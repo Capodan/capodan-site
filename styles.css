@@ -1,0 +1,4072 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    overflow-x: hidden; /* ✅ hard block any horizontal scrolling */
+}
+
+.logo-img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+/* Tab Banner Styles */
+.tab-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw; /* forces full viewport width */
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px; /* spacing inside left and right */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-sizing: border-box; /* ensures padding doesn't overflow width */
+}
+
+.tab-banner h1 {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.content-offset {
+  padding-top: 80px; /* default for desktop */
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tab-buttons a {
+  color: #373737;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.tab-buttons button {
+    background-color: #ffffff;
+    color: #373737;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* About button style (white) */
+.about-button {
+    background-color: #ffffff;
+    color: #373737;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.home-button {
+    background-color: #ffffff;
+    color: #373737;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.blog-button {
+    background-color: #ffffff;
+    color: #373737;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.blog-button:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.services-and-pricing-button {
+    background-color: #ffffff;
+    color: #373737;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.services-and-pricing-button:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.resources-button {
+    background-color: #ffffff;
+    color: #373737;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resources-button:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.contact-button {
+    background-color: #ffffff;
+    color: #373737;
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+}
+
+header {
+    margin-top: 70px; /* To prevent content from being hidden under the tab banner */
+    background-color: #ffffff;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.subheading {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #424141;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+section {
+    margin: 20px;
+}
+
+.text-container-two {
+    padding: 40px;
+    margin: 20px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 90%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+.text-container {
+    padding: 40px;
+    margin: 20px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 90%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.text-container-tag {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.highlight-blue {
+    color: #7b378b;
+}
+
+.tagheading{
+    font-family: 'Lucida Calligraphy', 'Cursive', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #555;
+    margin: 0;
+    font-size: 1em;
+}
+
+/* 🌐 Generic hyperlink style (for body copy like Cookie Policy) */
+main a, .cookie-text a, .footer-column a {
+  color: #90caf9;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
+/* Optional: Button-style links (only use when needed with class) */
+.button-link {
+  background-color: #B792D8;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button-link:hover {
+  background-color: #9c78c0;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1.5px;
+    background-color: black;
+    margin: 0 20px; /* Adds space between the line and the screen edge */
+}
+
+.dividerline {
+    flex-grow: 1;
+    height: 1.5px;
+    background-color: black;
+    margin: 0 20px; /* Adds space between the line and the screen edge */
+}
+
+.tiles-container {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    gap: 30px;
+    padding-top: 0px;  /* ⬅ adds space inside the grey */
+    padding-bottom: 30px; /* ⬅ keeps grey behind tiles */
+    margin-bottom: 0; /* remove if footer sticks tight */
+}
+
+.tile {
+    width: 430px;
+    height: 400px;
+    background-color: #ebeaea;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.tile:first-child {
+    background-image: url('ASSETS/SPLIT14.svg');
+    background-size: cover; /* Ensures the image covers the whole tile */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    position: relative; /* Needed to position the overlay */
+}
+
+.tile:first-child::after {
+    content: ''; /* No text, just a visual overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.3); /* Semi-transparent grey */
+    border-radius: 5px; /* Matches the tile's rounded corners */
+}
+
+.tile:first-child img {
+    position: absolute;
+    top: 40%; /* Adjust this value to position the icon slightly above the center */
+    left: 50%;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    transform: translateX(-50%) translateY(-50%); /* Center horizontally and adjust vertically */
+    max-width: 30%; /* Optional: Adjust the size of the icon */
+    height: auto;
+    z-index: 1;
+    transition: top 0.3s ease;
+}
+
+.tile:hover img {
+    top: 25%; /* Move the image up on hover */
+}
+
+.tile:nth-child(2) {
+    background-image: url('ASSETS/SPRS1.svg');
+    background-size: cover; /* Ensures the image covers the whole tile */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    position: relative; /* Needed to position the overlay */
+}
+
+.tile:nth-child(2)::after {
+    content: ''; /* No text, just a visual overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.3); /* Semi-transparent grey */
+    border-radius: 5px; /* Matches the tile's rounded corners */
+}
+
+.tile:nth-child(2) img {
+    position: absolute;
+    top: 40%; /* Adjust this value to position the icon slightly above the center */
+    left: 50%;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    transform: translateX(-50%) translateY(-50%); /* Center horizontally and adjust vertically */
+    max-width: 70%; /* Optional: Adjust the size of the icon */
+    height: auto;
+    z-index: 1;
+    transition: top 0.3s ease;
+}
+
+.tile:nth-child(3) {
+    background-image: url('ASSETS/STRAT3.svg');
+    background-size: cover; /* Ensures the image covers the whole tile */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    position: relative; /* Needed to position the overlay */
+}
+
+.tile:nth-child(3)::after {
+    content: ''; /* No text, just a visual overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.3); /* Semi-transparent grey */
+    border-radius: 5px; /* Matches the tile's rounded corners */
+}
+
+.tile:nth-child(3) img {
+    position: absolute;
+    top: 40%; /* Adjust this value to position the icon slightly above the center */
+    left: 50%;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    transform: translateX(-50%) translateY(-50%); /* Center horizontally and adjust vertically */
+    max-width: 20%; /* Optional: Adjust the size of the icon */
+    height: auto;
+    z-index: 1;
+    transition: transform 0.3s ease, top 0.3s ease; /* Add transition for smooth rotation */
+}
+
+.tile:hover img {
+    top: 30%; /* Move the image up on hover */
+}
+
+.tile:nth-child(3):hover img {
+    transform: translateX(-50%) translateY(-50%) rotate(180deg); /* Add rotation */
+}
+
+.tile-title-text-box-one {
+    position: absolute;
+    top: 10%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ⬅ Adds a subtle soft shadow */
+    width: 70%;
+    height: auto;
+    padding: 5px; /* Optional: Adjust for slight inner spacing */
+    text-align: center;
+    z-index: 2; /* Ensure it stays above the image */
+    border-radius: 5px;
+    font-size: 1.7em; /* Adjust text size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.2; /* Tighten text spacing */
+    margin: 0; /* Remove default margin */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+.tile:hover .tile-title-text-box-one {
+    top: 5%; /* Move down when hovered */
+}
+
+.tile-title-text-box-two {
+    position: absolute;
+    top: 10%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ⬅ Adds a subtle soft shadow */
+    width: 70%;
+    height: auto;
+    padding: 5px; /* Optional: Adjust for slight inner spacing */
+    text-align: center;
+    z-index: 2; /* Ensure it stays above the image */
+    border-radius: 5px;
+    font-size: 1.8em; /* Adjust text size */
+    line-height: 1.2; /* Tighten text spacing */
+    margin: 0; /* Remove default margin */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+.tile:hover .tile-title-text-box-two {
+    top: 5%; /* Move down when hovered */
+}
+
+.tile-title-text-box-three {
+    position: absolute;
+    top: 10%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ⬅ Adds a subtle soft shadow */
+    width: 70%;
+    height: auto;
+    padding: 5px; /* Optional: Adjust for slight inner spacing */
+    text-align: center;
+    z-index: 2; /* Ensure it stays above the image */
+    border-radius: 5px;
+    font-size: 1.7em; /* Adjust text size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    line-height: 1.2; /* Tighten text spacing */
+    margin: 0; /* Remove default margin */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+.tile:hover .tile-title-text-box-three {
+    top: 5%; /* Move down when hovered */
+}
+
+.tile-title-text-box-one p,
+.tile-title-text-box-two p,
+.tile-title-text-box-three p {
+    margin: 0;
+    padding: 0;
+    font-family: inherit; /* ⬅️ Allows child span to apply its style */
+}
+
+.text-box {
+    position: absolute;
+    bottom: 30%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    width: 70%;
+    height: auto;
+    padding: 5px; /* Optional: Adjust for slight inner spacing */
+    text-align: center;
+    z-index: 2; /* Ensure it stays above the image */
+    border-radius: 5px;
+    font-size: 1em; /* Adjust text size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.2; /* Tighten text spacing */
+    margin: 0; /* Remove default margin */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+.text-box p {
+    margin: 0; /* Remove any default margins from the paragraph */
+    padding: 0; /* Remove padding if any */
+}
+
+.tile:hover .text-box {
+    bottom: 10%; /* Move down when hovered */
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background when hovered */
+}
+
+/* Style for the new text box */
+.new-text-box {
+    position: absolute;
+    bottom: 30%; /* Position text above the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+    z-index: 2; /* Ensure it stays above the image */
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.2;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Prevents it from occupying space */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.new-text-box p {
+    margin: 0; /* Remove any default margins from the paragraph */
+    padding: 0; /* Remove padding if any */
+}
+
+/* Make the new text box appear when the tile is hovered */
+.tile:hover .new-text-box {
+    opacity: 1;
+    visibility: visible; /* Makes the text box visible */
+}
+
+.tile:hover {
+    transform: scale(1.1);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.centered-button {
+    text-decoration: none;
+    color: white;
+    background-color: #B792D8;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.centered-button:hover {
+    background-color: #7E2574;
+}
+
+.subheading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between the lines and text */
+    margin-top: 20px; /* Add some spacing above the container */
+}
+
+h1 {
+    margin-bottom: 80px; /* Space below the main heading */
+}
+
+.subheading-container .line {
+    flex: 1; /* Makes the line stretch */
+    height: 1px;
+    background-color: black;
+}
+
+/* Footer Styles */
+.footer-columns {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 30px;
+  gap: 40px;
+  font-size: 0.8rem;
+  border-top: 1px solid #444;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer-column h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.footer-column address {
+  color: #ccc;
+  line-height: 1.5;
+  font-style: normal; /* ← removes the italics */
+}
+
+.footer-column p,
+.footer-column li {
+  margin: 6px 0;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.footer-column address a {
+  color: #90caf9;
+  text-decoration: underline;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 0.8rem;     /* ⬅️ slightly smaller */
+  font-weight: normal;   /* ⬅️ removes bold */
+}
+
+.footer-logo-img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-icons i {
+  font-size: 24px;
+  color: white;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icons i:hover {
+  transform: scale(1.1);
+  color: #90caf9; /* or any accent hover colour */
+}
+
+.video-container {
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 100%; /* Added to limit the container width */
+}
+
+.video-container video {
+    width: 100%; /* Keep the width of the video at 100% */
+    height: 75vh; /* Set the height to 50% of the viewport height */
+    object-fit: cover; /* Ensures the video fills the container, cropping excess */
+    object-position: center top; /* Crops the bottom 50% and keeps the top visible */
+    display: block;
+    border-radius: 0px; /* Keep as-is if rounded corners are not needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+
+.video-container .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Prevent interaction with the SVG */
+}
+
+.video-container .overlay img {
+    max-width: 100%; /* Adjust size of the SVG */
+    height: auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-width: 100%; /* Set a max width for the video */
+    border-radius: 0px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    outline: none;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px); /* Start from 30px below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move back to the normal position */
+}
+
+/**/
+
+/* Container for tiles */
+.SPtiles-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1; /* Ensure tiles are above the gradient */
+    perspective: 1000px; /* Enables 3D perspective for the flip effect */
+}
+
+/* General tile styling */
+.SPtile {
+    width: 260px;
+    height: 250px;
+    position: relative;
+    background-color: black; /* Black background for the tiles */
+    background-size: cover; /* Ensure the image covers the tile */
+    background-position: center; /* Center the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    border-radius: 3px; /* Rounded corners */
+    border: 2px solid white; /* Add a white border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no content spills outside */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for tiles */
+.JASP-tile:hover,
+.SPtile:hover,
+.SPtile1:hover,
+.SPtile2:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    font-weight: bold;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+    cursor: pointer; /* Change cursor to a pointer (finger) */
+}
+
+/* Content inside the tile */
+.SPTILEtext-box {
+    color: white; /* White text color for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ⬅ Adds a subtle soft shadow */
+    font-size: 16px;
+    text-align: center;
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Move the element 10px from the top of the parent container */
+    left: 0;
+    right: 0;
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Ensure no extra margin is applied */
+}
+
+/* Icon styling inside the tile */
+.SPtile img {
+    max-width: 40%; /* Icon scaling */
+    max-height: 40%; /* Maintain proportions */
+    object-fit: contain; /* Ensure consistent scaling */
+    margin-top: 35px; /* Add space above the image */
+    display: block; /* Ensure images are block-level for better alignment */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+/* Section container */
+.SPLIsection {
+    position: relative;
+    padding: 0 0 100px 0; /* Top and bottom spacing */
+    margin: 0;
+    opacity: 0; /* Initially hidden for the fade-in effect */
+    transform: translateY(20px); /* Starts slightly below its final position */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+/* Fade-in animation trigger */
+.SPLIsection.fade-in.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Moves to its final position */
+}
+
+/* Section header styling */
+.SPTILEsection-header {
+    text-align: center;
+    color: #000000; /* Black text color */
+    padding: 10px 0;
+    margin-top: 0;
+}
+
+.SPTILEsection-header h1 {
+    font-size: 45px;
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.SPTILEsection-header .cursive {
+    font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', cursive;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 45px;
+}
+
+.SPTILEsection-header .serif {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.SPTILEsection-header .subheader {
+    font-size: 18px;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 30px 0;
+}
+
+.SPTILEsection-header p {
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+    width: 80%;
+    margin: 40px auto; /* Centers the paragraph horizontally */
+    margin-bottom: 50px;
+    display: block; /* Ensures it behaves as a block-level element */
+}
+
+.SPtile:nth-child(1) {
+    background-image: url('ASSETS/SPLIT1.svg');
+}
+
+.SPtile:nth-child(2) {
+    background-image: url('ASSETS/SPLIT2.svg');
+}
+
+.SPtile:nth-child(3) {
+    background-image: url('ASSETS/SPLIT3.svg');
+}
+
+.SPtile:nth-child(4) {
+    background-image: url('ASSETS/SPLIT4.svg');
+}
+
+.SPtile:nth-child(5) {
+    background-image: url('ASSETS/SPLIT5.svg');
+}
+
+.SPtile:nth-child(6) {
+    background-image: url('ASSETS/SPLIT6.svg');
+}
+
+.SPtile:nth-child(7) {
+    background-image: url('ASSETS/SPLIT7.svg');
+}
+
+.SPtile:nth-child(8) {
+    background-image: url('ASSETS/SPLIT8.svg');
+}
+
+.SPtile:nth-child(9) {
+    background-image: url('ASSETS/SPLIT9.svg');
+}
+
+.SPtile:nth-child(10) {
+    background-image: url('ASSETS/SPLIT10.svg');
+}
+
+.SPtile:nth-child(11) {
+    background-image: url('ASSETS/SPLIT11.svg');
+}
+
+.SPtile:nth-child(12) {
+    background-image: url('ASSETS/SPLIT12.svg');
+}
+
+.SPtile:nth-child(13) {
+    background-image: url('ASSETS/SPLIT13.svg');
+}
+
+.SPtile:nth-child(14) {
+    background-image: url('ASSETS/SPLIT14.svg');
+}
+
+.SPtile:nth-child(15) {
+    background-image: url('ASSETS/SPLIT15.svg');
+}
+
+/**/
+
+/* General tile styling */
+.SPtile1 {
+    width: 260px;
+    height: 250px;
+    position: relative;
+    background-color: black; /* Black background for the tiles */
+    background-size: cover; /* Ensure the image covers the tile */
+    background-position: center; /* Center the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    border-radius: 3px; /* Rounded corners */
+    border: 2px solid white; /* Add a white border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no content spills outside */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for tiles */
+.SPtile1:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+    cursor: pointer; /* Change cursor to a pointer (finger) */
+}
+
+/* Content inside the tile */
+.SPTILE1text-box {
+    color: white; /* White text color for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ⬅ Adds a subtle soft shadow */
+    font-size: 16px;
+    text-align: center;
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Move the element 10px from the top of the parent container */
+    left: 0;
+    right: 0;
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Ensure no extra margin is applied */
+}
+
+/* Icon styling inside the tile */
+.SPtile1 img {
+    max-width: 40%; /* Icon scaling */
+    max-height: 40%; /* Maintain proportions */
+    object-fit: contain; /* Ensure consistent scaling */
+    margin-top: 35px; /* Add space above the image */
+    display: block; /* Ensure images are block-level for better alignment */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+.SPtile1:nth-child(1) {
+    background-image: url('ASSETS/SPRS1.svg');
+}
+
+.SPtile1:nth-child(2) {
+    background-image: url('ASSETS/SPRS2.svg');
+}
+
+.SPtile1:nth-child(3) {
+    background-image: url('ASSETS/SPRS3.svg');
+}
+
+.SPtile1:nth-child(4) {
+    background-image: url('ASSETS/SPRS4.svg');
+}
+
+.SPtile1:nth-child(5) {
+    background-image: url('ASSETS/SPRS5.svg');
+}
+
+.SPtile1:nth-child(6) {
+    background-image: url('ASSETS/SPRS6.svg');
+}
+
+.SPtile1:nth-child(7) {
+    background-image: url('ASSETS/SPRS7.svg');
+}
+
+.SPtile1:nth-child(8) {
+    background-image: url('ASSETS/SPRS8.svg');
+}
+
+.SPtile1:nth-child(9) {
+    background-image: url('ASSETS/SPRS9.svg');
+}
+
+.SPtile1:nth-child(10) {
+    background-image: url('ASSETS/SPRS10.svg');
+}
+
+.SPtile1:nth-child(11) {
+    background-image: url('ASSETS/SPRS11.svg');
+}
+
+.SPtile1:nth-child(12) {
+    background-image: url('ASSETS/SPRS12.svg');
+}
+
+.SPtile1:nth-child(13) {
+    background-image: url('ASSETS/SPRS13.svg');
+}
+
+.SPtile1:nth-child(14) {
+    background-image: url('ASSETS/SPRS14.svg');
+}
+
+.SPtile1:nth-child(15) {
+    background-image: url('ASSETS/SPRS15.svg');
+}
+
+/**/
+
+/* Modal styles */
+.modal {
+    visibility: hidden; /* Initially hidden */
+    position: fixed; 
+    z-index: 9999; /* Ensure it's on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    transform: scale(0.7);
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.modal-content {
+    background-color: white;
+    width: 90%;
+    max-width: 1000px;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* go back to column to allow heading + content */
+    height: 80vh;
+    max-height: 90vh;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+/* Add the vertical line */
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: 80px;   /* align just below heading */
+    bottom: 30px;
+    left: 50%;
+    width: 1px;
+    background-color: darkgrey;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Modal active state (visible and scaled) */
+.modal.show {
+    visibility: visible; /* Make the modal visible */
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Scaled to normal size */
+    transition: opacity 0.3s ease, transform 0.5s ease, visibility 0s linear 0s;
+}
+
+/* Additional animation for modal content (optional, for a slight entrance effect) */
+.modal.show .modal-content {
+    transform: translateY(0); /* Optional: Moves the content from the top */
+}
+
+.logo-left {
+    display: inline;
+    margin: 0 20px 20px 0;
+}
+
+.modal-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #832979; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.modal-content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: relative; /* Makes the wrapper the reference point for absolute positioning */
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    height: 100%;               /* ✅ force it to take full space */
+    flex-grow: 1;               /* ✅ grow inside .modal-content */
+    padding: 30px;
+    gap: 40px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.text-section {
+    width: 48%; /* ✅ hardcoded to stay left of the 50% divider */
+    padding-right: 30px;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.text-section h2 {
+    margin-bottom: 10px;
+}
+
+.input-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 110px;
+}
+
+.name-label,
+.company-label,
+.email-label{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.service-label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.name-input,
+.company-input,
+.email-input {
+    width: 95%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.service-input {
+    width: 95%;
+    height: 120px;
+    padding: 8px;
+    font-size: 16px;
+    font-family: inherit;     /* ✅ Match parent font */
+    font-weight: normal;      /* ✅ Match weight */
+    line-height: 1.5;         /* ✅ Match vertical spacing */
+    color: #333;              /* ✅ Match input text color */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.black-line {
+    width: 95%;
+    height: 2px;
+    background-color: black;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Top white space block */
+.top-white-space {
+    width: 100%;
+    height: 250px; /* Adjust the height as needed */
+    background-color: white; /* Ensure it's white */
+    margin-bottom: 20px; /* Adds space between the top block and the next section */
+  }
+
+  /* Bottom white space block */
+.bottom-white-space {
+    width: 100%;
+    height: 100px; /* Adjust the height as needed */
+    background-color: white; /* Ensure it's white */
+    margin-top: 20px; /* Adds space between the bottom block and the previous section */
+  }
+
+.SPvideo-container {
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 100%; /* Added to limit the container width */
+}
+
+.SPvideo-container video {
+    width: 100%; /* Keep the width of the video at 100% */
+    height: 40vh; /* Set the height to 50% of the viewport height */
+    object-fit: cover; /* Ensures the video fills the container, cropping excess */
+    object-position: center top; /* Crops the bottom 50% and keeps the top visible */
+    display: block;
+    border-radius: 0px; /* Keep as-is if rounded corners are not needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+/* Text overlay styling */
+.SPtext-overlay {
+    position: absolute; /* Allows positioning over the video */
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Fine-tunes centering */
+    text-align: center; /* Centers text content */
+    color: white; /* White text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    z-index: 1; /* Ensures it is on top of the video */
+    padding: 20px; /* Adds spacing around the text */
+    border-radius: 10px; /* Optional: Rounded edges for the overlay */
+}
+
+/* Heading styling */
+.SPtext-overlay h1 {
+    font-size: 4rem; /* Adjust font size */
+    font-weight: bold;
+    margin: 0 0 10px 0; /* Adds spacing below the heading */
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-width: 100%; /* Set a max width for the video */
+    border-radius: 0px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    outline: none;
+}
+
+.container {
+    display: flex; /* Enables a flexbox layout */
+    padding: 20px;
+    justify-content: space-between; /* Spaces out the child elements */
+    align-items: center; /* Aligns items vertically */
+    width: 100%; /* Ensures the container takes the full width */
+    margin: 0 auto; /* Centers the container horizontally if needed */
+}
+
+.SPimage-container {
+    width: 45%; /* Takes the remaining 45% of the space */
+    padding: 20px;
+    display: flex; /* Ensures the image is centered inside */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+}
+
+.SPimage-container img {
+    max-width: 95%; /* Ensures the image scales within its container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 5px; /* Optional: Adds rounded corners to the image */
+}
+
+/* General Section Styling */
+.JAsection {
+    position: relative;
+    padding: 10px 0 100px 0;
+    margin: 0;
+    opacity: 0; /* Initially hidden for the fade-in effect */
+    transform: translateY(20px); /* Starts slightly below its final position */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+/* Fade-in animation trigger */
+.JAsection.fade-in.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Moves to its final position */
+}
+
+.JAsection-header {
+    position: relative;
+    z-index: 1; /* Keeps it above any background layers */
+    text-align: center;
+    color: #000000; /* Black color for text */
+    padding: 20px 0; /* Adds more vertical spacing for the header */
+    margin-top: 0;
+    display: flex; /* Aligns header elements horizontally */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers the content horizontally */
+    gap: 10px; /* Space between the lines and text */
+}
+
+.JAsection-header h1 {
+    font-size: 2rem; /* Larger font for better visibility */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; /* Removes extra margins */
+    padding: 10px 20px; /* Padding around the text */
+    text-align: center; /* Ensures text is centered */
+}
+
+.JAsection-header .line {
+    height: 1px; /* Thickness of the line */
+    background-color: black; /* Black line */
+    flex-grow: 1; /* Makes the line stretch to fill space */
+    max-width: 250px; /* Limits the line length */
+}
+
+.JAsection-header .subheader {
+    font-size: 1.5rem; /* Slightly smaller font for subheader */
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    width: fit-content;
+    margin: 10px auto; /* Centers subheader block horizontally */
+    padding: 5px 20px; /* Padding around the subheader text */
+}
+
+.JAsection-header p {
+    font-size: 1.125rem; /* Slightly smaller than subheader */
+    color: #000000;
+    width: fit-content;
+    margin: 20px auto; /* Centers paragraph block horizontally */
+    padding: 5px 20px; /* Padding for paragraph text */
+}
+
+/*JARES*/
+
+.JARESsection-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.JARESheading {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.JARESline {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #000;
+    max-width: 200px;
+}
+
+.JAREStiles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px; /* ⬅️ Adds space between columns */
+    row-gap: 10px;
+    padding: 20px 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.JARES-tile {
+    width: 100%;
+    background-color: #f4f4f4;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* ⬅️ Show hand cursor */
+}
+
+.JARES-tile:hover {
+    transform: scale(1.03); /* ⬅️ Slightly enlarge */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+.JARES-tile p {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    word-break: break-word;
+    white-space: normal;  /* ✅ allow wrapping again */
+    overflow: visible;
+}
+
+.JARES-tile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10px;
+    gap: 12px; /* spacing between icon and text */
+    text-align: center;
+}
+
+/*JARES End*/
+/* Environment */
+
+.RESENV-container {
+    width: 95vw; /* 95% of the viewport width */
+    max-width: 1350px;
+    position: relative; /* <-- Add this */
+    height: 550px;
+    background: url('ASSETS/RES1.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end; /* Align to the bottom */
+    justify-content: flex-end; /* Align to the right */
+    text-align: center;
+    overflow: hidden;
+    padding: 20px; /* Prevents tiles from sticking to the edge */
+}
+
+.RESENV-subtext {
+    position: absolute;
+    top: 150px; /* Adjust depending on spacing from heading */
+    left: 40px;
+    width: 300px; /* Adjust as needed */
+    color: white;
+    font-size: 1rem;
+    line-height: 1.4;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    z-index: 2;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.RESENV-heading {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    font-size: 2.5rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.RESENV-heading-altern {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    font-size: 2.5rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.RESENVtile-container {
+    display: flex;
+    gap: 20px; /* Space between tiles */
+    margin-bottom: 20px; /* Space from bottom */
+    margin-right: 20px; /* Space from right */
+}
+
+.RESENVtile {
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    background: rgba(255, 255, 255, 0.5); /* Light background */
+    border: 1.5px solid #ffffff; /* ← This adds the visible white border */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RESENVtile:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.env-tile-netzero-cover {
+    position: relative;
+    background: url('ASSETS/ENVPG1.svg') no-repeat center center;
+    background-size: cover;
+   overflow: hidden;
+}
+
+.env-tile-netzero-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.env-tile-pop-cover {
+    position: relative;
+    background: url('ASSETS/ENVPG2.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.env-tile-pop-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.env-tile-ev-cover {
+    position: relative;
+    background: url('ASSETS/ENVPG3.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.env-tile-ev-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+/* Environment End */
+/* Retail */
+
+.RESRETAIL-container {
+    width: 95vw; /* 95% of the viewport width */
+    max-width: 1350px;
+    height: 550px;
+    background: url('ASSETS/RESRETAIL.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end; /* Align to the bottom */
+    justify-content: flex-start; /* Align to the right */
+    text-align: center;
+    overflow: hidden;
+    padding: 20px; /* Prevents tiles from sticking to the edge */
+}
+
+.RESRETAIL-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.2); /* Adjust if needed */
+    pointer-events: none;
+    z-index: 1; /* ⬅️ Push it below your content */
+}
+
+.RESRETAILtile-container {
+    display: flex;
+    gap: 20px; /* Space between tiles */
+    margin-bottom: 20px; /* Space from bottom */
+    margin-left: 20px; /* Space from right */
+    z-index: 2;
+}
+
+.RESRETAILtile {
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    background: rgba(255, 255, 255, 0.5); /* Light background */
+    border: 1.5px solid #ffffff; /* ← This adds the visible white border */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RESRETAILtile:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.retail-tile-nike-cover {
+    position: relative;
+    background: url('ASSETS/RETAILPG1.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.retail-tile-nike-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.retail-tile-unbox-cover {
+    position: relative;
+    background: url('ASSETS/RETAILPG2.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.retail-tile-unbox-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.retail-tile-tarriff-cover {
+    position: relative;
+    background: url('ASSETS/RETAILPG3.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.retail-tile-tarriff-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+/* Retail End*/
+/* Pharma */
+
+.RESPHARMA-container {
+    width: 95vw; /* 95% of the viewport width */
+    max-width: 1350px;
+    position: relative; /* <-- Add this */
+    height: 550px;
+    background: url('ASSETS/RESPHARMA.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end; /* Align to the bottom */
+    justify-content: flex-end; /* Align to the right */
+    text-align: center;
+    overflow: hidden;
+    padding: 20px; /* Prevents tiles from sticking to the edge */
+}
+
+.RESPHARMA-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.2); /* Adjust if needed */
+    pointer-events: none;
+    z-index: 1; /* ⬅️ Push it below your content */
+}
+
+.RESPHARMAtile-container {
+    display: flex;
+    gap: 20px; /* Space between tiles */
+    margin-bottom: 20px; /* Space from bottom */
+    margin-right: 20px; /* Space from right */
+    z-index: 2;
+}
+
+.RESPHARMAtile {
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    background: rgba(255, 255, 255, 0.5); /* Light background */
+    border: 1.5px solid #ffffff; /* ← This adds the visible white border */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RESPHARMAtile:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.pharma-tile-injectable-cover {
+    position: relative;
+    background: url('ASSETS/PHARMPG1.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.pharma-tile-injectable-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.pharma-tile-sideeffects-cover {
+    position: relative;
+    background: url('ASSETS/PHARMPG2.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.pharma-tile-sideeffects-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.pharma-tile-ozempic-mounjaro-cover {
+    position: relative;
+    background: url('ASSETS/PHARMPG3.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.pharma-tile-ozempic-mounjaro-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+/* Pharma End */
+/* Travel */
+
+.RESENV-altern-subtext {
+    position: absolute;
+    top: 150px; /* Adjust depending on spacing from heading */
+    right: 40px; /* Changed from left to right */
+    width: 300px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.4;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    z-index: 2;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.RESTRAVEL-container {
+    width: 95vw;
+    max-width: 1350px;
+    height: 550px;
+    background: url('ASSETS/RESTRAVEL.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+    position: relative; /* ✅ Add this line */
+}
+
+.RESTRAVEL-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.2);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.RESTRAVELtile-container {
+    display: flex;
+    gap: 20px; /* Space between tiles */
+    margin-bottom: 20px; /* Space from bottom */
+    margin-right: 20px; /* Space from right */
+    z-index: 2;
+}
+
+.RESTRAVELtile {
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    background: rgba(255, 255, 255, 0.5); /* Light background */
+    border: 1.5px solid #ffffff; /* ← This adds the visible white border */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RESTRAVELtile:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.travel-tile-cruise-cover {
+    position: relative;
+    background: url('ASSETS/TRVAELPG1.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.travel-tile-cruise-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.travel-tile-flexible-cover {
+    position: relative;
+    background: url('ASSETS/TRVAELPG2.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.travel-tile-flexible-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.travel-tile-asia-cover {
+    position: relative;
+    background: url('ASSETS/TRVAELPG3.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.travel-tile-asia-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+/* Travel End*/
+/* Sport */
+
+.RESSPORT-heading {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.RESSPORT-heading-altern {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.RESSPORT-container {
+    width: 95vw; /* 95% of the viewport width */
+    max-width: 1350px;
+    height: 550px;
+    background: url('ASSETS/RESSPORT.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end; /* Align to the bottom */
+    justify-content: flex-end; /* Align to the right */
+    text-align: center;
+    overflow: hidden;
+    padding: 20px; /* Prevents tiles from sticking to the edge */
+}
+
+.RESSPORTtile-container {
+    display: flex;
+    gap: 20px; /* Space between tiles */
+    margin-bottom: 20px; /* Space from bottom */
+    margin-left: 20px; /* Space from right */
+}
+
+.RESSPORTtile {
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    background: rgba(255, 255, 255, 0.5); /* Light background */
+    border: 1.5px solid #ffffff; /* ← This adds the visible white border */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RESSPORTtile:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.sport-tile-stick-cover {
+    position: relative;
+    background: url('ASSETS/SPORTPG1.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.sport-tile-stick-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.sport-tile-women-cover {
+    position: relative;
+    background: url('ASSETS/SPORTPG2.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.sport-tile-women-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.sport-tile-heritage-cover {
+    position: relative;
+    background: url('ASSETS/SPORTPG3.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.sport-tile-heritage-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+/* Sport End*/
+/* AI */
+
+.RESAI-container {
+    width: 95vw; /* 95% of the viewport width */
+    max-width: 1350px;
+    height: 550px;
+    background: url('ASSETS/RES2.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end; /* Align to the bottom */
+    justify-content: flex-start; /* Align to the right */
+    text-align: center;
+    overflow: hidden;
+    padding: 20px; /* Prevents tiles from sticking to the edge */
+}
+
+.RESAI-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.2);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.RESAItile-container {
+    display: flex;
+    gap: 20px; /* Space between tiles */
+    margin-bottom: 20px; /* Space from bottom */
+    margin-left: 20px; /* Space from right */
+    z-index: 2;
+}
+
+
+.RESAItile {
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    background: rgba(255, 255, 255, 0.5); /* Light background */
+    border: 1.5px solid #ffffff; /* ← This adds the visible white border */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RESAItile:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.AI-tile-hype-cover {
+    position: relative;
+    background: url('ASSETS/AIPG1.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.AI-tile-hype-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.AI-tile-grok-cover {
+    position: relative;
+    background: url('ASSETS/AIPG2.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.AI-tile-grok-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.AI-tile-veo-cover {
+    position: relative;
+    background: url('ASSETS/AIPG3.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.AI-tile-veo-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+/* AI End*/
+/* Media */
+
+.RESMEDIA-container {
+    width: 95vw; /* 95% of the viewport width */
+    max-width: 1350px;
+    height: 550px;
+    background: url('ASSETS/RES3.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end; /* Align to the bottom */
+    justify-content: flex-end; /* Align to the right */
+    text-align: center;
+    overflow: hidden;
+    padding: 20px; /* Prevents tiles from sticking to the edge */
+}
+
+.RESMEDIAtile-container {
+    display: flex;
+    gap: 20px; /* Space between tiles */
+    margin-bottom: 20px; /* Space from bottom */
+    margin-right: 20px; /* Space from right */
+}
+
+.RESMEDIAtile {
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    background: rgba(255, 255, 255, 0.5); /* Light background */
+    border: 1.5px solid #ffffff; /* ← This adds the visible white border */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RESMEDIAtile:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.media-tile-last-cover {
+    position: relative;
+    background: url('ASSETS/MEDIAPG1.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.media-tile-last-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.media-tile-tiktok-cover {
+    position: relative;
+    background: url('ASSETS/MEDIAPG2.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.media-tile-tiktok-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.media-tile-netflix-cover {
+    position: relative;
+    background: url('ASSETS/MEDIAPG3.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.media-tile-netflix-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+/* Media End*/
+/* FCMG */
+
+.RESFCMG-container {
+    width: 95vw; /* 95% of the viewport width */
+    max-width: 1350px;
+    height: 550px;
+    background: url('ASSETS/RESFCMG.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end; /* Align to the bottom */
+    justify-content: flex-start; /* Align to the right */
+    text-align: center;
+    overflow: hidden;
+    padding: 20px; /* Prevents tiles from sticking to the edge */
+}
+
+.RESFCMGtile-container {
+    display: flex;
+    gap: 20px; /* Space between tiles */
+    margin-bottom: 20px; /* Space from bottom */
+    margin-left: 20px; /* Space from right */
+}
+
+.RESFCMGtile {
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    background: rgba(255, 255, 255, 0.5); /* Light background */
+    border: 1.5px solid #ffffff; /* ← This adds the visible white border */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RESFCMGtile:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.FMCG-tile-copy-cover {
+    position: relative;
+    background: url('ASSETS/FMCGPG1.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.FMCG-tile-copy-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.FMCG-tile-protein-cover {
+    position: relative;
+    background: url('ASSETS/FMCGPG2.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.FMCG-tile-protein-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.FMCG-tile-dove-cover {
+    position: relative;
+    background: url('ASSETS/FMCGPG3.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.FMCG-tile-dove-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+/* FCMG End*/
+/* FINANCE */
+
+.RESFINANCE-container {
+    width: 95vw; /* 95% of the viewport width */
+    max-width: 1350px;
+    height: 550px;
+    background: url('ASSETS/RESFINAN.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end; /* Align to the bottom */
+    justify-content: flex-end; /* Align to the right */
+    text-align: center;
+    overflow: hidden;
+    padding: 20px; /* Prevents tiles from sticking to the edge */
+}
+
+.RESFINANCEtile-container {
+    display: flex;
+    gap: 20px; /* Space between tiles */
+    margin-bottom: 20px; /* Space from bottom */
+    margin-right: 20px; /* Space from right */
+}
+
+.RESFINANCEtile {
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    background: rgba(255, 255, 255, 0.5); /* Light background */
+    border: 1.5px solid #ffffff; /* ← This adds the visible white border */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RESFINANCEtile:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.finance-tile-klarna-cover {
+    position: relative;
+    background: url('ASSETS/FINANCEPG1.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.finance-tile-klarna-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.finance-tile-genz-cover {
+    position: relative;
+    background: url('ASSETS/FINANCEPG2.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.finance-tile-genz-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.finance-tile-morethan-cover {
+    position: relative;
+    background: url('ASSETS/FINANCEPG3.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.finance-tile-morethan-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+/* Finance End*/
+/* Public Sector */
+
+.RESPUBSEC-container {
+    width: 95vw; /* 95% of the viewport width */
+    max-width: 1350px;
+    height: 550px;
+    background: url('ASSETS/RESPUBSEC.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end; /* Align to the bottom */
+    justify-content: flex-start; /* Align to the right */
+    text-align: center;
+    overflow: hidden;
+    padding: 20px; /* Prevents tiles from sticking to the edge */
+}
+
+.RESPUBSEC-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.2);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.RESPUBSECtile-container {
+    display: flex;
+    gap: 20px; /* Space between tiles */
+    margin-bottom: 20px; /* Space from bottom */
+    margin-left: 20px; /* Space from right */
+    z-index: 2;
+}
+
+.RESPUBSECtile {
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    background: rgba(255, 255, 255, 0.5); /* Light background */
+    border: 1.5px solid #ffffff; /* ← This adds the visible white border */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RESPUBSECtile:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.pubsec-tile-cdc-cover {
+    position: relative;
+    background: url('ASSETS/PUBSECPG1.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.pubsec-tile-cdc-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.pubsec-tile-self-cover {
+    position: relative;
+    background: url('ASSETS/PUBSECPG2.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.pubsec-tile-self-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.pubsec-tile-student-cover {
+    position: relative;
+    background: url('ASSETS/PUBSECPG3.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.pubsec-tile-student-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+/* Public Sector End*/
+/* B2B */
+
+.RESB2B-container {
+    width: 95vw; /* 95% of the viewport width */
+    max-width: 1350px;
+    height: 550px;
+    background: url('ASSETS/RESB2B.svg') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end; /* Align to the bottom */
+    justify-content: flex-end; /* Align to the right */
+    text-align: center;
+    overflow: hidden;
+    padding: 20px; /* Prevents tiles from sticking to the edge */
+}
+
+.RESB2B-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.2);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.RESB2Btile-container {
+    display: flex;
+    gap: 20px; /* Space between tiles */
+    margin-bottom: 20px; /* Space from bottom */
+    margin-right: 20px; /* Space from right */
+    z-index: 2;
+}
+
+.RESB2Btile {
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    background: rgba(255, 255, 255, 0.5); /* Light background */
+    border: 1.5px solid #ffffff; /* ← This adds the visible white border */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.RESB2Btile:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.b2b-tile-salesf-cover {
+    position: relative;
+    background: url('ASSETS/B2BPG1.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.b2b-tile-salesf-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.b2b-tile-pitch-cover {
+    position: relative;
+    background: url('ASSETS/B2BPG2.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.b2b-tile-pitch-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+.b2b-tile-canva-cover {
+    position: relative;
+    background: url('ASSETS/B2BPG3.svg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.b2b-tile-canva-cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.1); /* Adjust if needed */
+    pointer-events: none;
+}
+
+/* B2B End*/
+
+.back-to-top-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.back-to-top-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top-button:hover {
+  background-color: #333;
+}
+
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.4s ease, transform 0.5s ease; /* ⬅️ faster! */
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(50px); /* ⬅️ Positive value moves it right */
+    transition: opacity 0.4s ease, transform 0.5s ease; /* ⬅️ faster! */
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.JASPsection-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 40px;
+}
+
+.JASPheading {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.JASPline {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #000;
+    max-width: 200px;
+}
+
+.JASPtiles-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px 0;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    align-items: stretch;
+}
+
+.JASP-tile {
+    width: 250px;
+    background-color: #f4f4f4;
+    color: white;
+    padding: 30px;
+    height: 200px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align content to the bottom */
+    align-items: center;
+}
+
+
+.JASP-tile p {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    word-break: break-word;
+    white-space: normal;  /* ✅ allow wrapping again */
+    overflow: visible;
+}
+
+.JASP-tile-content {
+    display: flex;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ⬅ Adds a subtle soft shadow */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10px;
+    gap: 12px; /* spacing between icon and text */
+    text-align: center;
+}
+
+.JASPtiles-container .JASP-tile:first-child .JASP-tile-content {
+    transform: translateY(-10px);
+}
+
+.JASP-tile-content img {
+    width: 40px;       /* uniform icon size */
+    height: auto;
+    margin-top: -10px; /* nudges icon upwards */
+}
+
+.JASP-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.JASP-tile:first-child {
+    background-image: url('ASSETS/SPLIT1.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.JASP-tile:nth-child(2) {
+    background-image: url('ASSETS/SPRS1.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.JASP-tile:nth-child(3) {
+    background-image: url('ASSETS/SPLIT3.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.JASP-tile:nth-child(4) {
+    background-image: url('ASSETS/SPRS9.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.JASP-tile:nth-child(5) {
+    background-image: url('ASSETS/STRAT3.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.SPtile img
+.SPtile1 img,
+.SPtile2 img,
+.JASP-tile img {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.tile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.4); /* grey transparent overlay */
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.JASP-tile > *:not(.tile-overlay) {
+    position: relative;
+    z-index: 2;
+}
+
+.jasp-icon {
+    width: 40px;
+    height: auto;
+    margin-bottom: 12px;  /* ✅ neat spacing from the label */
+    display: block;
+}
+
+  .review-ticker-wrapper {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    color: #4A90E2;
+    margin-top: 40px;
+  }
+  
+  .review-ticker-wrapper p {
+    margin: 10px 0;
+  }
+  
+  .lilac-bg {
+    background: 
+      linear-gradient(135deg, #7b4fa2 0%, #6c4490 100%), 
+      repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.05) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+    background-blend-mode: overlay;
+    color: white;
+    padding: 30px 40px 40px 40px;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }   
+
+  .grey-bg {
+    background: 
+      linear-gradient(135deg, #4a4a4a 0%, #3f3f3f 100%), 
+      repeating-linear-gradient(
+        -45deg, /* ↘ flipped from +45deg to -45deg */
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.05) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+    background-blend-mode: overlay;
+    color: white;
+    padding: 30px 40px 40px 40px;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0 !important;
+    box-sizing: border-box;
+  } 
+  
+  .ticker-group {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* ✅ This is the key: centers ticker-boxes horizontally */
+    gap: 100px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }  
+  
+  /* Individual ticker block */
+  .ticker-box {
+    text-align: center;
+    align-items: center; /* ✅ This is the key: centers ticker-boxes horizontally */
+    min-width: 120px;
+  }
+  
+  /* Small label above number */
+  .ticker-label {
+    font-size: 1rem;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /* Small label above number */
+  .ticker-label-words {
+    font-size: 1rem;
+    color:#d3d3d3;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Large number display */
+  .ticker-value {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  .ticker-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    gap: 40px;
+  }
+  
+  .ticker-textbox {
+    max-width: 300px;
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .ticker-textbox.right,
+  .ticker-textbox.left {
+    text-align: center;
+    align-self: center;
+    padding-top: 20px;
+    margin: 0 auto;
+    max-width: 80%; /* ⬅️ wider than 300px */
+  }
+
+  .ticker-textbox.right p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+  }
+  
+  .ticker-group.align-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* ✅ This is the key: centers ticker-boxes horizontally */
+  }
+
+  .top-wrap .ticker-group {
+    justify-content: flex-start;
+    flex: 1;
+  }
+  
+  .bottom-wrap .ticker-group {
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  .ticker-title-left {
+    padding: 30px 40px 10px 40px;
+  }
+  
+  .ticker-title-left h2 {
+    color: white;
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ⬅ Adds a subtle soft shadow */
+  }  
+
+  .ticker-title-right {
+    padding: 30px 40px 10px 40px;
+  }
+  
+  .ticker-title-right h2 {
+    color: white;
+    font-size: 1.9rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: right;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ⬅ Adds a subtle soft shadow */
+  }  
+
+  .ticker-footer-prompts p {
+    margin: 4px 0;
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: white;
+  }  
+  
+  .ticker-footer-prompts p {
+    margin: 4px 0;
+  }
+  
+  .prompt-divider {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 60px 0 10px;
+    position: relative;
+  }
+  
+  .prompt-divider span {
+    position: relative;
+    top: -0.7em;
+    background: #8052a8; /* match your lilac bg */
+    padding: 0 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  .prompt-divider1 {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 60px 0 10px;
+    position: relative;
+  }
+  
+  .prompt-divider1 span {
+    position: relative;
+    top: -0.7em;
+    background: #424242; /* match your lilac bg */
+    padding: 0 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  .lilac-bg-small {
+    background: 
+      linear-gradient(135deg, #7b4fa2 0%, #6c4490 100%),
+      repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+    background-blend-mode: overlay;
+    color: white;
+    padding: 40px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  
+  .grey-bg-small {
+    background: 
+      linear-gradient(135deg, #4a4a4a 0%, #3f3f3f 100%),
+      repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+    background-blend-mode: overlay;
+    color: white;
+    padding: 40px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  
+  .contact-heading {
+    text-align: center;
+    padding-top: 80px;  /* ⬅ Add space above the heading */
+    padding-bottom: 20px;
+    margin: 0 auto;
+  }  
+  
+  .contact-heading h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .contact-subtext-wrapper {
+    background-color: white;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+  }
+  
+  .contact-subtext {
+    font-size: 1.25rem;       /* ⬆ Bigger */
+    font-weight: 500;         /* ⬆ Bolder but still elegant */
+    color: #333;              /* Darker for better readability */
+    max-width: 1000px;
+    margin: 0 auto 20px auto; /* ⬇ Reduced bottom space */
+    line-height: 1.6;
+  }  
+  
+  .contact-input-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+/* General tile styling */
+.SPtile2 {
+    width: 260px;
+    height: 250px;
+    position: relative;
+    background-color: black; /* Black background for the tiles */
+    background-size: cover; /* Ensure the image covers the tile */
+    background-position: center; /* Center the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    border-radius: 3px; /* Rounded corners */
+    border: 2px solid white; /* Add a white border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no content spills outside */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for tiles */
+.SPtile2:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+    cursor: pointer; /* Change cursor to a pointer (finger) */
+}
+
+/* Content inside the tile */
+.SPTILE2text-box {
+    color: white; /* White text color for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ⬅ Adds a subtle soft shadow */
+    font-size: 16px;
+    text-align: center;
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Move the element 10px from the top of the parent container */
+    left: 0;
+    right: 0;
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Ensure no extra margin is applied */
+}
+
+/* Icon styling inside the tile */
+.SPtile2 img {
+    max-width: 40%; /* Icon scaling */
+    max-height: 40%; /* Maintain proportions */
+    object-fit: contain; /* Ensure consistent scaling */
+    margin-top: 35px; /* Add space above the image */
+    display: block; /* Ensure images are block-level for better alignment */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+.SPtile2:nth-child(1) {
+    background-image: url('ASSETS/STRAT1.svg');
+}
+
+.SPtile2:nth-child(2) {
+    background-image: url('ASSETS/STRAT2.svg');
+}
+
+.SPtile2:nth-child(3) {
+    background-image: url('ASSETS/STRAT3.svg');
+}
+
+.SPtile2:nth-child(4) {
+    background-image: url('ASSETS/STRAT4.svg');
+}
+
+.SPtile2:nth-child(5) {
+    background-image: url('ASSETS/STRAT5.svg');
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2e2e2e;
+  color: white;
+  border-top: 1px solid #444;
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.cookie-text {
+  flex: 1 1 300px;
+  margin-right: 20px;
+}
+
+.cookie-text strong {
+  display: block;
+  font-size: 1.1em;
+  color: #B792D8;
+  margin-bottom: 6px;
+}
+
+.cookie-text p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+.cookie-text a {
+  color: #90caf9;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex: 1 1 300px;
+}
+
+.cookie-buttons button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cookie-buttons button:hover {
+  background-color: #555;
+}
+
+.cookie-buttons .accept {
+  background-color: #B792D8;
+  color: black;
+}
+
+.cookie-buttons .accept:hover {
+  background-color: #9c78c0;
+}
+
+.cookie-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* subtle grey */
+  z-index: 9998; /* just behind the banner */
+}
+
+.cookie-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  max-width: 90vw;
+  height: 100vh;
+  background-color: #2e2e2e;
+  color: white;
+  z-index: 10000;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.cookie-modal.show {
+  transform: translateX(0);
+}
+
+.cookie-modal-content {
+  padding: 30px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.cookie-modal h2 {
+  color: #B792D8;
+  margin-top: 0;
+}
+
+.cookie-toggle-group {
+  margin-top: 20px;
+}
+
+.cookie-toggle-group label {
+  font-weight: bold;
+  display: block;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.cookie-toggle-group input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.1);
+}
+
+.toggle-description {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 4px 0 0 28px;
+}
+
+.cookie-modal-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cookie-modal-actions button {
+  padding: 10px 15px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cookie-modal-actions button.accept {
+  background-color: #B792D8;
+  color: black;
+}
+
+.cookie-modal-actions button:not(.accept) {
+  background-color: #444;
+  color: white;
+}
+
+.close-modal {
+  font-size: 24px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+.cursive {
+  font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', cursive;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.serif {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.cookie-text-container {
+  max-width: 900px;
+  margin: 120px auto 60px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cookie-text-container h2,
+.cookie-text-container h3 {
+  color: #7b378b;
+  margin-top: 30px;
+  font-size: 1.4rem;
+}
+
+.cookie-text-container h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+.cookie-text-container ul {
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.cookie-text-container li {
+  margin-bottom: 10px;
+}
+
+.cookie-text-container a {
+  color: #90caf9;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.SPBLOCK-bg {
+  text-align: left;
+  width: 100vw;                /* take full viewport width */
+  background-color: #000;
+  margin: 0;                   /* remove inherited margin */
+  padding: 0;                  /* remove inherited padding */
+}
+
+.SPtext-container {
+  max-width: 100%;
+  padding: 60px 80px 120px 80px;
+    /* top | right | bottom | left */
+    /* keep text padding inside the black box */
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+section.SPBLOCK-bg {
+  margin: 0 !important;        /* ensure no section spacing */
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0px 0px;
+}
+
+.about-image {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    display: block;
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+}
+
+.about-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* top quarter */
+    background: linear-gradient(to bottom, white, transparent);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.about-text {
+    flex: 1;
+    margin-top: 0px;
+    margin-left: 20px;
+    font-size: 0.8em;
+    color: #000;
+    line-height: 1.6;
+}
+
+.about-text.white-text {
+  color: white;
+  margin-right: 20px;
+}
+
+.about-text h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.about-image2 {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    display: block;
+}
+
+.about-image2 img {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+}
+
+.about-image2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* top quarter */
+    z-index: 2;
+    pointer-events: none;
+}
+
+.contact-flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 40px;
+}
+
+.contact-details-left {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 5px solid #B792D8;
+}
+
+.contact-input-section {
+  flex: 2;
+  min-width: 300px;
+}
+
+.fixed-bottom-line {
+  position: absolute;
+  bottom: 30px;
+  width: 45%;
+  left: 30px;
+  right: 30px;
+  font-weight: 500;
+  font-size: 1em;
+  text-align: left;
+  color: #000; /* or whatever matches your modal */
+}
+
+@media screen and (max-width: 768px) {
+  .about-flex {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .logo-img {
+    max-width: 120px;
+  }
+
+  .reverse-on-mobile {
+    flex-direction: column !important;
+  }
+
+  .about-image2,
+  .about-image {
+    order: -1; /* Ensure image comes first */
+  }
+
+  .about-text {
+    padding-top: 20px;
+  }
+
+  .JASPtiles-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    justify-items: center;
+    padding: 20px;
+  }
+
+    /* Smaller tile size on mobile */
+  .JASP-tile {
+    width: 90px !important;
+    height: 90px !important;
+    padding: 12px !important;
+  }
+
+  .JASPtiles-container > .JASP-tile:nth-child(4) {
+    grid-column: 1;
+  }
+
+  .JASPtiles-container > .JASP-tile:nth-child(5) {
+    grid-column: 3;
+  }
+
+    /* Icon size inside tiles */
+  .JASP-tile img {
+    width: 30px;
+    height: auto;
+    margin-bottom: 2px;
+  }
+
+    /* Font tweak */
+  .JASP-tile p {
+    font-size: 10px !important;
+  }
+
+  .JASPtiles-container .JASP-tile:first-child .JASP-tile-content {
+    transform: none !important;
+  }
+
+  /* NEW: Make tab banner mobile-friendly */
+  .tab-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;  /* adds vertical spacing */
+    margin: 5px 0 0 0;
+  }
+
+  .tab-buttons a {
+    display: block;
+    padding: 5px 0;
+    font-size: 1rem;
+    width: 100%;         /* optional: full width */
+    text-align: left;    /* or center if preferred */
+  }
+
+  .tab-banner h1 {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .services-and-pricing-button {
+    white-space: nowrap;
+  }
+
+  .content-offset {
+    padding-top: 250px; /* extra for stacked mobile nav */
+  }
+
+  .JARESheading {
+    font-size: 20px;
+  }
+
+  .JARES-tile p {
+    font-size: 10px;
+  }
+
+  .modal {
+    overflow-y: auto !important; /* ✅ Enable scrolling for modal container */
+    -webkit-overflow-scrolling: touch; /* ✅ Smooth scroll for iOS */
+  }
+
+  .modal-content {
+    height: auto !important;
+    max-height: none !important;
+    margin: 10% auto !important;  /* Add space at top */
+    padding: 20px !important;
+  }
+
+  .modal-body {
+    flex-direction: column !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .modal-content::before {
+    display: none;
+  }
+
+  .text-section,
+  .input-section {
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  .text-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .text-section p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .fixed-bottom-line {
+    position: static !important;
+    width: 100% !important;
+    max-width: none;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .modal-button {
+    position: static !important;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .close {
+    position: fixed !important;
+    top: 15px;
+    right: 20px;
+    z-index: 9999;
+    font-size: 30px;
+    color: black;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  }
+
+  .text-container {
+    font-size: 1.1em;   /* Reduce from 1.8em default */
+    padding: 20px;   /* 20px top/bottom, 24px left/right */
+  }
+
+  .text-container-two {
+    font-size: 1.1em;   /* Reduce from 1.8em default */
+    padding: 20px;   /* 20px top/bottom, 24px left/right */
+  }
+
+  .SPtext-container {
+    font-size: 1.1em;   /* Reduce from 1.8em default */
+    padding: 50px 50px;   /* 20px top/bottom, 24px left/right */
+  }
+
+  .text-container .highlight-blue {
+    font-weight: bold;  /* Optional: emphasize the highlight if smaller */
+  }
+}
+@media screen and (max-width: 900px) {
+  .video-container video {
+    width: 100%;
+    height: 500px;         /* Fixed height to appear cropped */
+    object-fit: cover;     /* ✅ Crops to fit container while preserving aspect ratio */
+  }
+
+  .video-container .overlay img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .ticker-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ticker-group.align-left {
+    flex-direction: column !important;     /* ⬅️ Change direction to stack vertically */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;                  /* Optional: vertical spacing between boxes */
+  }
+
+  .ticker-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .tiles-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tile {
+    width: 90%;
+    max-width: 400px;
+    height: 350px;         /* Enforce a fixed height */
+    position: relative;    /* Needed for children to stay in bounds */
+    overflow: hidden;      /* Keeps content from overflowing */
+    margin-bottom: 20px;   /* Add space between stacked tiles */
+  }
+
+  .tile img {
+    max-width: 40%;    /* Optional: adjust icon size on mobile */
+  }
+
+  .tile-title-text-box-one,
+  .tile-title-text-box-two,
+  .tile-title-text-box-three,
+  .text-box,
+  .new-text-box {
+    width: 90%;
+    position: absolute;
+    z-index: 2;        /* Keep inner content responsive */
+  }
+
+  .RESENV-container,
+  .RESRETAIL-container,
+  .RESPHARMA-container,
+  .RESTRAVEL-container,
+  .RESMEDIA-container,
+  .RESAI-container,
+  .RESSPORT-container,
+  .RESFCMG-container,
+  .RESFINANCE-container,
+  .RESPUBSEC-container,
+  .RESB2B-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .RESENV-heading,
+  .RESENV-heading-altern {
+    position: static;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .RESENV-subtext,
+  .RESENV-altern-subtext {
+    position: static;
+    width: 90%;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .RESENVtile-container,
+  .RESRETAILtile-container,
+  .RESPHARMAtile-container,
+  .RESTRAVELtile-container,
+  .RESMEDIAtile-container,
+  .RESAItile-container,
+  .RESSPORTtile-container,
+  .RESFCMGtile-container,
+  .RESFINANCEtile-container,
+  .RESPUBSECtile-container,
+  .RESB2Btile-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  .RESENVtile,
+  .RESRETAILtile,
+  .RESPHARMAtile,
+  .RESTRAVELtile,
+  .RESMEDIAtile,
+  .RESAItile,
+  .RESSPORTtile,
+  .RESFCMGtile,
+  .RESFINANCEtile,
+  .RESPUBSECtile,
+  .RESB2Btile {
+    width: 90vw;
+    height: 500px;
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .SPtiles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Force 3 per row */
+    gap: 5px;
+    padding: 0 10px;
+  }
+
+  .SPtile,
+  .SPtile1,
+  .SPtile2 {
+    width: 100% !important; /* Let grid control width */
+    height: 160px;
+  }
+
+  .SPtile p,
+  .SPtile1 p,
+  .SPtile2 p {
+    font-size: 0.9rem;
+    font-weight: bold
+  }
+
+  .SPtile img,
+  .SPtile1 img,
+  .SPtile2 img {
+    max-width: 45px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .JASPtiles-container {
+    flex-wrap: nowrap !important;
+    overflow-x: auto; /* Allow scroll if screen is not wide enough */
+    justify-content: center; /* Center the single row */
+  }
+}
+
+.blog-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding-left: 20%;
+  padding: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.blog-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.blog-body p {
+  margin-bottom: 1rem;
+}
+
+.blog-body ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-body a {
+  color: #7b378b;
+  text-decoration: underline;
+}
+
+.blog-divider {
+  margin: 3rem auto;
+  border: none;
+  border-top: 1px solid #ccc;
+  max-width: 600px;
+}
+
+.blog-banner-carousel {
+  padding: 2rem 1rem;
+  background-color: #f7f7f7;
+}
+
+.carousel-heading {
+  font-family: Tahoma, sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.carousel-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.blog-card {
+  scroll-snap-align: start;
+  flex: 0 0 300px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card-content {
+  font-family: Tahoma, sans-serif;
+}
+
+.blog-card-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.3rem;
+}
+
+.blog-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-preview {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.read-more-link {
+  font-weight: bold;
+  color: #660099;
+  text-decoration: none;
+}
