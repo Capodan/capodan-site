@@ -2813,7 +2813,7 @@ video {
 }
 
 .JASP-tile:first-child {
-    background-image: url('ASSETS/SPLIT1.svg');
+    background-image: url('ASSETS/SPLIT1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
