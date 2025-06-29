@@ -11,7 +11,13 @@
     </script>
     <div id="cms"></div>
     <script>
-      CMS.init();
+      window.addEventListener("load", function() {
+        if (typeof CMS !== "undefined") {
+          CMS.init();
+        } else {
+          console.error("CMS object not found.");
+        }
+      });
     </script>
   </body>
 </html>
