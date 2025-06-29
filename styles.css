@@ -1417,7 +1417,7 @@ video {
     max-width: 1350px;
     position: relative; /* <-- Add this */
     height: 550px;
-    background: url('ASSETS/RES1.svg') no-repeat center center;
+    background: url('ASSETS/RES1.png') no-repeat center center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
@@ -1557,7 +1557,7 @@ video {
     width: 95vw; /* 95% of the viewport width */
     max-width: 1350px;
     height: 550px;
-    background: url('ASSETS/RESRETAIL.svg') no-repeat center center;
+    background: url('ASSETS/RESRETAIL.png') no-repeat center center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
@@ -1671,7 +1671,7 @@ video {
     max-width: 1350px;
     position: relative; /* <-- Add this */
     height: 550px;
-    background: url('ASSETS/RESPHARMA.svg') no-repeat center center;
+    background: url('ASSETS/RESPHARMA.png') no-repeat center center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
@@ -1800,7 +1800,7 @@ video {
     width: 95vw;
     max-width: 1350px;
     height: 550px;
-    background: url('ASSETS/RESTRAVEL.svg') no-repeat center center;
+    background: url('ASSETS/RESTRAVEL.png') no-repeat center center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
@@ -1938,7 +1938,7 @@ video {
     width: 95vw; /* 95% of the viewport width */
     max-width: 1350px;
     height: 550px;
-    background: url('ASSETS/RESSPORT.svg') no-repeat center center;
+    background: url('ASSETS/RESSPORT.png') no-repeat center center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
@@ -2038,7 +2038,7 @@ video {
     width: 95vw; /* 95% of the viewport width */
     max-width: 1350px;
     height: 550px;
-    background: url('ASSETS/RES2.svg') no-repeat center center;
+    background: url('ASSETS/RES2.png') no-repeat center center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
@@ -2152,7 +2152,7 @@ video {
     width: 95vw; /* 95% of the viewport width */
     max-width: 1350px;
     height: 550px;
-    background: url('ASSETS/RES3.svg') no-repeat center center;
+    background: url('ASSETS/RES3.png') no-repeat center center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
@@ -2252,7 +2252,7 @@ video {
     width: 95vw; /* 95% of the viewport width */
     max-width: 1350px;
     height: 550px;
-    background: url('ASSETS/RESFCMG.svg') no-repeat center center;
+    background: url('ASSETS/RESFCMG.png') no-repeat center center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
@@ -2352,7 +2352,7 @@ video {
     width: 95vw; /* 95% of the viewport width */
     max-width: 1350px;
     height: 550px;
-    background: url('ASSETS/RESFINAN.svg') no-repeat center center;
+    background: url('ASSETS/RESFINAN.png') no-repeat center center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
@@ -2452,7 +2452,7 @@ video {
     width: 95vw; /* 95% of the viewport width */
     max-width: 1350px;
     height: 550px;
-    background: url('ASSETS/RESPUBSEC.svg') no-repeat center center;
+    background: url('ASSETS/RESPUBSEC.png') no-repeat center center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
@@ -2565,7 +2565,7 @@ video {
     width: 95vw; /* 95% of the viewport width */
     max-width: 1350px;
     height: 550px;
-    background: url('ASSETS/RESB2B.svg') no-repeat center center;
+    background: url('ASSETS/RESB2B.png') no-repeat center center;
     background-size: cover;
     margin: 0 auto;
     display: flex;
