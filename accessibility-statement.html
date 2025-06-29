@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capodan Research | Decode Meaning. Drive Strategy.</title>
+    <meta name="description" content="Capodan is a research consultancy that turns hidden customer meaning into competitive edge. Using linguistic insight, we help brands uncover what people really mean—and why it matters.">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06JCZ4NXWZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-06JCZ4NXWZ');
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Capodan Research | Decode Meaning. Drive Strategy.">
+    <meta property="og:description" content="Uncover what customers really mean. Capodan uses linguistic insight to power better business decisions.">
+    <meta property="og:image" content="https://www.capodan.com/ASSETS/Capo1.svg"> <!-- update to full live URL when launched -->
+    <meta property="og:url" content="https://www.capodan.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Capodan Research | Decode Meaning. Drive Strategy.">
+    <meta name="twitter:description" content="Linguistic insight for real business impact.">
+    <meta name="twitter:image" content="https://www.capodan.com/ASSETS/Capo1.svg">
+
+    <link rel="icon" type="image/png" href="ASSETS/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="myscript.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="tab-banner">
+        <h1>
+            <img src="ASSETS/Capo.svg" alt="Logo" class="logo-img">
+        </h1>
+        <div class="tab-buttons">
+            <a href="index.html" class="tab-button home-button">Home</a>
+            <a href="about.html" class="tab-button about-button">About Us</a>
+            <a href="resources.html" class="tab-button resources-button">Resources</a>
+            <a href="servicespricing.html" class="tab-button services-and-pricing-button">Services & Pricing</a>
+            <a href="blog.html" class="tab-button blog-button">Blogs</a>
+            <a href="contact.html" class="tab-button contact-button">Contact</a>
+        </div>
+    </div>
+
+    <section class="cookie-text-container" style="margin-top: 120px;">
+        <h2>Accessibility Statement</h2>
+
+            <p>Capodan is committed to ensuring that our website is accessible to everyone, including people with disabilities. We aim to follow best practices for usability and inclusive design so that all visitors can navigate and understand our content.</p>
+
+        <h3>What we’ve done</h3>
+            <ul>
+            <li>Used clear, readable fonts and high-contrast colour schemes</li>
+            <li>Structured content with meaningful headings and semantic HTML</li>
+            <li>Provided alternative text for key images</li>
+            <li>Made the site responsive across devices and screen sizes</li>
+            </ul>
+
+        <h3>Known limitations</h3>
+            <p>Some documents or embedded third-party tools (such as survey forms or videos) may not fully meet accessibility standards. We are working to improve this and ensure alternative formats are available on request.</p>
+
+        <h3>Feedback and contact</h3>
+            <p>If you experience any difficulty using our website or would like to suggest improvements, please get in touch:</p>
+            <p>Email: <a href="mailto:contact@capodan.com">contact@capodan.com</a></p>
+
+            <p>This statement was last reviewed on 24 May 2025 and will be updated as improvements are made.</p>
+
+    </section>
+    
+    <footer class="footer-columns">
+    <div class="footer-column">
+        <img src="ASSETS/Capo1.svg" alt="Capodan Logo" class="footer-logo-img">
+        <p>
+        Capodan Research Ltd is a registered company in England and Wales.<br>
+        Company No. 16292639
+        </p>
+        <p>© Capodan 2025. All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-column">
+        <h3>Links</h3>
+        <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        <li><a href="terms-of-use.html">Terms of Use</a></li>
+        <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+    <h3>UK Office</h3>
+    <address>
+        First Floor, Swan Buildings<br>
+        20 Swan Street<br>
+        Manchester, M4 5JW<br>
+        <a href="mailto:contact@capodan.com">contact@capodan.com</a><br>
+        <a href="tel:+441615245787">+44 (0)161 524 5787</a>
+    </address>
+    </div>
+
+    <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/capodan-team" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/capodanresearch" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/capodanteam" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Twitter">
+            <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+    </div>
+    </footer>
+    <script>
+        // DOM Ready: Fade-In Effect + Cookie Banner
+        document.addEventListener("DOMContentLoaded", function () {
+            // ✅ Show Cookie Banner (DEV: force show for testing)
+
+            if (!localStorage.getItem("cookiesAccepted")) {
+                const banner = document.getElementById("cookie-banner");
+                const backdrop = document.getElementById("cookie-backdrop");
+                if (banner) banner.style.display = "flex";
+                if (backdrop) backdrop.style.display = "block";
+            }
+        });
+        //*JS COOKIES*//
+        function acceptCookies() {
+            localStorage.setItem("cookiesAccepted", "true");
+            document.getElementById("cookie-banner").style.display = "none";
+            document.getElementById("cookie-backdrop").style.display = "none";
+        }
+
+        function rejectCookies() {
+            localStorage.setItem("cookiesAccepted", "false");
+            document.getElementById("cookie-banner").style.display = "none";
+            document.getElementById("cookie-backdrop").style.display = "none";
+        }
+
+        function manageCookies() {
+            alert("Custom cookie settings coming soon.");
+        }
+
+        function manageCookies() {
+            document.getElementById("cookie-modal").classList.add("show");
+        }
+
+        function closeCookieModal() {
+            document.getElementById("cookie-modal").classList.remove("show");
+        }
+
+        function saveCookieSettings() {
+        const analytics = document.getElementById("analytics-cookies").checked;
+        const personalisation = document.getElementById("personalisation-cookies").checked;
+
+        localStorage.setItem("cookiesAccepted", "true");
+        localStorage.setItem("allowAnalytics", analytics);
+        localStorage.setItem("allowPersonalisation", personalisation);
+
+        document.getElementById("cookie-banner").style.display = "none";
+        document.getElementById("cookie-backdrop").style.display = "none";
+        closeCookieModal();
+        }
+        //*JS COOKIES END*//
+    </script>
+<!--HTML COOKIES-->
+<div id="cookie-backdrop" class="cookie-backdrop" style="display: none;"></div>
+<div id="cookie-banner" class="cookie-banner" style="display: none;">
+  <div class="cookie-text">
+    <strong>Your data, your choice</strong>
+    <p>
+    We use cookies to make Capodan work better for you, to understand what’s useful and to keep things secure.
+    You can read more in our <a href="cookie-policy.html" target="_blank">Cookie Policy</a>.
+    </p>
+  </div>
+  <div class="cookie-buttons">
+    <button onclick="manageCookies()">Manage choices</button>
+    <button onclick="rejectCookies()">Decline non-essentials</button>
+    <button class="accept" onclick="acceptCookies()">Accept all</button>
+  </div>
+</div>
+
+<div id="cookie-modal" class="cookie-modal">
+  <div class="cookie-modal-content">
+    <span class="close-modal" onclick="closeCookieModal()">×</span>
+    <h2>Privacy Preferences</h2>
+    <p>
+    We use cookies to enhance your experience and better understand how our site is used. 
+    You can choose which cookies to allow below. For more information, 
+    see our <a href="cookie-policy.html" target="_blank" style="color: #90caf9; text-decoration: underline;">Cookie Policy</a>.
+    </p>
+    <div class="cookie-toggle-group">
+      <label>
+        <input type="checkbox" id="functional-cookies" checked disabled>
+        Functional (always on)
+      </label>
+      <p class="toggle-description">Essential for site functionality.</p>
+
+      <label>
+        <input type="checkbox" id="analytics-cookies">
+        Analytics
+      </label>
+      <p class="toggle-description">Helps us understand how visitors use our site.</p>
+
+      <label>
+        <input type="checkbox" id="personalisation-cookies">
+        Personalisation
+      </label>
+      <p class="toggle-description">Used to tailor content and services based on your behaviour.</p>
+    </div>
+
+    <div class="cookie-modal-actions">
+      <button onclick="rejectCookies()">Reject All</button>
+      <button class="accept" onclick="saveCookieSettings()">Save Settings</button>
+    </div>
+  </div>
+<!--HTML COOKIES END-->
+</body>
