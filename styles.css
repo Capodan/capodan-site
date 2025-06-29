@@ -834,7 +834,7 @@ video {
 }
 
 .SPtile:nth-child(1) {
-    background-image: url('ASSETS/SPLIT1.svg');
+    background-image: url('ASSETS/SPLIT1.png');
 }
 
 .SPtile:nth-child(2) {
