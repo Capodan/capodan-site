@@ -315,7 +315,7 @@ const resourceModalsContent = {
             7: { 
                 title: "Rewriting Patient Expectations with Long-Acting Injectables", 
                 text: "Language isn't just clinical, it’s emotional. We explore how word choice around new treatments shapes uptake, comfort, and trust.",
-                image: "ASSETS/PHARMPG1.svg",
+                image: "ASSETS/PHARMAPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             8: { 
