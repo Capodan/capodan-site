@@ -1725,7 +1725,7 @@ video {
 
 .pharma-tile-injectable-cover {
     position: relative;
-    background: url('ASSETS/PHARMPG1.svg') no-repeat center center;
+    background: url('ASSETS/PHARMPG1.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -1743,7 +1743,7 @@ video {
 
 .pharma-tile-sideeffects-cover {
     position: relative;
-    background: url('ASSETS/PHARMPG2.svg') no-repeat center center;
+    background: url('ASSETS/PHARMPG2.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -1761,7 +1761,7 @@ video {
 
 .pharma-tile-ozempic-mounjaro-cover {
     position: relative;
-    background: url('ASSETS/PHARMPG3.svg') no-repeat center center;
+    background: url('ASSETS/PHARMPG3.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -1855,7 +1855,7 @@ video {
 
 .travel-tile-cruise-cover {
     position: relative;
-    background: url('ASSETS/TRVAELPG1.svg') no-repeat center center;
+    background: url('ASSETS/TRVAELPG1.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -1873,7 +1873,7 @@ video {
 
 .travel-tile-flexible-cover {
     position: relative;
-    background: url('ASSETS/TRVAELPG2.svg') no-repeat center center;
+    background: url('ASSETS/TRVAELPG2.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -1891,7 +1891,7 @@ video {
 
 .travel-tile-asia-cover {
     position: relative;
-    background: url('ASSETS/TRVAELPG3.svg') no-repeat center center;
+    background: url('ASSETS/TRVAELPG3.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -1979,7 +1979,7 @@ video {
 
 .sport-tile-stick-cover {
     position: relative;
-    background: url('ASSETS/SPORTPG1.svg') no-repeat center center;
+    background: url('ASSETS/SPORTPG1.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -1997,7 +1997,7 @@ video {
 
 .sport-tile-women-cover {
     position: relative;
-    background: url('ASSETS/SPORTPG2.svg') no-repeat center center;
+    background: url('ASSETS/SPORTPG2.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2015,7 +2015,7 @@ video {
 
 .sport-tile-heritage-cover {
     position: relative;
-    background: url('ASSETS/SPORTPG3.svg') no-repeat center center;
+    background: url('ASSETS/SPORTPG3.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2093,7 +2093,7 @@ video {
 
 .AI-tile-hype-cover {
     position: relative;
-    background: url('ASSETS/AIPG1.svg') no-repeat center center;
+    background: url('ASSETS/AIPG1.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2111,7 +2111,7 @@ video {
 
 .AI-tile-grok-cover {
     position: relative;
-    background: url('ASSETS/AIPG2.svg') no-repeat center center;
+    background: url('ASSETS/AIPG2.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2129,7 +2129,7 @@ video {
 
 .AI-tile-veo-cover {
     position: relative;
-    background: url('ASSETS/AIPG3.svg') no-repeat center center;
+    background: url('ASSETS/AIPG3.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2193,7 +2193,7 @@ video {
 
 .media-tile-last-cover {
     position: relative;
-    background: url('ASSETS/MEDIAPG1.svg') no-repeat center center;
+    background: url('ASSETS/MEDIAPG1.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2211,7 +2211,7 @@ video {
 
 .media-tile-tiktok-cover {
     position: relative;
-    background: url('ASSETS/MEDIAPG2.svg') no-repeat center center;
+    background: url('ASSETS/MEDIAPG2.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2229,7 +2229,7 @@ video {
 
 .media-tile-netflix-cover {
     position: relative;
-    background: url('ASSETS/MEDIAPG3.svg') no-repeat center center;
+    background: url('ASSETS/MEDIAPG3.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2293,7 +2293,7 @@ video {
 
 .FMCG-tile-copy-cover {
     position: relative;
-    background: url('ASSETS/FMCGPG1.svg') no-repeat center center;
+    background: url('ASSETS/FMCGPG1.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2311,7 +2311,7 @@ video {
 
 .FMCG-tile-protein-cover {
     position: relative;
-    background: url('ASSETS/FMCGPG2.svg') no-repeat center center;
+    background: url('ASSETS/FMCGPG2.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2329,7 +2329,7 @@ video {
 
 .FMCG-tile-dove-cover {
     position: relative;
-    background: url('ASSETS/FMCGPG3.svg') no-repeat center center;
+    background: url('ASSETS/FMCGPG3.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2393,7 +2393,7 @@ video {
 
 .finance-tile-klarna-cover {
     position: relative;
-    background: url('ASSETS/FINANCEPG1.svg') no-repeat center center;
+    background: url('ASSETS/FINANCEPG1.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2411,7 +2411,7 @@ video {
 
 .finance-tile-genz-cover {
     position: relative;
-    background: url('ASSETS/FINANCEPG2.svg') no-repeat center center;
+    background: url('ASSETS/FINANCEPG2.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2429,7 +2429,7 @@ video {
 
 .finance-tile-morethan-cover {
     position: relative;
-    background: url('ASSETS/FINANCEPG3.svg') no-repeat center center;
+    background: url('ASSETS/FINANCEPG3.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2506,7 +2506,7 @@ video {
 
 .pubsec-tile-cdc-cover {
     position: relative;
-    background: url('ASSETS/PUBSECPG1.svg') no-repeat center center;
+    background: url('ASSETS/PUBSECPG1.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2524,7 +2524,7 @@ video {
 
 .pubsec-tile-self-cover {
     position: relative;
-    background: url('ASSETS/PUBSECPG2.svg') no-repeat center center;
+    background: url('ASSETS/PUBSECPG2.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2542,7 +2542,7 @@ video {
 
 .pubsec-tile-student-cover {
     position: relative;
-    background: url('ASSETS/PUBSECPG3.svg') no-repeat center center;
+    background: url('ASSETS/PUBSECPG3.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2619,7 +2619,7 @@ video {
 
 .b2b-tile-salesf-cover {
     position: relative;
-    background: url('ASSETS/B2BPG1.svg') no-repeat center center;
+    background: url('ASSETS/B2BPG1.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2637,7 +2637,7 @@ video {
 
 .b2b-tile-pitch-cover {
     position: relative;
-    background: url('ASSETS/B2BPG2.svg') no-repeat center center;
+    background: url('ASSETS/B2BPG2.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
@@ -2655,7 +2655,7 @@ video {
 
 .b2b-tile-canva-cover {
     position: relative;
-    background: url('ASSETS/B2BPG3.svg') no-repeat center center;
+    background: url('ASSETS/B2BPG3.png') no-repeat center center;
     background-size: cover;
     overflow: hidden;
 }
