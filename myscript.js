@@ -297,19 +297,19 @@ const resourceModalsContent = {
             4: { 
                 title: "Nike vs. Adidas", 
                 text: "Both brands lead, but they lead differently, and their tone says it all. We compare how language in retail shapes identity, loyalty, and cultural edge.",
-                image: "ASSETS/RETAILPG1.svg",
+                image: "ASSETS/RETAILPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             5: { 
                 title: "The Unboxed Effect", 
                 text: "Unboxing is no longer just a moment, it's a message. We explore how brands shape anticipation, quality and connection through packaging language.",
-                image: "ASSETS/RETAILPG2.svg",
+                image: "ASSETS/RETAILPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             6: { 
                 title: "Beating the Tariffs", 
                 text: "When pricing changes, how you frame it matters. This piece examines how brands use language to soften cost shifts and protect perception.",
-                image: "ASSETS/RETAILPG3.svg",
+                image: "ASSETS/RETAILPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             7: { 
@@ -321,157 +321,157 @@ const resourceModalsContent = {
             8: { 
                 title: "The Power of Placement in Side Effect Messaging", 
                 text: "Where side effects are mentioned is as important as what is said. We explore the linguistic impact of placement, framing, and reassurance.",
-                image: "ASSETS/PHARMPG2.svg",
+                image: "ASSETS/PHARMPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             9: { 
                 title: "Ozempic vs. Mounjaro", 
                 text: "These names are everywhere, but what do they really signal to patients? We analyse tone, naming strategy and the rise of wellness pharma.",
-                image: "ASSETS/PHARMPG3.svg",
+                image: "ASSETS/PHARMPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             10: { 
                 title: "Short Cruise, Big Reset", 
                 text: "In a cost-conscious climate, language that reassures matters. This insight explores how short-break messaging taps into emotion and ease.",
-                image: "ASSETS/TRVAELPG1.svg",
+                image: "ASSETS/TRVAELPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             11: { 
                 title: "Flexible vs. Safe? The Trade-off Travellers Notice", 
                 text: "“Free to cancel” and “fully protected” say very different things. We decode how travel brands balance risk, control and confidence in real time.",
-                image: "ASSETS/TRVAELPG2.svg",
+                image: "ASSETS/TRVAELPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             12: { 
                 title: "Back on the Map Asia’s Travel Revival", 
                 text: "Language is playing a huge role in Asia’s tourism recovery. We unpack how reassurance, nostalgia and aspiration are shaping the comeback.",
-                image: "ASSETS/TRVAELPG3.svg",
+                image: "ASSETS/TRVAELPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             13: { 
                 title: "The Last of.... the Buzz?", 
                 text: "Once a surefire formula, franchise language now risks fatigue. We explore how tone can still spark excitement—or quietly turn audiences away.",
-                image: "ASSETS/MEDIAPG1.svg",
+                image: "ASSETS/MEDIAPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             14: { 
                 title: "The TikTokification of News", 
                 text: "Swipe-fast headlines and hyper-emotive captions are reshaping how news is consumed. This paper looks at how tone, trust, and tempo are shifting.",
-                image: "ASSETS/MEDIAPG2.svg",
+                image: "ASSETS/MEDIAPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             15: { 
                 title: "Netflix vs. Apple TV+", 
                 text: "Two streaming giants, two brand languages. We dissect how each builds prestige, innovation, and viewer loyalty through tone.",
-                image: "ASSETS/MEDIAPG3.svg",
+                image: "ASSETS/MEDIAPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             16: { 
                 title: "Human, Not Hype", 
                 text: "In the AI space, trust hinges on tone. We show how brands are moving from spectacle to substance, and what sounds credible today.",
-                image: "ASSETS/AIPG1.svg",
+                image: "ASSETS/AIPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             17: { 
                 title: "Grok vs. ChatGPT vs. Gemini", 
                 text: "Each AI assistant has its own voice, but which one lands best? This piece compares tone, clarity, and the role of character in AI adoption.",
-                image: "ASSETS/AIPG2.svg",
+                image: "ASSETS/AIPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             18: { 
                 title: "Cut to Veo 3", 
                 text: "New tech, new storytelling. We explore how brands like Veo position themselves in a world of cinematic AI and shifting creative roles.",
-                image: "ASSETS/AIPG3.svg",
+                image: "ASSETS/AIPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             19: { 
                 title: "Stick to Football, Or Don’t", 
                 text: "When athletes speak out, tone matters more than ever. This paper explores how values-based language plays out in sport and fandom.",
-                image: "ASSETS/SPORTPG1.svg",
+                image: "ASSETS/SPORTPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             20: { 
                 title: "New League, New Language", 
                 text: "Women’s sport is carving out a new voice. We look at how tone is being used to assert identity, inspire fans, and challenge old tropes.",
-                image: "ASSETS/SPORTPG2.svg",
+                image: "ASSETS/SPORTPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             21: { 
                 title: "Hype vs. Heritage", 
                 text: "Not all legacy branding lands. We explore how sports brands balance nostalgia and novelty in high-pressure cultural spaces.",
-                image: "ASSETS/SPORTPG3.svg",
+                image: "ASSETS/SPORTPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             22: { 
                 title: "From Bot to Basket", 
                 text: "AI copy is entering the FMCG aisle, but does it connect? We explore where automation wins, where it fails, and how tone still drives purchase.",
-                image: "ASSETS/FMCGPG1.svg",
+                image: "ASSETS/FMCGPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             23: { 
                 title: "The Protein Boom", 
                 text: "Protein is everywhere, but how it's talked about varies wildly. This insight decodes the language of health, strength and snack appeal.",
-                image: "ASSETS/FMCGPG2.svg",
+                image: "ASSETS/FMCGPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             24: { 
                 title: "Dove vs. Nivea", 
                 text: "Two beauty giants, two very different approaches to trust. We compare how language shapes perception across tone, confidence and care.",
-                image: "ASSETS/FMCGPG3.svg",
+                image: "ASSETS/FMCGPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             25: { 
                 title: "Klarna vs. Amex", 
                 text: "Buy-now-pay-later vs. traditional prestige, language defines the divide. We unpack how each builds confidence, ease, and control.",
-                image: "ASSETS/FINANCEPG1.svg",
+                image: "ASSETS/FINANCEPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             26: { 
                 title: "Gen Z investors", 
                 text: "Younger investors are fluent in finance, but reject outdated tone. We explore how to speak their language without losing rigour.",
-                image: "ASSETS/FINANCEPG2.svg",
+                image: "ASSETS/FINANCEPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             27: { 
                 title: "More Than Covered", 
                 text: "Insurance doesn’t need to sound cold. This paper shows how brands are building warmth, empathy and understanding through tone.",
-                image: "ASSETS/FINANCEPG3.svg",
+                image: "ASSETS/FINANCEPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             28: { 
                 title: "CDC vs. Mayo Clinic", 
                 text: "Authority alone doesn’t cut through anymore. We compare how tone, clarity and accessibility shape public trust in health comms.",
-                image: "ASSETS/PUBSECPG1.svg",
+                image: "ASSETS/PUBSECPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             29: { 
                 title: "Power to the People?", 
                 text: "Local voices are rising, but the tone of authority still lingers. This piece explores how language empowers, or silences, community agency.",
-                image: "ASSETS/PUBSECPG2.svg",
+                image: "ASSETS/PUBSECPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             30: { 
                 title: "Not Just a Loan", 
                 text: "Financial aid language often fails those who need it most. We decode how tone can shape dignity, clarity and take-up.",
-                image: "ASSETS/PUBSECPG3.svg",
+                image: "ASSETS/PUBSECPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             31: { 
                 title: "HubSpot vs. Salesforce", 
                 text: "One is casual, the other commanding, but both have reach. We analyse how B2B tone creates clarity, loyalty and competitive edge.",
-                image: "ASSETS/B2BPG1.svg",
+                image: "ASSETS/B2BPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             32: { 
                 title: "The Pitch Gap", 
                 text: "Some pitches land, others fall flat, and language is often the reason. This paper explores what successful proposals get right in tone.",
-                image: "ASSETS/B2BPG2.svg",
+                image: "ASSETS/B2BPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             33: { 
                 title: "Canva vs. Adobe", 
                 text: "Ease vs. legacy. We break down how these creative giants signal skill, approachability and value through every line of copy.",
-                image: "ASSETS/B2BPG3.svg",
+                image: "ASSETS/B2BPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             }
         };
