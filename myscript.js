@@ -279,19 +279,19 @@ const resourceModalsContent = {
             1: { 
                 title: "To Pop or Not to Pop?", 
                 text: "Why did a simple change to a bottle cap trigger such strong reactions? This paper unpacks what it tells us about environmental messaging, brand trust and how language shapes everyday decisions.",
-                image: "ASSETS/ENVPG1.svg",
+                image: "ASSETS/ENVPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             2: { 
                 title: "When Net Zero Sounds Hollow", 
                 text: "Net Zero has become a buzzword, but does it still carry weight with the public? This piece explores how overuse and vagueness risk undermining credibility and slowing behavioural change.",
-                image: "ASSETS/ENVPG2.svg",
+                image: "ASSETS/ENVPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             3: { 
                 title: "Driving Division: Politics in the EV Lane", 
                 text: "Electric vehicles should be neutral ground, but language is making them a political battleground. We analyse how tone fuels division—and what brands must do to stay above the noise.",
-                image: "ASSETS/ENVPG3.svg",
+                image: "ASSETS/ENVPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             4: { 
