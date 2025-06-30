@@ -2827,7 +2827,7 @@ video {
 }
 
 .JASP-tile:nth-child(3) {
-    background-image: url('ASSETS/SPLIT3.svg');
+    background-image: url('ASSETS/SPLIT3.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
