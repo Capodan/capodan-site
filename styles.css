@@ -285,7 +285,7 @@ main a, .cookie-text a, .footer-column a {
 }
 
 .tile:first-child {
-    background-image: url('ASSETS/SPLIT14.svg');
+    background-image: url('ASSETS/SPLIT14.png');
     background-size: cover; /* Ensures the image covers the whole tile */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -838,59 +838,59 @@ video {
 }
 
 .SPtile:nth-child(2) {
-    background-image: url('ASSETS/SPLIT2.svg');
+    background-image: url('ASSETS/SPLIT2.png');
 }
 
 .SPtile:nth-child(3) {
-    background-image: url('ASSETS/SPLIT3.svg');
+    background-image: url('ASSETS/SPLIT3.png');
 }
 
 .SPtile:nth-child(4) {
-    background-image: url('ASSETS/SPLIT4.svg');
+    background-image: url('ASSETS/SPLIT4.png');
 }
 
 .SPtile:nth-child(5) {
-    background-image: url('ASSETS/SPLIT5.svg');
+    background-image: url('ASSETS/SPLIT5.png');
 }
 
 .SPtile:nth-child(6) {
-    background-image: url('ASSETS/SPLIT6.svg');
+    background-image: url('ASSETS/SPLIT6.png');
 }
 
 .SPtile:nth-child(7) {
-    background-image: url('ASSETS/SPLIT7.svg');
+    background-image: url('ASSETS/SPLIT7.png');
 }
 
 .SPtile:nth-child(8) {
-    background-image: url('ASSETS/SPLIT8.svg');
+    background-image: url('ASSETS/SPLIT8.png');
 }
 
 .SPtile:nth-child(9) {
-    background-image: url('ASSETS/SPLIT9.svg');
+    background-image: url('ASSETS/SPLIT9.png');
 }
 
 .SPtile:nth-child(10) {
-    background-image: url('ASSETS/SPLIT10.svg');
+    background-image: url('ASSETS/SPLIT10.png');
 }
 
 .SPtile:nth-child(11) {
-    background-image: url('ASSETS/SPLIT11.svg');
+    background-image: url('ASSETS/SPLIT11.png');
 }
 
 .SPtile:nth-child(12) {
-    background-image: url('ASSETS/SPLIT12.svg');
+    background-image: url('ASSETS/SPLIT12.png');
 }
 
 .SPtile:nth-child(13) {
-    background-image: url('ASSETS/SPLIT13.svg');
+    background-image: url('ASSETS/SPLIT13.png');
 }
 
 .SPtile:nth-child(14) {
-    background-image: url('ASSETS/SPLIT14.svg');
+    background-image: url('ASSETS/SPLIT14.png');
 }
 
 .SPtile:nth-child(15) {
-    background-image: url('ASSETS/SPLIT15.svg');
+    background-image: url('ASSETS/SPLIT15.png');
 }
 
 /**/
