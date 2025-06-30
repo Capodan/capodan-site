@@ -351,7 +351,7 @@ main a, .cookie-text a, .footer-column a {
 }
 
 .tile:nth-child(3) {
-    background-image: url('ASSETS/STRAT3.svg');
+    background-image: url('ASSETS/STRAT3.png');
     background-size: cover; /* Ensures the image covers the whole tile */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -2841,7 +2841,7 @@ video {
 }
 
 .JASP-tile:nth-child(5) {
-    background-image: url('ASSETS/STRAT3.svg');
+    background-image: url('ASSETS/STRAT3.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -3225,23 +3225,23 @@ video {
 }
 
 .SPtile2:nth-child(1) {
-    background-image: url('ASSETS/STRAT1.svg');
+    background-image: url('ASSETS/STRAT1.png');
 }
 
 .SPtile2:nth-child(2) {
-    background-image: url('ASSETS/STRAT2.svg');
+    background-image: url('ASSETS/STRAT2.png');
 }
 
 .SPtile2:nth-child(3) {
-    background-image: url('ASSETS/STRAT3.svg');
+    background-image: url('ASSETS/STRAT3.png');
 }
 
 .SPtile2:nth-child(4) {
-    background-image: url('ASSETS/STRAT4.svg');
+    background-image: url('ASSETS/STRAT4.png');
 }
 
 .SPtile2:nth-child(5) {
-    background-image: url('ASSETS/STRAT5.svg');
+    background-image: url('ASSETS/STRAT5.png');
 }
 
 .cookie-banner {
