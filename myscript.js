@@ -699,31 +699,36 @@ function scrollToTop() {
 }
 
 fetch('blog-posts/posts.json')
-    .then(res => res.json())
-    .then(posts => {
-      const container = document.getElementById('blog-posts');
-      posts.forEach(post => {
-        fetch(`blog-posts/${post.file}`)
-          .then(res => res.text())
-          .then(md => {
-            const frontmatterMatch = md.match(/---\s*([\s\S]*?)\s*---/);
-            let content = md;
-            if (frontmatterMatch) {
-              content = md.replace(frontmatterMatch[0], '');
-            }
-            const html = marked.parse(content);
-            const postElement = document.createElement('article');
-            postElement.className = 'blog-article';
-            postElement.innerHTML = `
-              <h2 class="blog-title">${post.title}</h2>
-              <p class="blog-date">${post.date}</p>
-              <div class="blog-body">${html}</div>
-              <hr class="blog-divider">
-            `;
-            container.appendChild(postElement);
-          });
-      });
+  .then(res => res.json())
+  .then(posts => {
+    // Sort posts by date descending
+    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    const container = document.getElementById('blog-posts');
+    container.innerHTML = ''; // clear any existing content
+
+    posts.forEach(post => {
+      fetch(`blog-posts/${post.file}`)
+        .then(res => res.text())
+        .then(md => {
+          const frontmatterMatch = md.match(/---\s*([\s\S]*?)\s*---/);
+          let content = md;
+          if (frontmatterMatch) {
+            content = md.replace(frontmatterMatch[0], '');
+          }
+          const html = marked.parse(content);
+          const postElement = document.createElement('article');
+          postElement.className = 'blog-article';
+          postElement.innerHTML = `
+            <h2 class="blog-title">${post.title}</h2>
+            <p class="blog-date">${post.date}</p>
+            <div class="blog-body">${html}</div>
+            <hr class="blog-divider">
+          `;
+          container.appendChild(postElement);
+        });
     });
+  });
 
   fetch('blog-posts/posts.json')
     .then(response => response.json())
