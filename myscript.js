@@ -733,3 +733,40 @@ fetch('blog-posts/posts.json')
         });
     });
   });
+
+// Populate full blog page (blog.html)
+fetch('blog-posts/posts.json')
+  .then(res => res.json())
+  .then(posts => {
+    // sort by date DESC so newest is first
+    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    const container = document.getElementById('blog-posts');
+    if (!container) return; // don't run if not on blog.html
+    container.innerHTML = '';
+
+    posts.forEach(post => {
+      fetch(`blog-posts/${post.file}`)
+        .then(res => res.text())
+        .then(md => {
+          // strip YAML frontmatter
+          const frontmatterMatch = md.match(/---\s*([\s\S]*?)\s*---/);
+          let content = md;
+          if (frontmatterMatch) {
+            content = md.replace(frontmatterMatch[0], '');
+          }
+
+          const html = marked.parse(content);
+
+          const postElement = document.createElement('article');
+          postElement.className = 'blog-article';
+          postElement.innerHTML = `
+            <h2 class="blog-title">${post.title}</h2>
+            <p class="blog-date">${new Date(post.date).toDateString()}</p>
+            <div class="blog-body">${html}</div>
+            <hr class="blog-divider">
+          `;
+          container.appendChild(postElement);
+        });
+    });
+  });
