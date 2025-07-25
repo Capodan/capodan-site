@@ -701,65 +701,35 @@ function scrollToTop() {
 fetch('blog-posts/posts.json')
   .then(res => res.json())
   .then(posts => {
-    // Sort posts by date descending
+    // sort descending by date
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    const container = document.getElementById('blog-posts');
-    container.innerHTML = ''; // clear any existing content
+    const container = document.getElementById('carousel-container');
+    container.innerHTML = ''; // clear first
 
     posts.forEach(post => {
       fetch(`blog-posts/${post.file}`)
         .then(res => res.text())
-        .then(md => {
-          const frontmatterMatch = md.match(/---\s*([\s\S]*?)\s*---/);
-          let content = md;
-          if (frontmatterMatch) {
-            content = md.replace(frontmatterMatch[0], '');
-          }
-          const html = marked.parse(content);
-          const postElement = document.createElement('article');
-          postElement.className = 'blog-article';
-          postElement.innerHTML = `
-            <h2 class="blog-title">${post.title}</h2>
-            <p class="blog-date">${post.date}</p>
-            <div class="blog-body">${html}</div>
-            <hr class="blog-divider">
+        .then(text => {
+          const titleMatch = text.match(/title:\s*"(.+?)"/);
+          const dateMatch = text.match(/date:\s*(\d{4}-\d{2}-\d{2})/);
+          const bodyMatch = text.match(/---\n[\s\S]*?---\n([\s\S]*)/);
+
+          const title = titleMatch ? titleMatch[1] : 'Untitled';
+          const date = dateMatch ? new Date(dateMatch[1]).toDateString() : '';
+          const preview = bodyMatch ? bodyMatch[1].split('\n').slice(0, 3).join(' ') : '';
+
+          const card = document.createElement('div');
+          card.className = 'blog-card';
+          card.innerHTML = `
+            <div class="card-content">
+              <p class="blog-card-date">${date}</p>
+              <h3 class="blog-card-title">${title}</h3>
+              <p class="blog-card-preview">${preview}</p>
+              <a href="blog.html" class="read-more-link">Read More →</a>
+            </div>
           `;
-          container.appendChild(postElement);
+          container.appendChild(card);
         });
     });
   });
-
-  fetch('blog-posts/posts.json')
-    .then(response => response.json())
-    .then(posts => {
-      const container = document.getElementById('carousel-container');
-
-      posts.sort((a, b) => new Date(b.date) - new Date(a.date)); // Most recent first
-
-      posts.forEach(post => {
-        fetch(`blog-posts/${post.file}`)
-          .then(response => response.text())
-          .then(text => {
-            const titleMatch = text.match(/title:\s*"(.+?)"/);
-            const dateMatch = text.match(/date:\s*(\d{4}-\d{2}-\d{2})/);
-            const bodyMatch = text.match(/---\n[\s\S]*?---\n([\s\S]*)/);
-
-            const title = titleMatch ? titleMatch[1] : 'Untitled';
-            const date = dateMatch ? new Date(dateMatch[1]).toDateString() : '';
-            const preview = bodyMatch ? bodyMatch[1].split('\n').slice(0, 3).join(' ') : '';
-
-            const card = document.createElement('div');
-            card.className = 'blog-card';
-            card.innerHTML = `
-              <div class="card-content">
-                <p class="blog-card-date">${date}</p>
-                <h3 class="blog-card-title">${title}</h3>
-                <p class="blog-card-preview">${preview}</p>
-                <a href="blog.html" class="read-more-link">Read More →</a>
-              </div>
-            `;
-            container.appendChild(card);
-          });
-      });
-    });
