@@ -3692,7 +3692,7 @@ section.SPBLOCK-bg {
     padding: 10px 0;
   }
 
-  .tab-buttons.active {
+  #nav-links.active {
     display: flex;
   }
 
