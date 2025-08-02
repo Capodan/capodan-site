@@ -45,7 +45,6 @@ body {
   justify-content: flex-end;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap;
 }
 
 .tab-buttons a {
