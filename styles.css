@@ -3594,6 +3594,19 @@ section.SPBLOCK-bg {
   top: 18px;
   right: 20px;
   z-index: 1001;
+  transition: transform 0.4s ease;
+}
+
+.burger.open {
+  transform: rotate(180deg);
+}
+
+.burger::before {
+  content: "☰";
+}
+
+.burger.open::before {
+  content: "✕";
 }
 
 #nav-links {
