@@ -3590,8 +3590,15 @@ section.SPBLOCK-bg {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  margin-left: auto;
-  padding: 10px;
+  color: #373737;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 1001;
+}
+
+#nav-links {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {   
@@ -3600,6 +3607,10 @@ section.SPBLOCK-bg {
     text-align: center;
   }
 
+  #nav-links.active {
+    display: flex;
+  }
+    
   .logo-img {
     max-width: 120px;
   }
