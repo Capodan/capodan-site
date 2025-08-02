@@ -3603,7 +3603,7 @@ section.SPBLOCK-bg {
 
 .burger::before {
   content: "☰";
-
+}
 
 .burger.open::before {
   content: "✕";
