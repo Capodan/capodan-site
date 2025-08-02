@@ -3695,15 +3695,7 @@ section.SPBLOCK-bg {
   }
 
   .tab-buttons {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: 
-      max-height 0.4s ease,
-      opacity 0.3s ease,
-      transform 0.3s ease;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -3714,10 +3706,7 @@ section.SPBLOCK-bg {
   }
 
   .tab-buttons.active {
-    max-height: 500px; /* enough space to show all links */
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+    display: flex;
   }
 
   .tab-buttons a {
