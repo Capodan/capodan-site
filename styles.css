@@ -3609,10 +3609,6 @@ section.SPBLOCK-bg {
     flex-direction: column !important;
     text-align: center;
   }
-
-  #nav-links.active {
-    display: flex;
-  }
     
   .logo-img {
     max-width: 120px;
@@ -3681,7 +3677,7 @@ section.SPBLOCK-bg {
   }
 
   .tab-buttons {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -3691,12 +3687,12 @@ section.SPBLOCK-bg {
     z-index: 1000;
   }
 
-  .tab-buttons a {
-    padding: 10px 0;
-  }
-
   #nav-links.active {
     display: flex;
+  }
+
+  .tab-buttons a {
+    padding: 10px 0;
   }
 
   .services-and-pricing-button {
