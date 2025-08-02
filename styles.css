@@ -40,7 +40,7 @@ body {
   padding-top: 60px; /* default for desktop */
 }
 
-.tab-buttons {
+.tab-button {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -51,14 +51,14 @@ body {
   display: flex;
 }
 
-.tab-buttons a {
+.tab-button a {
   color: #373737;
   text-decoration: none;
   font-weight: 600; /* semi-bold */
   font-size: 0.85em;
 }
 
-.tab-buttons button {
+.tab-button button {
     background-color: #ffffff;
     color: #373737;
     border: 1px solid #ffffff;
