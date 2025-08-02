@@ -48,7 +48,7 @@ body {
 }
 
 #nav-links {
-  display: flex;
+  display: flex !important;
 }
 
 .tab-button a {
