@@ -636,8 +636,9 @@ h1 {
 .video-container {
     position: relative;
     text-align: center;
-    margin: 20px auto;
-    max-width: 100%; /* Added to limit the container width */
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
 }
 
 .video-container video {
