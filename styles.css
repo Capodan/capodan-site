@@ -3586,6 +3586,13 @@ section.SPBLOCK-bg {
   color: #000; /* or whatever matches your modal */
 }
 
+.burger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #373737;
+}
+
 @media screen and (max-width: 768px) {
   .about-flex {
     flex-direction: column !important;
@@ -3648,7 +3655,10 @@ section.SPBLOCK-bg {
     transform: none !important;
   }
 
-  /* NEW: Make tab banner mobile-friendly */
+  .burger {
+    display: block;
+  }
+
   .tab-banner {
     flex-direction: column;
     align-items: flex-start;
@@ -3656,23 +3666,25 @@ section.SPBLOCK-bg {
   }
 
   .tab-buttons {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;  /* adds vertical spacing */
-    margin: 5px 0 0 0;
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 10px 20px;
   }
 
   .tab-buttons a {
-    display: block;
-    padding: 5px 0;
-    font-size: 1rem;
-    width: 100%;         /* optional: full width */
-    text-align: left;    /* or center if preferred */
+    padding: 10px 0;
   }
 
-  .tab-banner h1 {
-    margin-left: 0;
-    margin-bottom: 10px;
+  .tab-buttons.active {
+    display: flex;
   }
 
   .services-and-pricing-button {
