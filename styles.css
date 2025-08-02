@@ -47,10 +47,6 @@ body {
   gap: 30px;
 }
 
-#nav-links {
-  display: flex !important;
-}
-
 .tab-buttons a {
   color: #373737;
   text-decoration: none;
@@ -3602,6 +3598,15 @@ section.SPBLOCK-bg {
 
 #nav-links {
   display: none;
+}
+
+@media screen and (min-width: 769px) {
+  #nav-links {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 768px) {   
