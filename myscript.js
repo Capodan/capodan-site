@@ -771,10 +771,6 @@ fetch('blog-posts/posts.json')
     });
   });
 function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active');
-}
-function toggleMenu() {
-  const nav = document.getElementById("nav-links");
+  const nav = document.querySelector(".tab-buttons");
   nav.classList.toggle("active");
 }
