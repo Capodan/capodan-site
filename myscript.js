@@ -772,5 +772,7 @@ fetch('blog-posts/posts.json')
   });
 function toggleMenu() {
   const nav = document.querySelector(".tab-buttons");
+  const burger = document.querySelector(".burger");
   nav.classList.toggle("active");
+  burger.classList.toggle("open"); // this triggers the animation
 }
