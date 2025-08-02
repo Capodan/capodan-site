@@ -3703,10 +3703,16 @@ section.SPBLOCK-bg {
     background: white;
     width: 100%;
     z-index: 1000;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   .tab-buttons.active {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .tab-buttons a {
