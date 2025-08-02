@@ -47,6 +47,10 @@ body {
   gap: 30px;
 }
 
+#nav-links {
+  display: flex;
+}
+
 .tab-buttons a {
   color: #373737;
   text-decoration: none;
