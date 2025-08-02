@@ -774,3 +774,7 @@ function toggleMenu() {
     const navLinks = document.getElementById('nav-links');
     navLinks.classList.toggle('active');
 }
+function toggleMenu() {
+  const nav = document.getElementById("nav-links");
+  nav.classList.toggle("active");
+}
