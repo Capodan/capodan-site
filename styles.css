@@ -51,7 +51,7 @@ body {
 .tab-buttons a {
   color: #373737;
   text-decoration: none;
-  font-weight: normal;
+  font-weight: semi-bold;
 }
 
 .tab-buttons button {
