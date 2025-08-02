@@ -3601,10 +3601,6 @@ section.SPBLOCK-bg {
   transform: rotate(180deg);
 }
 
-.burger::before {
-  content: "☰";
-}
-
 .burger.open::before {
   content: "✕";
 }
