@@ -3622,17 +3622,17 @@ section.SPBLOCK-bg {
   width: 100%;
   background: rgba(0, 0, 0, 0.7); /* transparent black */
   color: white;
-  font-weight: 600;
   font-size: 0.95rem;
-  padding: 10px 20px;
+  padding: 8px 16px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  z-index: 2;
+  gap: 10px;
+  box-sizing: border-box;
+  font-family: inherit;
 }
 
 .google-rating-banner .star {
-  color: gold;
+  color: white;
   font-size: 1rem;
 }
 
