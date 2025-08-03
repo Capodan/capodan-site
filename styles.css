@@ -3631,8 +3631,7 @@ section.SPBLOCK-bg {
 
   .video-container video {
     margin-top: 100px;
-    height: 20vh !important; /* Try 40–60vh depending on how tall you want */
-    object-fit: cover;
+    height: auto !important;
   }
 
   .SPvideo-container video {
