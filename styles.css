@@ -3638,49 +3638,37 @@ section.SPBLOCK-bg {
 }
 
 /* Container for the 3-step process */
-.three-step-process {
+.steps-section {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 40px 20px;
-  background: transparent;
+  gap: 60px;
+  padding: 50px 5vw;
 }
 
-/* Each row layout */
 .step-row {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* keep items left-aligned */
-  gap: 40px; /* bring text closer to GIFs */
-  padding: 0 5vw; /* add left/right breathing room */
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap;
 }
 
-/* Image styles */
 .step-gif {
-  width: 250px;
-  height: 250px;
+  flex: 0 0 200px;
+  max-width: 200px;
 }
 
-/* Specific positioning */
-.left-gif {
-  order: 0;
-}
-.center-gif {
-  margin: 0 auto;
-}
-.right-gif {
-  order: 1;
+.step-gif img {
+  width: 100%;
+  height: auto;
 }
 
-/* Text */
 .step-text {
   flex: 1;
-  max-width: 450px;
   color: black;
   font-size: 1rem;
   line-height: 1.6;
-  padding-right: 20px; /* add inner gap from the right edge */
+  max-width: 600px;
 }
 
 /* Animation classes */
