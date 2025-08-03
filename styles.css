@@ -3637,6 +3637,7 @@ section.SPBLOCK-bg {
   .SPvideo-container video {
     margin-top: 100px;
     height: auto !important;
+    z-index: 0;
   }
     
     
