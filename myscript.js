@@ -776,15 +776,22 @@ function toggleMenu() {
   nav.classList.toggle("active");
   burger.classList.toggle("open"); // this triggers the animation
 }
-document.addEventListener("DOMContentLoaded", function () {
+function updateVideoSource() {
   const video = document.querySelector(".video-container video");
   const source = video.querySelector("source");
 
-  const isMobile = window.innerWidth <= 768;
+  if (!video || !source) return;
 
-  if (isMobile) {
-    source.setAttribute("src", "ASSETS/CapoMobile.mp4");
+  const isMobile = window.innerWidth <= 768;
+  const currentSrc = source.getAttribute("src");
+  const newSrc = isMobile ? "ASSETS/CapoMobile.mp4" : "ASSETS/Capo.mp4";
+
+  if (currentSrc !== newSrc) {
+    source.setAttribute("src", newSrc);
     video.load();
   }
-});
+}
+
+document.addEventListener("DOMContentLoaded", updateVideoSource);
+window.addEventListener("resize", updateVideoSource); // optional live-resize support
 
