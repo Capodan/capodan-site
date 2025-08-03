@@ -3475,131 +3475,17 @@ section.SPBLOCK-bg {
   margin: 0 !important;        /* ensure no section spacing */
 }
 
-.about-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 100vw;
-    margin: 0 auto;
-    padding: 0px 0px;
-}
-
-.about-image {
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    display: block;
-}
-
-.about-image img {
-    width: 100%;
-    display: block;
-    border-radius: 0;
-}
-
-.about-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%; /* top quarter */
-    background: linear-gradient(to bottom, white, transparent);
-    z-index: 2;
-    pointer-events: none;
-}
-
-.about-text {
-    flex: 1;
-    margin-top: 0px;
-    margin-left: 20px;
-    font-size: 0.8em;
-    color: #000;
-    line-height: 1.6;
-}
-
-.about-text.white-text {
-  color: white;
-  margin-right: 20px;
-}
-
-.about-text h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.about-image2 {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    display: block;
-}
-
-.about-image2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.about-image2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%; /* top quarter */
-    z-index: 2;
-    pointer-events: none;
-}
-
-.about-hero {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.about-text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+.about-title-section {
+  padding: 80px 20px 40px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 30px;
-  border-radius: 10px;
-  z-index: 3;
+  background-color: white;
 }
 
-.about-text-overlay h1 {
+.about-title-section h1 {
   font-size: 3rem;
+  font-weight: bold;
   margin: 0;
-  font-weight: bold;
-}
-
-.about-text-overlay p {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-.about-cta-button {
-  display: inline-block;
-  margin-top: 20px;
-  background-color: #ff6f61;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.about-cta-button:hover {
-  background-color: #e65b50;
+  color: black;
 }
 
 .contact-flex-wrapper {
