@@ -776,3 +776,15 @@ function toggleMenu() {
   nav.classList.toggle("active");
   burger.classList.toggle("open"); // this triggers the animation
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.querySelector(".video-container video");
+  const source = video.querySelector("source");
+
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    source.setAttribute("src", "ASSETS/CapoMobile.mp4");
+    video.load();
+  }
+});
+
