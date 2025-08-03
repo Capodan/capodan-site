@@ -3637,6 +3637,75 @@ section.SPBLOCK-bg {
   font-size: 1rem;
 }
 
+/* Container for the 3-step process */
+.three-step-process {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+  background: transparent;
+}
+
+/* Each row layout */
+.step-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Image styles */
+.step-gif {
+  width: 120px;
+  height: auto;
+}
+
+/* Specific positioning */
+.left-gif {
+  order: 0;
+}
+.center-gif {
+  margin: 0 auto;
+}
+.right-gif {
+  order: 1;
+}
+
+/* Text */
+.step-text {
+  flex: 1;
+  color: black;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Animation classes */
+.fade-in-left {
+  animation: fadeInLeft 1s ease forwards;
+}
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+.fade-in-right {
+  animation: fadeInRight 1s ease forwards;
+}
+
+/* Keyframes */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
 @media screen and (min-width: 769px) {
   #nav-links {
     display: flex;
