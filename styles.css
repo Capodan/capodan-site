@@ -3650,8 +3650,9 @@ section.SPBLOCK-bg {
 .step-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: flex-start; /* keep items left-aligned */
+  gap: 40px; /* bring text closer to GIFs */
+  padding: 0 5vw; /* add left/right breathing room */
   flex-wrap: wrap;
 }
 
@@ -3675,10 +3676,11 @@ section.SPBLOCK-bg {
 /* Text */
 .step-text {
   flex: 1;
+  max-width: 450px;
   color: black;
   font-size: 1rem;
   line-height: 1.6;
-  max-width: 600px;
+  padding-right: 20px; /* add inner gap from the right edge */
 }
 
 /* Animation classes */
