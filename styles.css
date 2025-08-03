@@ -3721,6 +3721,15 @@ section.SPBLOCK-bg {
     text-align: center;
   }
 
+  .step-row {
+    flex-direction: column;
+    text-align: center;
+  }
+    
+  .step-gif {
+    margin: 0 auto;
+  }
+    
   .video-container video {
     margin-top: 100px;
     height: auto !important;
