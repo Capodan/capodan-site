@@ -3630,6 +3630,7 @@ section.SPBLOCK-bg {
   }
 
   .video-container video {
+    margin-top: 20px;
     height: auto !important;
   }
     
