@@ -3731,17 +3731,26 @@ section.SPBLOCK-bg {
     margin-bottom: 40px; /* spacing between each step-row */
   }
 
+  .step-row.step-2,
+  .step-row.step-3 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .step-text {
+    margin: 15px 0 0 0 !important;
+    padding: 0 10px;
+  }
+
   .step-gif {
     margin: 0 auto;
     max-width: 200px;
     width: 100%;
     height: auto;
   }
-
-  .step-text {
-    max-width: 90%;
-  }
-    
+   
   .video-container video {
     margin-top: 100px;
     height: auto !important;
