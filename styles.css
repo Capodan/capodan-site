@@ -3724,12 +3724,22 @@ section.SPBLOCK-bg {
   }
 
   .step-row {
-    flex-direction: column;
+    flex-direction: column !important;
+    align-items: center;
     text-align: center;
+    gap: 15px; /* spacing between gif and text */
+    margin-bottom: 40px; /* spacing between each step-row */
   }
-    
+
   .step-gif {
     margin: 0 auto;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+  }
+
+  .step-text {
+    max-width: 90%;
   }
     
   .video-container video {
