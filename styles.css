@@ -3741,8 +3741,9 @@ section.SPBLOCK-bg {
     padding: 0 20px;
   }
 
-  .step-row:last-child {
-    display: flex;
+  .step-row:nth-child(2),
+  .step-row:nth-child(3) {
+    margin-left: 0 !important; /* 🔧 Ensure override */
   }
    
   .video-container video {
