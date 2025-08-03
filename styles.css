@@ -3627,6 +3627,10 @@ section.SPBLOCK-bg {
     flex-direction: column !important;
     text-align: center;
   }
+
+  .video-container video {
+    height: auto !important;
+  }
     
   .logo-img {
     max-width: 120px;
