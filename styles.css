@@ -3633,6 +3633,12 @@ section.SPBLOCK-bg {
     margin-top: 100px;
     height: auto !important;
   }
+
+  .SPvideo-container video {
+    margin-top: 100px;
+    height: auto !important;
+  }
+    
     
   .logo-img {
     max-width: 120px;
