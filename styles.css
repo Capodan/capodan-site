@@ -3671,6 +3671,18 @@ section.SPBLOCK-bg {
   max-width: 600px;
 }
 
+.step-row:nth-child(1) {
+  margin-left: 0;
+}
+
+.step-row:nth-child(2) {
+  margin-left: 40px;
+}
+
+.step-row:nth-child(3) {
+  margin-left: 80px;
+}
+
 /* Animation classes */
 .fade-in-left {
   animation: fadeInLeft 1s ease forwards;
