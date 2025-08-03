@@ -3676,11 +3676,11 @@ section.SPBLOCK-bg {
 }
 
 .step-row:nth-child(2) {
-  margin-left: 40px;
+  margin-left: 150px;
 }
 
 .step-row:nth-child(3) {
-  margin-left: 80px;
+  margin-left: 300px;
 }
 
 /* Animation classes */
