@@ -29,24 +29,24 @@
     <meta name="twitter:image" content="https://www.capodan.com/ASSETS/Capo1.svg">
 
     <link rel="icon" type="image/png" href="ASSETS/favicon.png">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="myscript.js"></script>
+    <link rel="stylesheet" href="styles (23).css">
+    <script defer src="myscript (9).js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <div class="tab-banner">
-      <a href="index.html">
-        <img src="ASSETS/Capo.svg" class="logo-img" alt="Capodan logo" />
-      </a>
-      <div class="burger" onclick="toggleMenu()"></div>
-      <div class="tab-buttons" id="nav-links">
-        <a href="about.html" class="tab-button about-button">WHY CAPODAN</a>
-        <a href="resources.html" class="tab-button resources-button">INSIGHTS</a>
-        <a href="servicespricing.html" class="tab-button services-and-pricing-button">WAYS TO WORK TOGETHER</a>
-        <a href="blog.html" class="tab-button blog-button">LATEST SIGNALS</a>
-        <a href="contact.html" class="tab-button contact-button">LETS TALK</a>
-      </div>
+        <a href="index.html">
+            <img src="ASSETS/Capo.svg" class="logo-img" alt="Capodan logo" />
+        </a>
+        <div class="burger" onclick="toggleMenu()"></div>
+        <div class="tab-buttons" id="nav-links">
+            <a href="about.html" class="tab-button about-button">WHY CAPODAN</a>
+            <a href="resources.html" class="tab-button resources-button">INSIGHTS</a>
+            <a href="servicespricing.html" class="tab-button services-and-pricing-button">WAYS TO WORK TOGETHER</a>
+            <a href="blog.html" class="tab-button blog-button">LATEST SIGNALS</a>
+            <a href="contact.html" class="tab-button contact-button">LETS TALK</a>
+        </div>
     </div>
     </div>
     <section class="content-offset">
@@ -187,68 +187,95 @@
         <p>Both. In fact, many of our sharpest insights come from complex or technical industries where language is the key barrier to alignment.</p>
         </div>
     </div>
-
     </section>
-    
-    <!-- 🟣 SPEECH TICKERS -->
-    <section class="ticker-section lilac-bg">
-        <div class="ticker-title-left">
-            <h2>The Power You’re Letting Drift</h2>
-        </div>
-        <div class="ticker-wrapper top-wrap">
-            <div class="ticker-group align-left">
+
+    <!-- TICKERS -->
+    <div class="ticker-section lilac-bg">
+        <h2 class="ticker-title">The Cost of Unheard Words</h2>
+        <div class="ticker-wrapper top-wrap horizontal-layout">
+            
+            <!-- Intro Text -->
+            <div class="ticker-textbox left-top">
+                <p>
+                    <span class="accent">Spoken language</span> is the 
+                    <span class="accent">most powerful source</span> of 
+                    <span class="accent">business insight</span>, yet it’s often the first to be 
+                    <span class="ink">overlooked</span>. In 
+                    <span class="ink">sales conversations</span> especially, 
+                    thousands of <span class="accent">valuable words</span> 
+                    <span class="ink">drift away</span> the moment they’re said.
+                </p>
+                <p>
+                    Without <span class="accent">structured capture</span> and 
+                    <span class="accent">linguistic analysis</span>, those 
+                    <span class="accent">words vanish</span>, along with the 
+                    <span class="gold-accent">revenue</span> they could have generated.
+                </p>
+                <p>
+                    The figures show the scale of the loss: for each 
+                    <span class="accent">business size</span>, the 
+                    <span class="accent">words slipping away</span> every second 
+                    translate directly into the 
+                    <span class="gold-accent">revenue</span> shown beneath.
+                </p>
+            </div>
+
+            <!-- Ticker Items -->
+            <div class="ticker-group-top align-horizontal">
+
+                <!-- SME -->
                 <div class="ticker-box">
                     <span class="ticker-label">5-person SME sales team</span>
-                    <span id="sme-ticker" class="ticker-value">0</span>
-                    <span class="ticker-label-words">words</span>
+                    <img src="ASSETS/1.PNG" alt="SME icon" class="one-icon" />
+                    <div class="ticker-values-row">
+                        <div>
+                            <span id="sme-ticker" class="ticker-value">0</span>
+                            <div class="ticker-label-words">words</div>
+                        </div>
+                        <div>
+                            <span id="sme-lost" class="ticker-lost">$0</span>
+                            <div class="ticker-label-words-bottom">revenue</div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Mid -->
                 <div class="ticker-box">
-                    <span class="ticker-label">15-person mid-size sales team</span>
-                    <span id="mid-ticker" class="ticker-value">0</span>
-                    <span class="ticker-label-words">words</span>
+                    <span class="ticker-label">15-person mid sales team</span>
+                    <img src="ASSETS/2.PNG" alt="SME icon" class="two-icon" />
+                    <div class="ticker-values-row">
+                        <div>
+                            <span id="mid-ticker" class="ticker-value">0</span>
+                            <div class="ticker-label-words">words</div>
+                        </div>
+                        <div>
+                            <span id="mid-lost" class="ticker-lost">$0</span>
+                            <div class="ticker-label-words-bottom">revenue</div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Large -->
                 <div class="ticker-box">
                     <span class="ticker-label">200-person large sales force</span>
-                    <span id="large-ticker" class="ticker-value">0</span>
-                    <span class="ticker-label-words">words</span>
+                    <img src="ASSETS/3.PNG" alt="SME icon" class="three-icon" />
+                    <div class="ticker-values-row">
+                        <div>
+                            <span id="large-ticker" class="ticker-value">0</span>
+                            <div class="ticker-label-words">words</div>
+                        </div>
+                        <div>
+                            <span id="large-lost" class="ticker-lost">$0</span>
+                            <div class="ticker-label-words-bottom">revenue</div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-            <div class="ticker-textbox right">
-                <p>Spoken language is the most powerful source of business insight, yet it's often the first to be overlooked. In sales conversations especially, thousands of valuable words drift away the moment they’re said.</p>
-                <p>Without structured capture, and without linguistic analysis, that insight vanishes. This visual shows what escapes <strong>every second</strong> a company doesn’t act.</p>
-            </div>
-        </div>            
-    </section>
-    
-    <!-- 🔘 REVIEW WORD TICKERS -->
-    <section class="ticker-section grey-bg">
-        <div class="ticker-title-right">
-            <h2>The Missed Meaning in Reviews</h2>
         </div>
-        <div class="ticker-wrapper bottom-wrap">
-            <div class="ticker-group align-right">
-                <div class="ticker-box">
-                    <span class="ticker-label">SME</span>
-                    <span id="sme-review-words" class="ticker-value">0</span>
-                    <span class="ticker-label-words">words</span>
-                </div>
-                <div class="ticker-box">
-                    <span class="ticker-label">Mid-size</span>
-                    <span id="mid-review-words" class="ticker-value">0</span>
-                    <span class="ticker-label-words">words</span>
-                </div>
-                <div class="ticker-box">
-                    <span class="ticker-label">Large</span>
-                    <span id="large-review-words" class="ticker-value">0</span>
-                    <span class="ticker-label-words">words</span>
-                </div>
-            </div>
-            <div class="ticker-textbox left">
-                <p>Every review is a window into how your product or brand is truly experienced, but most get skimmed, scored, and forgotten. This visual shows how much insight slips by when reviews are read without structure and without the depth that expert analysis brings.</p>
-                <p>It’s not about stars. It’s about the meaning behind them, and what your customers really trying to tell you.</p>
-            </div>
-        </div> 
+    </div>
     </section>
+
     <div class="text-container">
         <p class="fade-in">
             Key Services
