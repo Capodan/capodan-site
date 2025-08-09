@@ -570,19 +570,27 @@ function closeModal(num) {
   document.getElementById(`modal-${num}`)?.classList.remove("show");
 }
 
+let fadeInTriggered = false;
+
+window.addEventListener('scroll', () => {
+  if (!fadeInTriggered) {
+    fadeInTriggered = true;
+    initFadeInObserver();
+  }
+});
+
 function initFadeInObserver() {
-  const observer = new IntersectionObserver((entries, observerRef) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observerRef.unobserve(entry.target); // Animate only once
+        // ✅ Don't unobserve, so it can trigger only when scrolled into view
       }
     });
   }, {
-    threshold: 0.15
+    threshold: 0.8 // ⬅️ increases how much of element must be visible before fading in
   });
 
-  // Support all three classes
   document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(el => {
     observer.observe(el);
   });
@@ -648,37 +656,92 @@ function saveCookieSettings() {
   closeCookieModal();
 }
 
-// ✅ Tick counters
+// ✅ Flexible tick counters (safe if review section is removed)
 function startTickers() {
-  const smeElement = document.getElementById("sme-ticker");
-  const midElement = document.getElementById("mid-ticker");
-  const largeElement = document.getElementById("large-ticker");
-  const smeEl = document.getElementById("sme-review-words");
-  const midEl = document.getElementById("mid-review-words");
-  const largeEl = document.getElementById("large-review-words");
+  if (startTickers._started) return; // prevent double start
+  startTickers._started = true;
 
-  if (!smeElement || !midElement || !largeElement || !smeEl || !midEl || !largeEl) return;
+  const el = (id) => document.getElementById(id);
 
-  let sme = 0, mid = 0, large = 0;
-  let smeWords = 0, midWords = 0, largeWords = 0;
+  // Speech counters (top row)
+  const speech = {
+    sme: el("sme-ticker"),
+    mid: el("mid-ticker"),
+    large: el("large-ticker"),
+  };
 
-  const smeWPM = 0.7, midWPM = 6.5, largeWPM = 70;
-  const smePerSec = smeWPM / 60, midPerSec = midWPM / 60, largePerSec = largeWPM / 60;
+  // Review counters (may be absent after removal)
+  const reviews = {
+    sme: el("sme-review-words"),
+    mid: el("mid-review-words"),
+    large: el("large-review-words"),
+  };
 
-  setInterval(() => { sme++; smeElement.textContent = sme.toLocaleString(); }, 66);
-  setInterval(() => { mid++; midElement.textContent = mid.toLocaleString(); }, 22);
-  setInterval(() => { large++; largeElement.textContent = large.toLocaleString(); }, 2);
+  // Revenue counters (bottom row)
+  const revenue = {
+    sme: el("sme-lost"),
+    mid: el("mid-lost"),
+    large: el("large-lost"),
+  };
 
+  const haveSpeech  = speech.sme && speech.mid && speech.large;
+  const haveReviews = reviews.sme && reviews.mid && reviews.large;
+  const haveRevenue = revenue.sme && revenue.mid && revenue.large;
+
+  // If none of the groups exist, bail
+  if (!haveSpeech && !haveReviews && !haveRevenue) return;
+
+  // Internal counters
+  let counts = { sme: 0, mid: 0, large: 0 };
+  let words  = { sme: 0, mid: 0, large: 0 };
+
+  // Rates
+  const WPM = { sme: 0.7, mid: 6.5, large: 70 }; // words per minute
+  const perSec = {
+    sme: WPM.sme / 60,
+    mid: WPM.mid / 60,
+    large: WPM.large / 60,
+  };
+
+  // Lost value per word (14% effective → 86% loss)
+  const lostValuePerWord = 0.0086 * 0.86;
+
+  const nf = new Intl.NumberFormat();
+
+  // Blue number tickers (live counters)
+  if (haveSpeech) {
+    setInterval(() => { counts.sme++; speech.sme.textContent   = nf.format(counts.sme); }, 66);
+    setInterval(() => { counts.mid++; speech.mid.textContent   = nf.format(counts.mid); }, 22);
+    setInterval(() => { counts.large++; speech.large.textContent = nf.format(counts.large); }, 2);
+  }
+
+  // Shared 100ms loop for “words” accumulation + revenue calc
   setInterval(() => {
-    smeWords += smePerSec;
-    midWords += midPerSec;
-    largeWords += largePerSec;
+    words.sme  += perSec.sme;
+    words.mid  += perSec.mid;
+    words.large += perSec.large;
 
-    smeEl.textContent = Math.floor(smeWords).toLocaleString();
-    midEl.textContent = Math.floor(midWords).toLocaleString();
-    largeEl.textContent = Math.floor(largeWords).toLocaleString();
+    if (haveReviews) {
+      reviews.sme.textContent  = nf.format(Math.floor(words.sme));
+      reviews.mid.textContent  = nf.format(Math.floor(words.mid));
+      reviews.large.textContent = nf.format(Math.floor(words.large));
+    }
+
+    if (haveRevenue) {
+      const smeLostVal   = words.sme   * lostValuePerWord;
+      const midLostVal   = words.mid   * lostValuePerWord;
+      const largeLostVal = words.large * lostValuePerWord;
+
+      revenue.sme.textContent   = `$${smeLostVal.toFixed(2)}`;
+      revenue.mid.textContent   = `$${midLostVal.toFixed(2)}`;
+      revenue.large.textContent = `$${largeLostVal.toFixed(2)}`;
+    }
   }, 100);
 }
+
+// Auto-start on load
+document.addEventListener("DOMContentLoaded", startTickers);
+
 
 document.addEventListener("DOMContentLoaded", () => {
   if (!localStorage.getItem("cookiesAccepted")) {
@@ -791,7 +854,3 @@ function updateVideoSource() {
     video.load();
   }
 }
-
-document.addEventListener("DOMContentLoaded", updateVideoSource);
-window.addEventListener("resize", updateVideoSource); // optional live-resize support
-
