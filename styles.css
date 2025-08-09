@@ -689,6 +689,52 @@ video {
     transform: translateY(0); /* Move back to the normal position */
 }
 
+.fade-in-left,
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(0); /* Default neutral position, will override below */
+  transition: opacity 10s ease, transform 10s ease;
+}
+
+/* Pre-animation starting positions */
+.fade-in-left {
+  transform: translateX(-40px);
+}
+
+.fade-in-right {
+  transform: translateX(40px);
+}
+
+/* Animate when visible */
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/**/
+
+.one-icon,
+.two-icon,
+.three-icon,
+.four-icon,
+.five-icon,
+.six-icon,
+.seven-icon,
+.eight-icon,
+.nine-icon {
+  width: 90px; /* Adjust to your liking */
+  height: 90px;
+  margin-bottom: 6px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /**/
 
 /* Container for tiles */
@@ -2862,185 +2908,6 @@ video {
     margin-bottom: 12px;  /* ✅ neat spacing from the label */
     display: block;
 }
-
-  .review-ticker-wrapper {
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-    font-size: 1.5em;
-    color: #4A90E2;
-    margin-top: 40px;
-  }
-  
-  .review-ticker-wrapper p {
-    margin: 10px 0;
-  }
-  
-  .lilac-bg {
-    background: 
-      linear-gradient(135deg, #7b4fa2 0%, #6c4490 100%), 
-      repeating-linear-gradient(
-        45deg,
-        rgba(255,255,255,0.05),
-        rgba(255,255,255,0.05) 1px,
-        transparent 1px,
-        transparent 4px
-      );
-    background-blend-mode: overlay;
-    color: white;
-    padding: 30px 40px 40px 40px;
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0 !important;
-    box-sizing: border-box;
-  }   
-
-  .grey-bg {
-    background: 
-      linear-gradient(135deg, #4a4a4a 0%, #3f3f3f 100%), 
-      repeating-linear-gradient(
-        -45deg, /* ↘ flipped from +45deg to -45deg */
-        rgba(255,255,255,0.05),
-        rgba(255,255,255,0.05) 1px,
-        transparent 1px,
-        transparent 4px
-      );
-    background-blend-mode: overlay;
-    color: white;
-    padding: 30px 40px 40px 40px;
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0 !important;
-    box-sizing: border-box;
-  } 
-  
-  .ticker-group {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* ✅ This is the key: centers ticker-boxes horizontally */
-    gap: 100px;
-    flex-wrap: wrap;
-    max-width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }  
-  
-  /* Individual ticker block */
-  .ticker-box {
-    text-align: center;
-    align-items: center; /* ✅ This is the key: centers ticker-boxes horizontally */
-    min-width: 120px;
-  }
-  
-  /* Small label above number */
-  .ticker-label {
-    font-size: 1rem;
-    font-weight: normal;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  /* Small label above number */
-  .ticker-label-words {
-    font-size: 1rem;
-    color:#d3d3d3;
-    font-weight: normal;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  /* Large number display */
-  .ticker-value {
-    font-size: 4rem;
-    font-weight: bold;
-  }
-  
-  .ticker-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-    gap: 40px;
-  }
-  
-  .ticker-textbox {
-    max-width: 300px;
-    color: white;
-    font-size: 1rem;
-    text-align: left;
-  }
-  
-  .ticker-textbox.right,
-  .ticker-textbox.left {
-    text-align: center;
-    align-self: center;
-    padding-top: 20px;
-    margin: 0 auto;
-    max-width: 80%; /* ⬅️ wider than 300px */
-  }
-
-  .ticker-textbox.right p {
-    margin-bottom: 1em;
-    line-height: 1.6;
-  }
-  
-  .ticker-group.align-left {
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* ✅ This is the key: centers ticker-boxes horizontally */
-  }
-
-  .top-wrap .ticker-group {
-    justify-content: flex-start;
-    flex: 1;
-  }
-  
-  .bottom-wrap .ticker-group {
-    justify-content: flex-end;
-    flex: 1;
-  }
-  
-  .ticker-title-left {
-    padding: 30px 40px 10px 40px;
-  }
-  
-  .ticker-title-left h2 {
-    color: white;
-    font-size: 1.9rem;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 30px;
-    text-align: left;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ⬅ Adds a subtle soft shadow */
-  }  
-
-  .ticker-title-right {
-    padding: 30px 40px 10px 40px;
-  }
-  
-  .ticker-title-right h2 {
-    color: white;
-    font-size: 1.9rem;
-    margin-bottom: 30px;
-    font-weight: bold;
-    text-align: right;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* ⬅ Adds a subtle soft shadow */
-  }  
-
-  .ticker-footer-prompts p {
-    margin: 4px 0;
-    text-align: center;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 0.9rem;
-    color: white;
-  }  
-  
-  .ticker-footer-prompts p {
-    margin: 4px 0;
-  }
   
   .prompt-divider {
     width: 100%;
@@ -3120,7 +2987,189 @@ video {
     overflow: hidden;
     margin: 0;
   }
-  
+
+  /* Primary emphasis: brand-purple + bold */
+  .accent {
+    color: #732d80;           /* Capodan purple */
+    font-weight: 700;
+  }
+
+  /* replaces your .ink rule */
+  .ink{
+    display:inline;
+    padding:0 .06em;                         /* tiny side padding for rounded look */
+    box-shadow: inset 0 -0.38em rgba(115,45,128,.18);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;             /* keeps highlight per line on wrap */
+  }
+
+  /* Gold emphasis for revenue-related terms */
+  .gold-accent {
+    color: #efc026;           /* Gold */
+    font-weight: 700;
+  }
+
+  .ticker-title {
+    text-align: left; /* or center, depending on your layout */
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #000000;
+    font-weight: 700;
+  }
+
+  /* === Unified Ticker Section Layout === */
+  .ticker-section {
+    position: relative;
+    z-index: 2;
+    padding-top: 0;
+    padding: 60px 40px; /* reasonable padding instead of huge margin-top hacks */
+    background-blend-mode: overlay;
+    color: rgb(0, 0, 0);
+  }
+
+    /* Tighter spacing for the second (revenue) row */
+  .ticker-section.compact {
+    padding-top: 6vw;     /* much closer to the row above */
+    margin-top: -8vw;     /* pull it up to overlap the wave nicely */
+  }
+
+  .ticker-section.compact .align-horizontal {
+    margin-top: 60px; /* adjust value until aligned visually */
+  }
+
+  /* make sure no old margins push the rows apart */
+  .ticker-group-top { margin-top: 0 !important; }
+
+  .ticker-background-stack {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 12vw;
+  }
+
+  /* Wrapper: text on left, tickers on right */
+  .ticker-wrapper {
+    display: flex;
+    align-items: flex-start; /* ensures both start from the same top baseline */
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ticker-textbox {
+    flex: 1;
+    max-width: 480px;
+    font-size: 1.1rem;
+    color: #000000;
+    text-align: right;
+    margin: 0;
+    line-height: 1.5;
+    padding-right: 40px; /* space between text and line */
+    border-right: 2px solid #e0e0e0; /* light grey vertical line */
+  }
+
+  .ticker-group-top {
+    padding-left: 40px; /* space after the line before tickers */
+  }
+
+  /* First text box in the top row */
+  .ticker-section:first-of-type .ticker-textbox {
+    margin-top: 30px; /* aligns with icon top */
+  }
+
+  /* Second text box in the revenue row */
+  .ticker-section.compact .ticker-textbox {
+    margin-top: 0; /* reset so it's centered with revenue icons */
+  }
+
+  .ticker-textbox p {
+    margin-bottom: 0.8em;  /* tightened paragraph spacing */
+    line-height: 1.5;
+  }
+
+  /* Counter group: shared layout for words & revenue */
+  .ticker-group-top {
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    justify-content: center;
+    gap: 80px;
+    flex: 1;
+    font-size: 1rem;
+  }
+
+  /* Individual counter */
+  .ticker-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ticker-label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .ticker-label-words,
+  .ticker-label-words-bottom {
+      margin-top: 4px;  /* space between number and label */
+      margin-bottom: 16px; /* NEW: adds gap before the next row (gold number) */
+      font-size: 1rem;
+      font-weight: 500;
+      color: #000000;
+  }
+
+
+  .ticker-value,
+  .ticker-lost {
+    font-size: 3.8rem;
+    font-weight: 800;
+    letter-spacing: -1px; /* tighter */
+    line-height: 1.1;     /* closer to the label */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+
+  /* Word counters (purple) */
+  #sme-ticker,
+  #mid-ticker,
+  #large-ticker {
+    background: linear-gradient(to bottom, #732d80, #5d2368);
+    background-clip: text;              /* Standard */
+    -webkit-background-clip: text;      /* Safari / Chrome */
+    color: transparent;                 /* Standard */
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Revenue counters (gold) */
+  #sme-lost,
+  #mid-lost,
+  #large-lost {
+    background: linear-gradient(to bottom, #efc026, #cfa11e);
+    background-clip: text;              /* Standard */
+    -webkit-background-clip: text;      /* Safari / Chrome */
+    color: transparent;                 /* Standard */
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  .one-icon,
+  .two-icon,
+  .three-icon,
+  .seven-icon,
+  .eight-icon,
+  .nine-icon {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 6px;
+  }
+
+/*----------------------------------*/
   
   .contact-heading {
     text-align: center;
@@ -3729,7 +3778,7 @@ section.SPBLOCK-bg {
 
 .faq-section {
   max-width: 100%;
-  margin: 60px auto;
+  margin: 120px auto;
   padding: 0 20px;
   font-family: inherit;
 }
@@ -3783,6 +3832,7 @@ section.SPBLOCK-bg {
   max-height: 300px;
   padding: 10px 0 20px;
 }
+
 
 @media screen and (min-width: 769px) {
   #nav-links {
@@ -4165,7 +4215,59 @@ section.SPBLOCK-bg {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  .ticker-title { text-align: center; }
+
+  .ticker-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ticker-textbox {
+    max-width: 680px;
+    text-align: center;
+    border-right: none;
+    padding-right: 0;
+    margin: 0 auto 8px;
+  }
+
+  .ticker-group-top {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .ticker-box { text-align: center; align-items: center; }
+  .ticker-box img { display: block; margin: 0 auto; }
+
+  .ticker-values-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ticker-values-row div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ticker-value, .ticker-lost { font-size: 2.4rem; font-weight: 800; margin: 0; }
+  .ticker-label-words, .ticker-label-words-bottom { font-size: 1rem; margin-top: 2px; }
+}
+
   .SPtiles-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Force 3 per row */
@@ -4192,7 +4294,6 @@ section.SPBLOCK-bg {
   .SPtile2 img {
     max-width: 45px;
   }
-}
 
 @media screen and (min-width: 1024px) {
   .JASPtiles-container {
