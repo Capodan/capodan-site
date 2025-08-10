@@ -4164,7 +4164,7 @@ section.SPBLOCK-bg {
 }
 @media screen and (max-width: 900px) {
   .video-container video {
-    margin-top: 100px;
+    margin-top: 50px;
     width: 100%;
     height: 500px;         /* Fixed height to appear cropped */
     object-fit: cover;     /* ✅ Crops to fit container while preserving aspect ratio */
