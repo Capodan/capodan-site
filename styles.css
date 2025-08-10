@@ -3972,44 +3972,56 @@ section.SPBLOCK-bg {
     padding-top: 20px;
   }
 
-  .JASPtiles-container {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    justify-items: center;
-    padding: 20px;
-  }
+/* JASP mini-tiles — mobile */
+.JASPtiles-container{
+  display:grid !important;
+  grid-template-columns: 1fr;   /* stack */
+  gap:12px;
+  justify-items: stretch;
+  padding:12px 16px;
+}
+.JASP-tile{
+  width:auto !important;
+  height:auto !important;
+  padding:14px !important;
+}
+.JASPtiles-container > .JASP-tile:nth-child(4),
+.JASPtiles-container > .JASP-tile:nth-child(5){
+  grid-column:auto;             /* remove manual column hacks */
+}
+.JASP-tile img{ width:28px; height:auto; margin-bottom:4px; }
+.JASP-tile p{ font-size:12px !important; }
 
-    /* Smaller tile size on mobile */
-  .JASP-tile {
-    width: 90px !important;
-    height: 90px !important;
-    padding: 12px !important;
-  }
+    /* RESOURCES hero + tiles — mobile */
+.JAsection-header{ padding:14px 16px 6px; }
+.JAeyebrow{ font-size:12px; padding:4px 10px; }
 
-  .JASPtiles-container > .JASP-tile:nth-child(4) {
-    grid-column: 1;
-  }
+.JAhero{ display:block; }                      /* break 2-col layout */
+.JAhero-title{
+  font-size:clamp(28px,8vw,34px);
+  line-height:1.05;
+  margin:8px 16px;
+}
+.JAhero-copy{
+  font-size:15px;
+  line-height:1.6;
+  margin:0 16px 18px;
+}
 
-  .JASPtiles-container > .JASP-tile:nth-child(5) {
-    grid-column: 3;
-  }
-
-    /* Icon size inside tiles */
-  .JASP-tile img {
-    width: 30px;
-    height: auto;
-    margin-bottom: 2px;
-  }
-
-    /* Font tweak */
-  .JASP-tile p {
-    font-size: 10px !important;
-  }
-
-  .JASPtiles-container .JASP-tile:first-child .JASP-tile-content {
-    transform: none !important;
-  }
+/* resource tiles */
+.JAREStiles-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;  /* 2-up on small phones */
+  gap:12px;
+  padding:12px 16px;
+}
+    
+@media (max-width:420px){
+  .JAREStiles-container{ grid-template-columns: 1fr; }  /* 1-up on very small */
+}
+.JARES-tile{ min-height:92px; padding:14px; border-radius:14px; }
+.JARES-tile p{ font-size:12px; }
+.JARES-tile img{ width:28px; height:auto; }
 
   .burger {
     display: block;
@@ -4141,10 +4153,10 @@ section.SPBLOCK-bg {
     padding: 20px;   /* 20px top/bottom, 24px left/right */
   }
 
-  .SPtext-container {
-    font-size: 1.1em;   /* Reduce from 1.8em default */
-    padding: 50px 50px;   /* 20px top/bottom, 24px left/right */
-  }
+    .SPtext-container { 
+      font-size: 1.1em;
+      padding: 18px 16px; 
+    }
 
   .text-container .highlight-blue {
     font-weight: bold;  /* Optional: emphasize the highlight if smaller */
