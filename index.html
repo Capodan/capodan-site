@@ -360,11 +360,35 @@
             </div>
         </div>
     </section>
-    <section class="blog-banner-carousel">
-        <h2 class="carousel-heading">From the Blog</h2>
-        <div class="carousel-scroll-container" id="carousel-container">
-            <!-- Cards will be injected here by script -->
+    <section class="blog-banner-carousel" aria-labelledby="blog-carousel-heading">
+      <div class="container">
+        <div class="carousel-header">
+          <h2 id="blog-carousel-heading" class="carousel-heading">From the Blog</h2>
+          <div class="carousel-controls">
+            <button class="carousel-btn prev" type="button" aria-label="Previous">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next" type="button" aria-label="Next">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
         </div>
+    
+        <div
+          class="carousel-track"
+          id="blog-carousel"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Blog posts"
+          tabindex="0"
+        >
+          <!-- cards injected by JS -->
+        </div>
+    
+        <!-- soft edges -->
+        <div class="carousel-edge left" aria-hidden="true"></div>
+        <div class="carousel-edge right" aria-hidden="true"></div>
+      </div>
     </section>
     <footer class="footer-columns">
     <div class="footer-column">
