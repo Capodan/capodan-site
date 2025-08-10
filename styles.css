@@ -4812,3 +4812,58 @@ section.SPBLOCK-bg {
   width:100%; height:auto; border-radius:16px; border:1px solid var(--line);
   box-shadow:0 10px 28px rgba(0,0,0,.06);
 }
+
+/* INSIGHTS — styles (editorial variation) */
+:root{
+  --ink:#0b0b0c; --ink-70:rgba(11,11,12,.72);
+  --brand:#4f46e5; --brand-8:rgba(79,70,229,.08);
+  --line:#eceef3; --card:#fff; --radius:16px;
+}
+
+/* Hero */
+.insights-hero{
+  padding:58px 0 24px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(700px 200px at 12% 0%, var(--brand-8), transparent 60%),
+    repeating-linear-gradient(0deg, transparent, transparent 22px, rgba(79,70,229,.04) 22px, rgba(79,70,229,.04) 23px);
+}
+.insights-hero .eyebrow{
+  display:inline-block; font-size:12px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-70); background:#fff; border:1px solid var(--line); border-radius:999px;
+  padding:6px 10px; margin-bottom:10px;
+}
+.insights-hero h1{
+  margin:0 0 6px; font-size:clamp(32px,4.6vw,56px); letter-spacing:-.015em; color:var(--ink);
+}
+.insights-hero .dek{
+  margin:0 0 14px; max-width:760px; color:var(--ink-70); font-size:clamp(16px,2.1vw,18px);
+}
+.chip-row{ display:flex; gap:10px; padding:0; margin:14px 0 0; list-style:none; flex-wrap:wrap; }
+.chip{
+  display:inline-block; padding:8px 12px; border:1px solid var(--line); border-radius:999px;
+  background:#fff; color:#2b2b2b; text-decoration:none; font-size:14px;
+}
+.chip:hover{ border-color:#d7daf0; }
+
+/* Intro split */
+.insights-intro{ padding:28px 0 40px; background:#fff; }
+.split{ display:grid; grid-template-columns:1.15fr .85fr; gap:30px; align-items:start; }
+@media (max-width:980px){ .split{ grid-template-columns:1fr; } }
+
+.copy .lead{ margin:0 0 8px; font-size:clamp(18px,2.2vw,20px); }
+.copy p{ color:var(--ink-70); margin:0 0 12px; }
+.ticks{ list-style:none; padding:0; margin:10px 0 12px; }
+.ticks li{ padding-left:22px; position:relative; color:var(--ink-70); }
+.ticks li::before{ content:"✓"; position:absolute; left:0; top:0; color:var(--brand); line-height:1; }
+.inline-cta{ color:var(--brand); text-decoration:underline; }
+.cta-note{ margin-top:6px; }
+
+.quote{
+  border-left:3px solid var(--brand);
+  padding-left:16px;
+}
+.quote blockquote{
+  margin:0 0 6px; font-size:clamp(18px,2.3vw,22px); line-height:1.35; color:#141414;
+}
+.quote cite{ display:block; font-style:normal; color:var(--ink-70); font-size:14px; }
