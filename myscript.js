@@ -840,18 +840,21 @@ function toggleMenu() {
   burger.classList.toggle("open"); // this triggers the animation
 }
 function updateVideoSource() {
-  const video = document.querySelector(".video-container video");
+  const video  = document.querySelector(".video-container video");
+  if (!video) return;
   const source = video.querySelector("source");
+  if (!source) return;
 
-  if (!video || !source) return;
+  const isMobile  = window.innerWidth <= 768;
+  const current   = source.getAttribute("src") || "";
+  const desired   = isMobile ? "ASSETS/CapoMobile.mp4" : "ASSETS/Capo.mp4";
 
-  const isMobile = window.innerWidth <= 768;
-  const currentSrc = source.getAttribute("src");
-  const newSrc = isMobile ? "ASSETS/CapoMobile.mp4" : "ASSETS/Capo.mp4";
-
-  if (currentSrc !== newSrc) {
-    source.setAttribute("src", newSrc);
-    video.load();
+  if (current !== desired) {
+    source.setAttribute("src", desired);
+    video.pause();
+    video.load();                       // refreshes the <source>
+    const p = video.play();             // try to auto-play again
+    if (p && typeof p.then === "function") p.catch(() => {});
   }
 }
 document.addEventListener('DOMContentLoaded', () => {
@@ -867,4 +870,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  updateVideoSource();                                // ✅ ADD
+  window.addEventListener('resize', debounce(updateVideoSource, 200)); // ✅ ADD
 });
