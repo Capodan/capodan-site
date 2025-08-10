@@ -3884,6 +3884,7 @@ section.SPBLOCK-bg {
 .event-ribbon:hover{ filter:brightness(1.06); }
 
 @media (max-width:768px){
+  .event-banner{ margin-top: 84px; }       /* push the whole banner down */
   .event-ribbon{ font-size:12px; padding:10px 12px; }
 }
 
