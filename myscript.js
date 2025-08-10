@@ -854,3 +854,17 @@ function updateVideoSource() {
     video.load();
   }
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const els = document.querySelectorAll('.fade-in');
+  const onScroll = () => {
+    els.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight - 60 && r.bottom > 0) {
+        el.classList.add('visible');
+      } // <-- closing brace for if
+    }); // <-- closing for forEach
+  }; // <-- closing for onScroll function
+
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+});
