@@ -5156,4 +5156,51 @@ section.SPBLOCK-bg {
     text-align: center;
   }
 }
+/* ==== WHY CAPODAN (about-hero) — mobile overrides ==== */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 60px 0 !important;          /* tighter vertical space */
+  }
+  .about-hero .container {
+    display: block !important;            /* kill any 2-col layout */
+    padding: 0 16px !important;           /* side gutter */
+  }
 
+  .about-hero h1 {
+    margin: 6px 0 10px !important;
+    font-size: clamp(28px, 8vw, 36px) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em !important;
+    white-space: normal !important;       /* prevent weird splits */
+  }
+
+  .about-hero .sub {
+    margin: 0 0 12px !important;
+    max-width: none !important;
+    font-size: 15.5px !important;
+    line-height: 1.6 !important;
+    color: var(--ink-70);
+  }
+
+  /* badges: smaller chips, wrap on multiple rows */
+  .about-badges {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    margin: 10px 0 0 !important;
+    list-style: none !important;
+  }
+  .about-badges li {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px 10px !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 999px !important;
+    background: #fff !important;
+    font-size: 13px !important;
+    color: var(--ink-70) !important;
+  }
+  .about-badges i { width: 16px !important; text-align: center; }
+}
