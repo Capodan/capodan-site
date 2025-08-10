@@ -5043,3 +5043,117 @@ section.SPBLOCK-bg {
 @media (max-width:700px){
   .carousel-controls{ display:none; } /* rely on swipe on mobile */
 }
+
+/* ==== RESOURCES (Insights) — hard mobile overrides ==== */
+@media (max-width: 768px) {
+  /* make hero a single column and reduce sizing */
+  .insights-hero { padding: 30px 0 !important; }
+  .insights-hero .container { display: block !important; padding: 0 16px !important; }
+
+  .insights-hero .eyebrow { font-size: 12px !important; padding: 4px 10px !important; margin-bottom: 6px !important; }
+
+  .insights-hero h1 {
+    font-size: clamp(28px, 8vw, 34px) !important;
+    line-height: 1.1 !important;
+    margin: 6px 0 10px !important;
+  }
+
+  .insights-hero .dek {
+    font-size: 15.5px !important;
+    line-height: 1.6 !important;
+    margin: 0 0 12px !important;
+    max-width: none !important;
+  }
+
+  .insights-hero .chip-row { gap: 8px !important; margin-top: 10px !important; }
+  .insights-hero .chip { font-size: 12px !important; padding: 6px 10px !important; }
+
+  /* If anything made the hero a grid, force each item to span full width */
+  .insights-hero h1,
+  .insights-hero .dek,
+  .insights-hero .chip-row,
+  .insights-hero .eyebrow { grid-column: 1 / -1 !important; }
+
+  /* Intro section stacks + readable sizes */
+  .insights-intro .container { display: block !important; padding: 0 16px !important; }
+  .insights-intro .lead { font-size: 18px !important; }
+  .insights-intro p { font-size: 15.5px !important; line-height: 1.65 !important; }
+  .insights-intro .ticks { margin: 8px 0 0 18px !important; }
+  .insights-intro .quote { padding: 12px 16px !important; border-left-width: 4px !important; }
+  .insights-intro .quote blockquote { font-size: 18px !important; line-height: 1.4 !important; }
+
+  /* Resource tiles: compact 2-up on phones */
+  .JAREStiles-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    padding: 12px 16px !important;
+  }
+  .JARES-tile { min-height: 96px !important; padding: 14px !important; border-radius: 14px !important; }
+  .JARES-tile p { font-size: 12px !important; }
+  .JARES-tile img { width: 28px !important; height: auto !important; }
+}
+
+/* 1-up tiles on very small screens */
+@media (max-width: 420px) {
+  .JAREStiles-container { grid-template-columns: 1fr !important; }
+}
+
+/* ==== WAYS TO WORK (servicespricing) — mobile overrides ==== */
+@media (max-width: 768px) {
+
+  /* small gap below the top nav/header */
+  .tab-banner + .work-hero {
+    margin-top: 40px !important;   /* bump this up if your header is taller */
+  }
+
+  .work-hero {
+    padding: 18px 0 !important;
+  }
+
+  .work-hero .container {
+    display: block !important;
+    padding: 0 16px !important;
+  }
+
+  .work-hero h1 {
+    margin: 8px 0 12px !important;
+    font-size: clamp(28px, 8vw, 36px) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .work-hero .sub {
+    margin: 0 0 14px !important;
+    font-size: 15.5px !important;
+    line-height: 1.6 !important;
+    max-width: none !important;
+    color: var(--ink-70);
+  }
+
+  /* badges (chips) */
+  .work-badges {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    margin: 10px 0 0 !important;
+    list-style: none !important;
+  }
+  .work-badges li {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px 10px !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 999px !important;
+    background: #fff !important;
+    font-size: 13px !important;
+    color: var(--ink-70) !important;
+  }
+  .work-badges i {
+    width: 16px !important;
+    text-align: center;
+  }
+}
+
