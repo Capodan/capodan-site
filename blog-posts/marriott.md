@@ -3,9 +3,6 @@ title: "What Marriott Gets Right: A Tale of Two Cities, One Customer-Aligned Bra
 date: 2025-07-31
 ---
 
-Capodan Research Ltd  
-195 followers  
-
 We analysed guest feedback, review patterns, and brand messaging for two Marriott International properties:  
 
 ⭐ **Austin Marriott Downtown**  
