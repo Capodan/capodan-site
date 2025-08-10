@@ -46,59 +46,95 @@
             <a href="servicespricing.html" class="tab-button services-and-pricing-button">WAYS TO WORK TOGETHER</a>
             <a href="blog.html" class="tab-button blog-button">LATEST SIGNALS</a>
         </div>
-    </div
+      </div>
         
-    <section class="content-offset">
-      <div class="SPvideo-container static-banner">
-        <div class="SPtext-overlay">
-          <h1>Let's Talk</h1>
-        </div>
+    <section class="contact-hero">
+      <div class="container">
+        <h1>Let’s talk</h1>
+        <p class="hero-sub">
+          Ready to see what your clients, customers or teams are really telling you?
+          Send a note and we’ll show you what language can reveal—from focused research to strategic direction.
+        </p>
+        <ul class="trust-row" aria-label="Trust signals">
+          <li><i class="fa-regular fa-clock"></i> Reply within 1 business day</li>
+          <li><i class="fa-solid fa-shield-halved"></i> GDPR compliant</li>
+          <li><i class="fa-solid fa-location-dot"></i> UK-based</li>
+        </ul>
       </div>
     </section>
 
-    <section class="contact-subtext-wrapper">
-        <p class="contact-subtext">
-          If you're ready to see what your clients, customers or teams are really telling you, we’re here to help.
-          Whether it’s a question, a project idea or the start of something bigger, get in touch and we’ll show you
-          what language can reveal, from focused research to strategic direction.
-        </p>
-      </section>
+    <!-- CONTACT GRID -->
+    <section class="contact-grid">
+      <div class="container grid">
+        <!-- Left card -->
+        <aside class="contact-card">
+          <h3>Our details</h3>
+          <p><strong>Capodan Research Ltd</strong></p>
+          <p>
+            First Floor, Swan Buildings<br>
+            20 Swan Street<br>
+            Manchester, M4 5JW
+          </p>
 
-    <section class="contact-flex-wrapper">
-    <div class="contact-details-left">
-        <h3>Our Details</h3>
-        <p><strong>Capodan Research Ltd</strong></p>
-        <p>First Floor, Swan Buildings<br>20 Swan Street<br>Manchester, M4 5JW</p>
-        <p><strong>Email:</strong> <a href="mailto:contact@capodan.com">contact@capodan.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+441615245787">+44 (0)161 524 5787</a></p>
-    </div>
-    <form 
-        action="https://formspree.io/f/xvgrgnka" 
-        method="POST" 
-        onsubmit="return handleContactSubmit(event)"
-        class="contact-input-section"
-    >
-        <label for="name" class="name-label">Your Name</label>
-        <input type="text" name="name" id="name" class="name-input" placeholder="Enter your name" required>
+          <div class="contact-lines">
+            <p><i class="fa-regular fa-envelope"></i>
+              <a href="mailto:contact@capodan.com">contact@capodan.com</a></p>
+            <p><i class="fa-solid fa-phone"></i>
+              <a href="tel:+441615245787">+44 (0)161 524 5787</a></p>
+          </div>
 
-        <label for="company" class="company-label">Company</label>
-        <input type="text" name="company" id="company" class="company-input" placeholder="Enter company name">
+          <hr>
+          <p class="small">
+            Prefer email? Send us a brief and we’ll suggest next steps.
+          </p>
+        </aside>
 
-        <label for="email" class="email-label">Your Email</label>
-        <input type="email" name="email" id="email" class="email-input" placeholder="Enter your email" required>
+        <!-- Form card -->
+        <form
+          action="https://formspree.io/f/xvgrgnka"
+          method="POST"
+          onsubmit="return handleContactSubmit(event)"
+          class="contact-card form-card"
+          aria-describedby="form-success form-error"
+        >
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
 
-        <label for="message" class="service-label">Message</label>
-        <textarea name="message" id="message" class="service-input" rows="5" placeholder="How can we help?" required></textarea>
+          <div class="field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme Ltd">
+          </div>
 
-        <label style="margin-top: 10px;">
-        <input type="checkbox" name="consent" required>
-        I agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a> and to CapoDan using my information to respond to this enquiry.
-        </label>
+          <div class="field">
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+          </div>
 
-        <button type="submit" class="centered-button" style="width: fit-content; margin-top: 20px;">Send</button>
-    </form>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="How can we help?" required></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            I agree to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+          </label>
+
+          <button type="submit" class="btn-primary">Send message</button>
+
+          <!-- Inline status (accessible, replaces alert boxes) -->
+          <p id="form-success" class="form-status success" role="status" aria-live="polite" hidden>
+            Thank you — we’ve got your message.
+          </p>
+          <p id="form-error" class="form-status error" role="status" aria-live="polite" hidden>
+            Something went wrong. Please try again.
+          </p>
+        </form>
+      </div>
     </section>
-             
+              
     </div>
 
     <footer class="footer-columns">
