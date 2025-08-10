@@ -502,5 +502,61 @@
 
 
 </div>
+<!-- Blog carousel script: place just before </body> -->
+<script>
+(function(){
+  // Use your own data if you set window.postsHome or window.posts
+  const posts = (window.postsHome || window.posts || []).slice(0, 12);
+
+  // Fallback samples (safe to delete if you always provide posts)
+  const fallback = [
+    { title: "Bronx Legacy vs Queens Energy", date: "2025-07-22", url: "blog/bronx-vs-queens.html", excerpt: "" },
+    { title: "Oura vs Fitbit: What the Language Tells Us", date: "2025-06-17", url: "blog/oura-fitbit.html", excerpt: "We analysed hundreds of reviews for language—not star ratings." }
+  ];
+
+  const data = posts.length ? posts : fallback;
+
+  // Works with #blog-carousel (new) or #carousel-container (old)
+  const track = document.getElementById('blog-carousel') || document.getElementById('carousel-container');
+  if (!track) return;
+
+  track.innerHTML = data.map(p => {
+    const d = p.date ? new Date(p.date).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}) : "";
+    const ex = p.excerpt ? `<p class="excerpt">${p.excerpt}</p>` : "";
+    const url = p.url || "#";
+    return `
+      <article class="blog-card">
+        ${d ? `<time datetime="${p.date}">${d}</time>` : ""}
+        <h3><a href="${url}">${p.title || "Untitled post"}</a></h3>
+        ${ex}
+        <a class="read-more" href="${url}">Read More →</a>
+      </article>`;
+  }).join("");
+
+  const prev = document.querySelector('.carousel-btn.prev');
+  const next = document.querySelector('.carousel-btn.next');
+
+  function scrollByAmount(dir = 1){
+    const amt = Math.round(track.clientWidth * 0.9);
+    track.scrollBy({ left: dir * amt, behavior: 'smooth' });
+  }
+  function updateArrows(){
+    const atStart = track.scrollLeft <= 2;
+    const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    if (prev) prev.disabled = atStart;
+    if (next) next.disabled = atEnd;
+  }
+
+  if (prev) prev.addEventListener('click', () => scrollByAmount(-1));
+  if (next) next.addEventListener('click', () => scrollByAmount(1));
+  track.addEventListener('scroll', updateArrows, { passive:true });
+  track.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); scrollByAmount(1); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); scrollByAmount(-1); }
+  });
+
+  updateArrows();
+})();
+</script>
 </body>
 </html>
