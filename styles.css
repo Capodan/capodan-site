@@ -4953,3 +4953,80 @@ section.SPBLOCK-bg {
 
 /* Utility container */
 .container{ width:min(1100px,92vw); margin:0 auto; }
+
+/* BLOG CAROUSEL */
+:root{
+  --ink:#0b0b0c; --ink-70:rgba(11,11,12,.72);
+  --brand:#4f46e5; --brand-8:rgba(79,70,229,.08);
+  --line:#eceef3; --card:#fff; --radius:16px;
+}
+
+.blog-banner-carousel{ padding: 32px 0 10px; background: #f7f8fc; }
+.blog-banner-carousel .container{ position: relative; }
+
+.carousel-header{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  margin-bottom:14px;
+}
+.carousel-heading{
+  margin:0;
+  font-size: clamp(22px, 3.2vw, 34px);
+  font-weight: 800;
+  letter-spacing:-.01em;
+  color: var(--ink);
+}
+
+/* arrows */
+.carousel-controls{ display:flex; gap:8px; }
+.carousel-btn{
+  width:36px; height:36px; border-radius:999px; border:1px solid var(--line);
+  background:#fff; display:grid; place-items:center; cursor:pointer;
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
+}
+.carousel-btn:disabled{ opacity:.35; cursor:default; }
+.carousel-btn:hover:not(:disabled){ background:var(--brand); color:#fff; border-color:transparent; }
+
+/* track */
+.carousel-track{
+  display:flex; gap:14px; padding:6px 4px 16px;
+  overflow-x:auto; overscroll-behavior-x: contain;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.carousel-track::-webkit-scrollbar{ height:8px; }
+.carousel-track::-webkit-scrollbar-thumb{ background:#d8dcec; border-radius:999px; }
+.carousel-track::-webkit-scrollbar-track{ background:transparent; }
+
+/* cards */
+.blog-card{
+  scroll-snap-align: start;
+  min-width: clamp(260px, 32vw, 360px);
+  background:#fff; border:1px solid var(--line); border-radius: var(--radius);
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+  padding:16px;
+  display:flex; flex-direction:column;
+}
+.blog-card time{ color:var(--ink-70); font-size:13px; }
+.blog-card h3{ margin:6px 0 8px; font-size: clamp(18px, 2.2vw, 24px); line-height:1.2; }
+.blog-card h3 a{ color:var(--ink); text-decoration:none; }
+.blog-card h3 a:hover{ text-decoration:underline; }
+.blog-card .excerpt{
+  color:var(--ink-70);
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+  margin:0 0 10px;
+}
+.blog-card .read-more{
+  margin-top:auto; font-weight:700; color:var(--brand); text-decoration:none;
+}
+.blog-card .read-more:hover{ text-decoration:underline; }
+
+/* edge fade */
+.carousel-edge{
+  position:absolute; top:52px; bottom:6px; width:48px; pointer-events:none;
+}
+.carousel-edge.left{ left:0; background:linear-gradient(90deg,#f7f8fc,transparent); }
+.carousel-edge.right{ right:0; background:linear-gradient(-90deg,#f7f8fc,transparent); }
+
+@media (max-width:700px){
+  .carousel-controls{ display:none; } /* rely on swipe on mobile */
+}
