@@ -503,60 +503,133 @@
 
 </div>
 <!-- Blog carousel script: place just before </body> -->
+
 <script>
-(function(){
-  // Use your own data if you set window.postsHome or window.posts
-  const posts = (window.postsHome || window.posts || []).slice(0, 12);
+(async function () {
+  // Helpers
+  const byDateDesc = (a, b) => new Date(b.date) - new Date(a.date);
+  const slugify = (s) =>
+    (s || "post")
+      .replace(/\.[^.]+$/, "")              // drop extension
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")          // non-alnum -> dashes
+      .replace(/^-+|-+$/g, "");
 
-  // Fallback samples (safe to delete if you always provide posts)
-  const fallback = [
-    { title: "Bronx Legacy vs Queens Energy", date: "2025-07-22", url: "blog/bronx-vs-queens.html", excerpt: "" },
-    { title: "Oura vs Fitbit: What the Language Tells Us", date: "2025-06-17", url: "blog/oura-fitbit.html", excerpt: "We analysed hundreds of reviews for language—not star ratings." }
-  ];
-
-  const data = posts.length ? posts : fallback;
-
-  // Works with #blog-carousel (new) or #carousel-container (old)
-  const track = document.getElementById('blog-carousel') || document.getElementById('carousel-container');
-  if (!track) return;
-
-  track.innerHTML = data.map(p => {
-    const d = p.date ? new Date(p.date).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}) : "";
-    const ex = p.excerpt ? `<p class="excerpt">${p.excerpt}</p>` : "";
-    const url = p.url || "#";
-    return `
-      <article class="blog-card">
-        ${d ? `<time datetime="${p.date}">${d}</time>` : ""}
-        <h3><a href="${url}">${p.title || "Untitled post"}</a></h3>
-        ${ex}
-        <a class="read-more" href="${url}">Read More →</a>
-      </article>`;
-  }).join("");
-
-  const prev = document.querySelector('.carousel-btn.prev');
-  const next = document.querySelector('.carousel-btn.next');
-
-  function scrollByAmount(dir = 1){
-    const amt = Math.round(track.clientWidth * 0.9);
-    track.scrollBy({ left: dir * amt, behavior: 'smooth' });
+  // Load posts.json once
+  let posts = [];
+  try {
+    const res = await fetch("blog-posts/posts.json", { cache: "no-store" });
+    posts = await res.json();
+  } catch (e) {
+    console.error("Failed to load posts.json", e);
+    posts = [];
   }
-  function updateArrows(){
-    const atStart = track.scrollLeft <= 2;
-    const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
-    if (prev) prev.disabled = atStart;
-    if (next) next.disabled = atEnd;
+  posts.sort(byDateDesc);
+
+  /* -------------------- HOME CAROUSEL -------------------- */
+  const track =
+    document.getElementById("blog-carousel") ||
+    document.getElementById("carousel-container");
+
+  if (track && posts.length) {
+    // Only show the latest 12 in the carousel
+    const latest = posts.slice(0, 12);
+
+    // Build cards (grab excerpt from MD if not provided)
+    const cards = await Promise.all(
+      latest.map(async (post) => {
+        const slug = slugify(post.slug || post.file || post.title);
+        const url = post.url || `blog.html#${slug}`;
+        const dateStr = post.date
+          ? new Date(post.date).toLocaleDateString(undefined, {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })
+          : "";
+
+        // Prefer posts.json excerpt; otherwise create one from the MD body
+        let excerpt = (post.excerpt || "").trim();
+        if (!excerpt && post.file) {
+          try {
+            const md = await fetch(`blog-posts/${post.file}`).then((r) => r.text());
+            const bodyMatch = md.match(/---\s*[\s\S]*?---\s*([\s\S]*)/); // strip frontmatter
+            const body = (bodyMatch ? bodyMatch[1] : md)
+              // strip links/images/markdown chars
+              .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+              .replace(/\[[^\]]*\]\([^)]*\)/g, "")
+              .replace(/[*`>#_]/g, "");
+            excerpt = body.split(/\s+/).slice(0, 28).join(" ") + "…";
+          } catch {}
+        }
+
+        return `
+          <article class="blog-card">
+            ${dateStr ? `<time datetime="${post.date}">${dateStr}</time>` : ""}
+            <h3><a href="${url}">${post.title || "Untitled"}</a></h3>
+            ${excerpt ? `<p class="excerpt">${excerpt}</p>` : ""}
+            <a class="read-more" href="${url}">Read More →</a>
+          </article>
+        `;
+      })
+    );
+
+    track.innerHTML = cards.join("");
+
+    // Wire arrows (if present)
+    const prev = document.querySelector(".carousel-btn.prev");
+    const next = document.querySelector(".carousel-btn.next");
+
+    function scrollByAmount(dir = 1) {
+      const amt = Math.round(track.clientWidth * 0.9);
+      track.scrollBy({ left: dir * amt, behavior: "smooth" });
+    }
+    function updateArrows() {
+      const atStart = track.scrollLeft <= 2;
+      const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+      if (prev) prev.disabled = atStart;
+      if (next) next.disabled = atEnd;
+    }
+
+    if (prev) prev.addEventListener("click", () => scrollByAmount(-1));
+    if (next) next.addEventListener("click", () => scrollByAmount(1));
+    track.addEventListener("scroll", updateArrows, { passive: true });
+    updateArrows();
   }
 
-  if (prev) prev.addEventListener('click', () => scrollByAmount(-1));
-  if (next) next.addEventListener('click', () => scrollByAmount(1));
-  track.addEventListener('scroll', updateArrows, { passive:true });
-  track.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') { e.preventDefault(); scrollByAmount(1); }
-    if (e.key === 'ArrowLeft')  { e.preventDefault(); scrollByAmount(-1); }
-  });
+  /* -------------------- BLOG PAGE -------------------- */
+  const blogContainer = document.getElementById("blog-posts");
+  if (blogContainer && posts.length) {
+    blogContainer.innerHTML = "";
+    for (const post of posts) {
+      try {
+        const md = await fetch(`blog-posts/${post.file}`).then((r) => r.text());
+        const fm = md.match(/---\s*([\s\S]*?)\s*---/); // frontmatter
+        const body = fm ? md.replace(fm[0], "") : md;
+        const html = marked.parse(body);
 
-  updateArrows();
+        const slug = slugify(post.slug || post.file || post.title);
+        const dateStr = new Date(post.date).toDateString();
+
+        const el = document.createElement("article");
+        el.className = "blog-article";
+        el.id = slug; // anchor target for Read More
+        el.innerHTML = `
+          <h2 class="blog-title">${post.title}</h2>
+          <p class="blog-date">${dateStr}</p>
+          <div class="blog-body">${html}</div>
+          <hr class="blog-divider">
+        `;
+        blogContainer.appendChild(el);
+      } catch (e) {
+        console.error("Failed to render post:", post, e);
+      }
+    }
+  }
 })();
 </script>
+
+
+    
 </body>
 </html>
