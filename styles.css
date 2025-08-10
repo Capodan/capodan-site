@@ -4812,3 +4812,128 @@ section.SPBLOCK-bg {
   width:100%; height:auto; border-radius:16px; border:1px solid var(--line);
   box-shadow:0 10px 28px rgba(0,0,0,.06);
 }
+
+/* SP TILE */
+
+/* === Key Services — overrides === */
+:root{
+  --tile-radius: 18px;
+  --tile-shadow: 0 18px 40px rgba(0,0,0,.18);
+  --tile-line: rgba(255,255,255,.18);
+}
+
+/* Section title */
+.text-container p{
+  margin: 10px auto 18px;
+  font-size: clamp(22px, 3.6vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--ink);
+}
+
+/* Grid */
+.tiles-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+  padding: 8px 12px 26px;
+}
+@media (max-width: 1050px){ .tiles-container{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px){ .tiles-container{ grid-template-columns: 1fr; } }
+
+/* Base tile */
+.tile{
+  position: relative;
+  border-radius: var(--tile-radius);
+  overflow: hidden;
+  isolation: isolate;
+  cursor: pointer;
+  aspect-ratio: 16 / 11;                /* consistent height */
+  box-shadow: var(--tile-shadow);
+  border: 1px solid rgba(0,0,0,.06);
+  transition: transform .25s ease, box-shadow .25s ease;
+  background: #0b0b0c;
+}
+.tile:hover{ transform: translateY(-4px); box-shadow: 0 22px 48px rgba(0,0,0,.22); }
+
+/* Background image */
+.tile > img{
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  transform: scale(1.02);
+  filter: saturate(.95) contrast(1.05) brightness(.9);
+  transition: transform .6s ease, filter .35s ease;
+  z-index: 0;
+}
+.tile:hover > img{ transform: scale(1.08); filter: saturate(1.05) contrast(1.08) brightness(.95); }
+
+/* Gradient/veil */
+.tile .overlay{
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    radial-gradient(900px 300px at 20% -10%, rgba(255,255,255,.08), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.62) 65%);
+  border: 1px solid var(--tile-line);
+  mix-blend-mode: normal;
+}
+
+/* Title (unify all three “tile-title-text-box-*” classes) */
+.tile [class^="tile-title-text-box"]{
+  position: absolute; z-index: 2;
+  left: 22px; top: 22px; right: 22px;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,.35);
+}
+.tile [class^="tile-title-text-box"] p{
+  margin: 0;
+  font-size: clamp(20px, 2.7vw, 34px);
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+.tile .cursive{ font-style: italic; font-weight: 800; }
+
+/* Sub tagline (pill) */
+.tile .text-box{
+  position: absolute; z-index: 2;
+  left: 22px; right: 22px; bottom: 22px;
+  background: rgba(12,14,18,.55);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--tile-line);
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: #fff;
+  text-align: center;
+  transition: opacity .25s ease;
+}
+.tile .text-box p{ margin: 0; line-height: 1.35; }
+
+/* Long description: hidden until hover (or focus) */
+.tile .new-text-box{
+  position: absolute; z-index: 2;
+  left: 22px; right: 22px; bottom: 22px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: #e9ecff;
+  background: rgba(12,14,18,.74);
+  border: 1px solid var(--tile-line);
+  opacity: 0; transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity .28s ease, transform .28s ease;
+}
+.tile .new-text-box p{ margin: 0; font-size: 14.5px; line-height: 1.35; }
+
+/* Swap short → long on hover/focus */
+.tile:hover .text-box,
+.tile:focus-within .text-box{ opacity: 0; }
+
+.tile:hover .new-text-box,
+.tile:focus-within .new-text-box{
+  opacity: 1; transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Improve click target for accessibility */
+.tile:focus{ outline: none; }
+.tile:focus-visible{ outline: 3px solid rgba(79,70,229,.55); outline-offset: 4px; }
