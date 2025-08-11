@@ -5047,7 +5047,7 @@ section.SPBLOCK-bg {
 /* ==== RESOURCES (Insights) — hard mobile overrides ==== */
 @media (max-width: 768px) {
   /* make hero a single column and reduce sizing */
-  .insights-hero { padding: 100px 0 !important; }
+  .insights-hero { padding: 140px 0 !important; }
   .insights-hero .container { display: block !important; padding: 0 16px !important; }
 
   .insights-hero .eyebrow { font-size: 12px !important; padding: 4px 10px !important; margin-bottom: 6px !important; }
@@ -5065,12 +5065,12 @@ section.SPBLOCK-bg {
     max-width: none !important;
   }
 
-  .insights-hero .chip-row { gap: 8px !important; margin-top: 10px !important; }
-  .insights-hero .chip { font-size: 12px !important; padding: 6px 10px !important; }
+  . .chip-row { gap: 8px !important; margin-top: 10px !important; }
+  . .chip { font-size: 12px !important; padding: 6px 10px !important; }
 
   /* If anything made the hero a grid, force each item to span full width */
-  .insights-hero h1,
-  .insights-hero .dek,
+  . h1,
+  . .dek,
   .insights-hero .chip-row,
   .insights-hero .eyebrow { grid-column: 1 / -1 !important; }
 
