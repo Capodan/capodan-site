@@ -5103,7 +5103,7 @@ section.SPBLOCK-bg {
 @media (max-width: 768px) {
   /* add breathing room above the hero on mobile */
   .work-hero {
-    margin-top: 28px !important;      /* <- bump to 40px if you want more space */
+    margin-top: 100px !important;      /* <- bump to 40px if you want more space */
     padding: 18px 0 !important;
   }
 
