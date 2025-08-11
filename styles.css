@@ -5047,7 +5047,7 @@ section.SPBLOCK-bg {
 /* ==== RESOURCES (Insights) — hard mobile overrides ==== */
 @media (max-width: 768px) {
   /* make hero a single column and reduce sizing */
-  .insights-hero { padding: 30px 0 !important; }
+  .insights-hero { padding: 100px 0 !important; }
   .insights-hero .container { display: block !important; padding: 0 16px !important; }
 
   .insights-hero .eyebrow { font-size: 12px !important; padding: 4px 10px !important; margin-bottom: 6px !important; }
