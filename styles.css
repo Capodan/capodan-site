@@ -5159,7 +5159,7 @@ section.SPBLOCK-bg {
 /* ==== WHY CAPODAN (about-hero) — mobile overrides ==== */
 @media (max-width: 768px) {
   .about-hero {
-    padding: 60px 0 !important;          /* tighter vertical space */
+    padding: 100px 0 !important;          /* tighter vertical space */
   }
   .about-hero .container {
     display: block !important;            /* kill any 2-col layout */
