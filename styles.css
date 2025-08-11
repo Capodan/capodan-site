@@ -5201,3 +5201,31 @@ section.SPBLOCK-bg {
   }
   .about-badges i { width: 16px !important; text-align: center; }
 }
+
+/* --- BLOG CAROUSEL: mobile UX upgrades --- */
+@media (max-width:700px){
+  .carousel-header{ padding:0 12px; }
+
+  .carousel-track{
+    gap:12px;
+    padding:0 12px 16px;     /* edge padding so first/last cards aren’t flush */
+    scroll-padding:0 12px;   /* snap to that same padding */
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* Hide the scroll bar on phones */
+  .carousel-track::-webkit-scrollbar{ display:none; }
+  .carousel-track{ scrollbar-width:none; -ms-overflow-style:none; }
+
+  .blog-card{
+    min-width:88vw;          /* big, thumb-friendly card */
+    scroll-snap-align:center;
+    scroll-snap-stop:always; /* always land cleanly on a card */
+    border-radius:14px;
+  }
+
+  .blog-card h3{ font-size:1.05rem; line-height:1.2; }
+  .blog-card .excerpt{ -webkit-line-clamp:4; }  /* slightly longer preview */
+  .carousel-controls{ display:none; }           /* swipe only on mobile */
+  .carousel-edge{ display:none; }               /* fades not needed on small screens */
+}
