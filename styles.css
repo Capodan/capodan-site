@@ -5101,13 +5101,9 @@ section.SPBLOCK-bg {
 
 /* ==== WAYS TO WORK (servicespricing) — mobile overrides ==== */
 @media (max-width: 768px) {
-
-  /* small gap below the top nav/header */
-  .tab-banner + .work-hero {
-    margin-top: 40px !important;   /* bump this up if your header is taller */
-  }
-
+  /* add breathing room above the hero on mobile */
   .work-hero {
+    margin-top: 28px !important;      /* <- bump to 40px if you want more space */
     padding: 18px 0 !important;
   }
 
@@ -5156,6 +5152,7 @@ section.SPBLOCK-bg {
     text-align: center;
   }
 }
+
 /* ==== WHY CAPODAN (about-hero) — mobile overrides ==== */
 @media (max-width: 768px) {
   .about-hero {
