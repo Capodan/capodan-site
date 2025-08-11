@@ -4835,7 +4835,7 @@ section.SPBLOCK-bg {
 
 /* Hero */
 .insights-hero{
-  padding:58px 0 24px;
+  padding:100px 0 24px;
   border-bottom:1px solid var(--line);
   background:
     radial-gradient(700px 200px at 12% 0%, var(--brand-8), transparent 60%),
