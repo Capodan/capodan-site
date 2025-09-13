@@ -4062,7 +4062,7 @@ section.SPBLOCK-bg {
   }
 
   .content-offset {
-    padding-top: 0px; /* extra for stacked mobile nav */
+    padding-top: 80px; /* extra for stacked mobile nav */
   }
 
   .JARESheading {
