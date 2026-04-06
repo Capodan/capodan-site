@@ -1049,12 +1049,11 @@ video {
 }
 
 .container {
-    display: flex; /* Enables a flexbox layout */
-    padding: 20px;
-    justify-content: space-between; /* Spaces out the child elements */
-    align-items: center; /* Aligns items vertically */
-    width: 100%; /* Ensures the container takes the full width */
-    margin: 0 auto; /* Centers the container horizontally if needed */
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .SPimage-container {
