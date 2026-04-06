@@ -5641,3 +5641,53 @@ section.SPBLOCK-bg {
 .signal-icon i {
   line-height: 1;
 }
+
+.blog-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.blog-article {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 20px;
+}
+
+.blog-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.blog-body p {
+  margin-bottom: 1rem;
+}
+
+.blog-body ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-body a {
+  color: #7b378b;
+  text-decoration: underline;
+}
+
+.blog-divider {
+  margin: 3rem auto;
+  border: none;
+  border-top: 1px solid #ccc;
+  max-width: 600px;
+}
