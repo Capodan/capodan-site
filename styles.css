@@ -7124,9 +7124,14 @@ html.js body.cinematic-boot.cinematic-boot-fading::before {
 }
 
 .scroll-fade {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.scroll-fade.scroll-fade-pending {
   opacity: 0;
   transform: translateY(26px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
 .scroll-fade.is-visible {
@@ -7176,5 +7181,542 @@ html.js body.cinematic-boot.cinematic-boot-fading::before {
   .scroll-fade {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Site-wide premium dark refresh */
+:root {
+  --capo-bg: #030305;
+  --capo-panel: #101014;
+  --capo-panel-soft: #15151b;
+  --capo-line: rgba(255, 255, 255, 0.11);
+  --capo-text: #f8f7fb;
+  --capo-muted: rgba(255, 255, 255, 0.72);
+  --capo-soft: rgba(255, 255, 255, 0.56);
+  --capo-purple: #b792d8;
+  --capo-gold: #d6b36a;
+}
+
+body {
+  background: var(--capo-bg);
+  color: var(--capo-text);
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-hero,
+.work-hero,
+.insights-hero,
+.blog-hero,
+.contact-hero {
+  background:
+    radial-gradient(900px 280px at 18% 0%, rgba(183, 146, 216, 0.14), transparent 62%),
+    linear-gradient(180deg, #07070a 0%, var(--capo-bg) 100%);
+  border-bottom: 1px solid var(--capo-line);
+}
+
+.about-hero h1,
+.work-hero h1,
+.insights-hero h1,
+.blog-hero h1,
+.contact-hero h1,
+.SPTILEsection-header h1,
+.JARESheading,
+.about-cta h2,
+.about-steps h2,
+.copy h2,
+.contact-card h3,
+.cookie-text-container h2,
+.cookie-text-container h3 {
+  color: #fff;
+  letter-spacing: 0;
+}
+
+.about-hero h1,
+.work-hero h1,
+.insights-hero h1,
+.blog-hero h1,
+.contact-hero h1 {
+  margin: 0 0 16px;
+  line-height: 1.05;
+}
+
+.about-hero .sub,
+.work-hero .sub,
+.insights-hero .dek,
+.blog-hero .dek,
+.contact-hero .hero-sub,
+.copy p,
+.copy .lead,
+.ticks li,
+.small,
+.contact-card p,
+.cookie-text-container p,
+.cookie-text-container li,
+.SPTILEsection-header p,
+.simple-service-block p,
+.simple-feature-panel > p,
+.feature-item p {
+  color: var(--capo-muted);
+}
+
+.about-badges,
+.work-badges,
+.trust-row,
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+  color: var(--capo-muted);
+}
+
+.about-badges li,
+.work-badges li,
+.trust-row li,
+.insights-hero .eyebrow,
+.chip,
+.JARES-tile {
+  border: 1px solid var(--capo-line);
+  background: rgba(255, 255, 255, 0.055);
+  color: var(--capo-muted);
+  border-radius: 8px;
+}
+
+.about-badges li,
+.work-badges li,
+.trust-row li {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+.insights-hero .eyebrow,
+.chip {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  padding: 7px 10px;
+  text-decoration: none;
+}
+
+.about-badges i,
+.work-badges i,
+.trust-row i,
+.ticks li::before,
+.inline-cta,
+.contact-lines i,
+.cookie-text-container a {
+  color: var(--capo-purple);
+}
+
+.about-pillars,
+.about-split,
+.about-split.alt,
+.about-steps,
+.about-outcomes,
+.about-cta,
+.work-intro,
+.insights-intro,
+.posts-wrap,
+.contact-grid,
+.SPLIsection,
+.JARESsection {
+  background: var(--capo-bg);
+  color: var(--capo-text);
+}
+
+.pillar,
+.cards-2 .mini,
+.step,
+.outcome,
+.simple-service-block,
+.simple-feature-panel,
+.feature-item,
+#blog-posts .blog-card,
+.posts-grid > *,
+.contact-card,
+.quote,
+.cookie-text-container {
+  border: 1px solid var(--capo-line);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.075) 0%, rgba(255, 255, 255, 0.035) 100%),
+    var(--capo-panel);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.pillar h3,
+.pillar h4,
+.pillar li,
+.cards-2 h4,
+.step h4,
+.outcome h3,
+.simple-service-block h3,
+.simple-service-block li,
+.simple-feature-panel h3,
+.feature-item strong,
+#blog-posts .blog-card h3 a,
+#blog-posts .blog-card h2,
+.posts-grid > * h1,
+.posts-grid > * h2,
+.posts-grid > * h3,
+.contact-card strong,
+.form-card label {
+  color: #fff;
+}
+
+.contact-grid form.form-card .field label {
+  color: #fff;
+}
+
+.contact-grid form.form-card .consent {
+  color: var(--capo-muted);
+}
+
+.pillar p,
+.pillar ul,
+.step p,
+.outcome p,
+#blog-posts .blog-card time,
+#blog-posts .blog-card .excerpt,
+#blog-posts .blog-card p,
+.posts-grid > * p,
+.posts-grid > * time,
+.posts-grid > * .meta,
+.form-card label.consent,
+.consent {
+  color: var(--capo-muted);
+}
+
+.pillar,
+.simple-service-block,
+.simple-feature-panel,
+.feature-item,
+#blog-posts .blog-card,
+.contact-card {
+  overflow: hidden;
+}
+
+.pillar::before,
+.simple-service-block::before,
+.simple-feature-panel::before,
+.contact-card::before,
+.cookie-text-container::before {
+  background: var(--capo-purple);
+}
+
+.simple-service-block::before,
+.simple-feature-panel::before {
+  height: 3px;
+}
+
+.simple-service-block h3,
+.simple-feature-panel h3 {
+  min-height: 0;
+}
+
+.simple-service-block p {
+  min-height: 0;
+}
+
+.simple-service-block li::before,
+.homepage-service-card li::before {
+  background: var(--capo-purple);
+}
+
+.feature-item,
+.cards-2 .mini {
+  background: var(--capo-panel-soft);
+}
+
+.about-figure img,
+.art img {
+  border: 1px solid var(--capo-line);
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+}
+
+.mini-stats > div,
+.mini-stats div {
+  border: 1px solid var(--capo-line);
+  border-radius: 8px;
+  background: var(--capo-panel);
+  box-shadow: none;
+}
+
+.mini-stats span {
+  color: #fff;
+}
+
+.mini-stats em {
+  color: var(--capo-muted);
+}
+
+.SPTILEsection-header {
+  color: var(--capo-text);
+}
+
+.SPTILEsection-header .cursive,
+.SPTILEsection-header .serif {
+  color: #fff;
+}
+
+.black-line {
+  height: 1px;
+  background: var(--capo-line);
+}
+
+.bottom-white-space {
+  background: var(--capo-bg);
+}
+
+.JARESsection-header .line,
+.line,
+.dividerline {
+  background: var(--capo-line);
+}
+
+.JARES-tile {
+  min-height: 58px;
+  height: auto;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  color: var(--capo-muted);
+}
+
+.JARES-tile:hover {
+  border-color: rgba(214, 179, 106, 0.45);
+  background: rgba(214, 179, 106, 0.08);
+  box-shadow: none;
+}
+
+.JARES-tile p {
+  color: var(--capo-text);
+}
+
+.RESENV-container,
+.RESRETAIL-container,
+.RESPHARMA-container,
+.RESTRAVEL-container,
+.RESMEDIA-container,
+.RESAI-container,
+.RESSPORT-container,
+.RESFCMG-container,
+.RESFINANCE-container,
+.RESPUBSEC-container,
+.RESB2B-container {
+  position: relative;
+  border: 1px solid var(--capo-line);
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+  isolation: isolate;
+}
+
+.RESENV-container::before,
+.RESRETAIL-container::before,
+.RESPHARMA-container::before,
+.RESTRAVEL-container::before,
+.RESMEDIA-container::before,
+.RESAI-container::before,
+.RESSPORT-container::before,
+.RESFCMG-container::before,
+.RESFINANCE-container::before,
+.RESPUBSEC-container::before,
+.RESB2B-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(3, 3, 5, 0.84) 0%, rgba(3, 3, 5, 0.42) 52%, rgba(3, 3, 5, 0.78) 100%),
+    linear-gradient(0deg, rgba(3, 3, 5, 0.82) 0%, rgba(3, 3, 5, 0.1) 44%);
+  pointer-events: none;
+}
+
+.RESENV-heading,
+.RESENV-heading-altern,
+.RESSPORT-heading,
+.RESSPORT-heading-altern {
+  z-index: 2;
+  padding: 10px 14px;
+  border: 1px solid var(--capo-line);
+  border-radius: 8px;
+  background: rgba(16, 16, 20, 0.78);
+  color: #fff;
+  text-shadow: none;
+  backdrop-filter: blur(10px);
+}
+
+.RESENV-subtext,
+.RESENV-altern-subtext {
+  z-index: 2;
+  border: 1px solid var(--capo-line);
+  border-radius: 8px;
+  background: rgba(16, 16, 20, 0.78);
+  color: var(--capo-muted);
+  text-shadow: none;
+  backdrop-filter: blur(10px);
+}
+
+.RESENV-subtext p,
+.RESENV-altern-subtext p {
+  color: var(--capo-muted);
+}
+
+.RESENVtile,
+.RESRETAILtile,
+.RESPHARMAtile,
+.RESTRAVELtile,
+.RESMEDIAtile,
+.RESAItile,
+.RESSPORTtile,
+.RESFCMGtile,
+.RESFINANCEtile,
+.RESPUBSECtile,
+.RESB2Btile {
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.32);
+}
+
+.modal-content,
+.cookie-modal-content {
+  border: 1px solid var(--capo-line);
+  background: var(--capo-panel);
+  color: var(--capo-text);
+}
+
+.modal-content h2,
+.cookie-modal-content h2,
+.modal-content label,
+.cookie-toggle-group label {
+  color: #fff;
+}
+
+.modal-content p,
+.cookie-modal-content p,
+.toggle-description {
+  color: var(--capo-muted);
+}
+
+.modal-content input,
+.modal-content textarea,
+.contact-grid form.form-card input[type="text"],
+.contact-grid form.form-card input[type="email"],
+.contact-grid form.form-card textarea,
+.form-card input:not([type="checkbox"]),
+.form-card textarea {
+  border: 1px solid var(--capo-line);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.modal-content input::placeholder,
+.modal-content textarea::placeholder,
+.form-card input::placeholder,
+.form-card textarea::placeholder {
+  color: rgba(255, 255, 255, 0.44);
+}
+
+.btn-primary,
+.contact-grid form.form-card .btn-primary,
+.back-to-top-button {
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+  box-shadow: none;
+}
+
+.btn-primary:hover,
+.contact-grid form.form-card .btn-primary:hover,
+.back-to-top-button:hover {
+  background: var(--capo-purple);
+  color: #111;
+}
+
+.contact-card a,
+.card-link,
+#blog-posts .blog-card .read-more,
+.blog-card .read-more,
+.post-link {
+  color: #d9c5ee;
+}
+
+.contact-card hr {
+  border: 0;
+  border-top: 1px solid var(--capo-line);
+}
+
+.cookie-text-container {
+  position: relative;
+  max-width: 980px;
+  margin: 120px auto 72px !important;
+  padding: 42px;
+  box-sizing: border-box;
+}
+
+.cookie-text-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+.cookie-text-container ul {
+  color: var(--capo-muted);
+}
+
+.blog-article,
+.blog-body,
+.blog-body p,
+.blog-body li {
+  color: var(--capo-muted);
+}
+
+.blog-title,
+.blog-body h1,
+.blog-body h2,
+.blog-body h3 {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .cookie-text-container {
+    margin: 104px 16px 56px !important;
+    padding: 28px 22px;
+  }
+
+  .RESENV-container,
+  .RESRETAIL-container,
+  .RESPHARMA-container,
+  .RESTRAVEL-container,
+  .RESMEDIA-container,
+  .RESAI-container,
+  .RESSPORT-container,
+  .RESFCMG-container,
+  .RESFINANCE-container,
+  .RESPUBSEC-container,
+  .RESB2B-container {
+    width: calc(100% - 32px);
+    min-height: 760px;
+    height: auto;
   }
 }

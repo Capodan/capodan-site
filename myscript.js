@@ -761,6 +761,35 @@ function scrollToTop() {
   });
 }
 
+function escapeHtml(value = "") {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#39;"
+  }[char]));
+}
+
+function markdownPreview(markdown = "", wordLimit = 80) {
+  const body = markdown
+    .replace(/---\s*[\s\S]*?---/, "")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+    .replace(/\[[^\]]*\]\([^)]*\)/g, "")
+    .replace(/[#>*_`~-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return body.split(" ").slice(0, wordLimit).join(" ");
+}
+
+function slugifyPost(value = "post") {
+  return String(value)
+    .replace(/\.[^.]+$/, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 fetch('blog-posts/posts.json')
   .then(res => res.json())
   .then(posts => {
@@ -768,6 +797,7 @@ fetch('blog-posts/posts.json')
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const container = document.getElementById('carousel-container');
+    if (!container) return;
     container.innerHTML = ''; // clear first
 
     posts.forEach(post => {
@@ -819,15 +849,24 @@ fetch('blog-posts/posts.json')
             content = md.replace(frontmatterMatch[0], '');
           }
 
-          const html = marked.parse(content);
+          const excerpt = post.excerpt || markdownPreview(content, 38);
+          const slug = slugifyPost(post.slug || post.file || post.title);
+          const date = post.date
+            ? new Date(post.date).toLocaleDateString(undefined, {
+                year: "numeric",
+                month: "short",
+                day: "numeric"
+              })
+            : "";
 
           const postElement = document.createElement('article');
-          postElement.className = 'blog-article';
+          postElement.className = 'blog-card';
+          postElement.id = slug;
           postElement.innerHTML = `
-            <h2 class="blog-title">${post.title}</h2>
-            <p class="blog-date">${new Date(post.date).toDateString()}</p>
-            <div class="blog-body">${html}</div>
-            <hr class="blog-divider">
+            ${date ? `<time datetime="${escapeHtml(post.date)}">${escapeHtml(date)}</time>` : ""}
+            <h3><a href="blog.html#${escapeHtml(slug)}">${escapeHtml(post.title || "Untitled")}</a></h3>
+            <p class="excerpt">${escapeHtml(excerpt)}</p>
+            <a class="read-more" href="blog.html#${escapeHtml(slug)}">Read more</a>
           `;
           container.appendChild(postElement);
         });
@@ -903,11 +942,48 @@ function initCinematicHero() {
 
 function initHomepageScrollFades() {
   const sections = document.querySelectorAll(
-    ".homepage-signals-section, .homepage-output-section, .homepage-services-section, .blog-banner-carousel, .homepage-faq-section"
+    [
+      ".homepage-signals-section",
+      ".homepage-output-section",
+      ".homepage-services-section",
+      ".blog-banner-carousel",
+      ".homepage-faq-section",
+      ".about-pillars",
+      ".about-split",
+      ".about-steps",
+      ".about-outcomes",
+      ".about-cta",
+      ".work-intro",
+      ".SPLIsection",
+      ".insights-intro",
+      ".JARESsection",
+      ".RESENV-container",
+      ".RESRETAIL-container",
+      ".RESPHARMA-container",
+      ".RESTRAVEL-container",
+      ".RESMEDIA-container",
+      ".RESAI-container",
+      ".RESSPORT-container",
+      ".RESFCMG-container",
+      ".RESFINANCE-container",
+      ".RESPUBSEC-container",
+      ".RESB2B-container",
+      ".posts-wrap",
+      ".contact-grid",
+      ".cookie-text-container"
+    ].join(", ")
   );
   if (!sections.length) return;
 
-  sections.forEach(section => section.classList.add("scroll-fade"));
+  sections.forEach(section => {
+    section.classList.add("scroll-fade");
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+      section.classList.add("is-visible");
+    } else {
+      section.classList.add("scroll-fade-pending");
+    }
+  });
 
   if (!("IntersectionObserver" in window)) {
     sections.forEach(section => section.classList.add("is-visible"));
@@ -917,6 +993,7 @@ function initHomepageScrollFades() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        entry.target.classList.remove("scroll-fade-pending");
         entry.target.classList.add("is-visible");
         observer.unobserve(entry.target);
       }
