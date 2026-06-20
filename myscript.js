@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 // Modal Content
         const serviceModalsContent = {
             1: { title: "Brand Alignment", text: `Clients often connect with parts of your brand that your marketing overlooks. We identify where the language drifts, exposing gaps between what is said and what actually matters to your audience.<br><br>
@@ -878,6 +880,47 @@ function toggleMenu() {
   nav.classList.toggle("active");
   burger?.classList.toggle("open"); // this triggers the animation
 }
+
+function initMobileNavigation() {
+  const burger = document.querySelector(".burger");
+  if (!burger || burger.querySelector(".burger-lines")) return;
+  burger.setAttribute("role", "button");
+  burger.setAttribute("aria-label", "Toggle navigation menu");
+  burger.innerHTML = '<span class="burger-lines" aria-hidden="true"></span>';
+
+  const syncBurger = () => {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    if (!isMobile) {
+      burger.removeAttribute("style");
+      return;
+    }
+
+    const mobileStyles = {
+      display: "flex",
+      position: "fixed",
+      top: "10px",
+      right: "18px",
+      width: "44px",
+      height: "44px",
+      "align-items": "center",
+      "justify-content": "center",
+      "z-index": "1100",
+      background: "#151515",
+      border: "1px solid rgba(17, 17, 17, 0.18)",
+      "border-radius": "8px",
+      opacity: "1",
+      visibility: "visible"
+    };
+
+    Object.entries(mobileStyles).forEach(([property, value]) => {
+      burger.style.setProperty(property, value, "important");
+    });
+  };
+
+  syncBurger();
+  window.addEventListener("resize", syncBurger, { passive: true });
+}
+
 function initCinematicHero() {
   const hero = document.querySelector(".cinematic-hero");
   const intro = hero?.querySelector(".hero-video-intro");
@@ -1007,6 +1050,7 @@ function initHomepageScrollFades() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initMobileNavigation();
   initCinematicHero();
   initHomepageScrollFades();
 });
