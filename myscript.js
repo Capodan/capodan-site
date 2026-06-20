@@ -903,7 +903,7 @@ function initCinematicHero() {
 
 function initHomepageScrollFades() {
   const sections = document.querySelectorAll(
-    ".homepage-signals-section, .homepage-services-section, .blog-banner-carousel, .homepage-faq-section"
+    ".homepage-signals-section, .homepage-output-section, .homepage-services-section, .blog-banner-carousel, .homepage-faq-section"
   );
   if (!sections.length) return;
 

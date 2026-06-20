@@ -6407,6 +6407,7 @@ html.js body.cinematic-nav-hidden .tab-banner {
 }
 
 .homepage-signals-inner,
+.homepage-output-inner,
 .homepage-service-cards,
 .blog-banner-carousel .container {
   max-width: 1180px;
@@ -6471,6 +6472,15 @@ html.js body.cinematic-nav-hidden .tab-banner {
   background: #f1e8f8;
 }
 
+.method-step {
+  display: inline-flex;
+  margin-bottom: 16px;
+  color: #d6b36a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
 .homepage-signals-cta {
   margin-top: 30px;
 }
@@ -6483,6 +6493,77 @@ html.js body.cinematic-nav-hidden .tab-banner {
 
 .homepage-signals-cta .button-link:hover {
   background: #7b378b;
+}
+
+.homepage-output-section {
+  padding: 86px 20px 96px;
+  background: #030305;
+  color: #f8f7fb;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.homepage-output-inner {
+  margin: 0 auto;
+}
+
+.homepage-output-header {
+  max-width: 860px;
+  margin: 0 0 34px;
+}
+
+.snapshot-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.snapshot-preview-card {
+  position: relative;
+  display: flex;
+  min-height: 236px;
+  flex-direction: column;
+  padding: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.075) 0%, rgba(255, 255, 255, 0.035) 100%),
+    #101014;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.snapshot-preview-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #d6b36a;
+}
+
+.snapshot-preview-card span {
+  margin-bottom: 18px;
+  color: #d6b36a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.snapshot-preview-card h3 {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: 1.34rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.snapshot-preview-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.68;
 }
 
 .homepage-services-section {
@@ -6627,8 +6708,8 @@ html.js body.cinematic-nav-hidden .tab-banner {
   }
 
   .homepage-hero-content {
-    right: 32px;
-    width: min(460px, calc(100% - 64px));
+    right: auto;
+    width: min(720px, calc(100% - 64px));
   }
 
   .homepage-signals-header h2,
@@ -6639,11 +6720,13 @@ html.js body.cinematic-nav-hidden .tab-banner {
 
 @media (max-width: 900px) {
   .homepage-signals-grid,
+  .snapshot-preview,
   .homepage-service-cards {
     grid-template-columns: 1fr;
   }
 
   .homepage-signals-section,
+  .homepage-output-section,
   .homepage-services-section,
   .blog-banner-carousel,
   .homepage-faq-section {
@@ -6760,6 +6843,7 @@ html.js body.cinematic-nav-hidden .tab-banner {
   }
 
   .homepage-signals-section,
+  .homepage-output-section,
   .homepage-services-section,
   .blog-banner-carousel,
   .homepage-faq-section {
@@ -6850,6 +6934,7 @@ html.js body.cinematic-nav-hidden .tab-banner {
   }
 
   .homepage-signal-card,
+  .snapshot-preview-card,
   .homepage-service-card,
   .blog-banner-carousel .blog-card {
     padding: 24px;
@@ -6964,6 +7049,7 @@ html.js body.cinematic-boot.cinematic-boot-fading::before {
 }
 
 .homepage-signals-section,
+.homepage-output-section,
 .homepage-services-section,
 .blog-banner-carousel,
 .homepage-faq-section {
