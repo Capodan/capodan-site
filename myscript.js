@@ -862,6 +862,7 @@ function initCinematicHero() {
     window.clearTimeout(introWatchdog);
     hero.classList.remove("is-loading", "intro-visible");
     hero.classList.add("loop-visible");
+    document.body.classList.remove("cinematic-nav-hidden");
     loop.muted = true;
     loop.loop = true;
     loop.playsInline = true;

@@ -6222,6 +6222,13 @@ section.SPBLOCK-bg {
   padding: 10px 32px;
   border-bottom: 1px solid rgba(17, 17, 17, 0.08);
   box-shadow: 0 12px 30px rgba(17, 17, 17, 0.06);
+  transition: opacity 0.75s ease, visibility 0s linear 0s;
+}
+
+html.js body.cinematic-nav-hidden .tab-banner {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .tab-buttons {
