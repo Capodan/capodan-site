@@ -839,24 +839,100 @@ function toggleMenu() {
   nav.classList.toggle("active");
   burger?.classList.toggle("open"); // this triggers the animation
 }
-function updateVideoSource() {
-  const video  = document.querySelector(".video-container video");
-  if (!video) return;
-  const source = video.querySelector("source");
-  if (!source) return;
+function initCinematicHero() {
+  const hero = document.querySelector(".cinematic-hero");
+  const intro = hero?.querySelector(".hero-video-intro");
+  const loop = hero?.querySelector(".hero-video-loop");
+  if (!hero || !loop) return;
 
-  const isMobile  = window.innerWidth <= 768;
-  const current   = source.getAttribute("src") || "";
-  const desired   = isMobile ? "ASSETS/CapoMobile.mp4" : "ASSETS/Capo.mp4";
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let loopVisible = false;
+  let introWatchdog;
 
-  if (current !== desired) {
-    source.setAttribute("src", desired);
-    video.pause();
-    video.load();                       // refreshes the <source>
-    const p = video.play();             // try to auto-play again
-    if (p && typeof p.then === "function") p.catch(() => {});
+  function clearBootScreen() {
+    document.body.classList.add("cinematic-boot-fading");
+    window.setTimeout(() => {
+      document.body.classList.remove("cinematic-boot", "cinematic-boot-fading");
+    }, 850);
   }
+
+  function playLoop() {
+    if (loopVisible) return;
+    loopVisible = true;
+    window.clearTimeout(introWatchdog);
+    hero.classList.remove("is-loading", "intro-visible");
+    hero.classList.add("loop-visible");
+    loop.muted = true;
+    loop.loop = true;
+    loop.playsInline = true;
+    const playPromise = loop.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => hero.classList.add("loop-visible"));
+    }
+  }
+
+  function playIntro() {
+    clearBootScreen();
+
+    if (!intro || prefersReducedMotion) {
+      playLoop();
+      return;
+    }
+
+    hero.classList.remove("is-loading");
+    hero.classList.add("intro-visible");
+    intro.muted = true;
+    intro.loop = false;
+    intro.playsInline = true;
+    intro.currentTime = 0;
+
+    intro.addEventListener("ended", playLoop, { once: true });
+    intro.addEventListener("error", playLoop, { once: true });
+    introWatchdog = window.setTimeout(playLoop, 15000);
+
+    const playPromise = intro.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(playLoop);
+    }
+  }
+
+  loop.addEventListener("error", () => hero.classList.add("loop-visible"), { once: true });
+  window.setTimeout(playIntro, 1000);
 }
+
+function initHomepageScrollFades() {
+  const sections = document.querySelectorAll(
+    ".homepage-signals-section, .homepage-services-section, .blog-banner-carousel, .homepage-faq-section"
+  );
+  if (!sections.length) return;
+
+  sections.forEach(section => section.classList.add("scroll-fade"));
+
+  if (!("IntersectionObserver" in window)) {
+    sections.forEach(section => section.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: "0px 0px -12% 0px",
+    threshold: 0.12
+  });
+
+  sections.forEach(section => observer.observe(section));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initCinematicHero();
+  initHomepageScrollFades();
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const els = document.querySelectorAll('.fade-in');
   const onScroll = () => {
@@ -871,6 +947,4 @@ document.addEventListener('DOMContentLoaded', () => {
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  updateVideoSource();                                // ✅ ADD
-  window.addEventListener('resize', debounce(updateVideoSource, 200)); // ✅ ADD
 });

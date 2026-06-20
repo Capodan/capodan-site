@@ -6852,3 +6852,218 @@ section.SPBLOCK-bg {
     font-size: 1.85rem;
   }
 }
+
+/* Cinematic homepage entry */
+body {
+  background: #030305;
+}
+
+html.js body.cinematic-boot {
+  overflow: hidden;
+}
+
+html.js body.cinematic-boot::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 30000;
+  background: #000;
+  opacity: 1;
+  transition: opacity 0.85s ease;
+  pointer-events: none;
+}
+
+html.js body.cinematic-boot.cinematic-boot-fading::before {
+  opacity: 0;
+}
+
+.cinematic-hero {
+  isolation: isolate;
+  background: #000;
+}
+
+.homepage-hero .cinematic-hero {
+  height: calc(100vh - 170px);
+  min-height: 560px;
+  max-height: 680px;
+}
+
+.cinematic-hero .hero-video-stage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.cinematic-hero .hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.homepage-hero .cinematic-hero .hero-video {
+  height: 100% !important;
+  min-height: 0;
+  max-height: none;
+}
+
+.cinematic-hero.intro-visible .hero-video-intro,
+.cinematic-hero.loop-visible .hero-video-loop {
+  opacity: 1;
+}
+
+.cinematic-hero.loop-visible .hero-video-intro,
+.cinematic-hero.is-loading .hero-video {
+  opacity: 0;
+}
+
+.cinematic-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: #000;
+  opacity: 0;
+  transition: opacity 0.85s ease;
+  pointer-events: none;
+}
+
+.cinematic-hero.is-loading::after {
+  opacity: 1;
+}
+
+.homepage-signals-section,
+.homepage-services-section,
+.blog-banner-carousel,
+.homepage-faq-section {
+  background: #030305;
+  color: #f8f7fb;
+}
+
+.homepage-signals-header h2,
+.homepage-section-header h2,
+.carousel-heading,
+.homepage-signal-card h3,
+.homepage-service-card h3,
+.blog-banner-carousel .blog-card h3 a,
+.homepage-faq-section .faq-question {
+  color: #fff;
+}
+
+.signals-sub,
+.homepage-section-header p,
+.homepage-signal-card p,
+.homepage-service-card p,
+.homepage-service-card li,
+.blog-card time,
+.blog-card .excerpt,
+.homepage-faq-section .faq-answer p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.homepage-signal-card,
+.homepage-service-card,
+.blog-banner-carousel .blog-card {
+  border-color: rgba(255, 255, 255, 0.10);
+  background: #101014;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+}
+
+.signal-icon {
+  background: rgba(183, 146, 216, 0.14);
+}
+
+.homepage-signals-cta .button-link,
+.hero-button-primary {
+  background: #fff;
+  color: #111;
+}
+
+.homepage-signals-cta .button-link:hover {
+  background: #b792d8;
+  color: #111;
+}
+
+.card-link,
+.blog-card .read-more {
+  color: #d9c5ee;
+}
+
+.blog-card h3 a:hover,
+.blog-card .read-more:hover {
+  color: #fff;
+}
+
+.blog-banner-carousel .carousel-edge.left {
+  background: linear-gradient(90deg, #030305 0%, rgba(3, 3, 5, 0) 100%);
+}
+
+.blog-banner-carousel .carousel-edge.right {
+  background: linear-gradient(270deg, #030305 0%, rgba(3, 3, 5, 0) 100%);
+}
+
+.homepage-faq-section .faq-item {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.scroll-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+  .homepage-hero .cinematic-hero {
+    height: auto;
+    max-height: none;
+  }
+
+  .cinematic-hero .hero-video-stage {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 390px;
+    flex: 0 0 auto;
+  }
+
+  .cinematic-hero .hero-video {
+    height: 100% !important;
+    min-height: 0;
+    max-height: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .cinematic-hero .hero-video-stage {
+    height: 350px;
+  }
+
+  .cinematic-hero .hero-video {
+    max-height: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-hero .hero-video,
+  .cinematic-hero::after,
+  html.js body.cinematic-boot::before,
+  .scroll-fade {
+    transition: none;
+  }
+
+  .scroll-fade {
+    opacity: 1;
+    transform: none;
+  }
+}

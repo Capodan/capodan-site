@@ -30,6 +30,7 @@
 
     <link rel="icon" type="image/png" href="ASSETS/favicon.png">
     <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add('js');</script>
     <script defer src="myscript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -60,7 +61,7 @@
     </script>
 </head>
 
-<body>
+<body class="cinematic-boot">
     <div class="tab-banner">
         <a href="index.html">
             <img src="ASSETS/Capo.svg" class="logo-img" alt="Capodan logo" />
@@ -81,20 +82,35 @@
     </div>
 
     <section class="content-offset homepage-hero" aria-labelledby="homepage-hero-title">
-        <div class="video-container">
-            <video
-                width="100%"
-                height="auto"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="none"
-                poster="ASSETS/CapoPoster.png"
-            >
-                <source src="ASSETS/Capo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        <div class="video-container cinematic-hero is-loading">
+            <div class="hero-video-stage" aria-hidden="true">
+                <video
+                    class="hero-video hero-video-intro"
+                    width="100%"
+                    height="auto"
+                    muted
+                    playsinline
+                    preload="auto"
+                    poster="ASSETS/CapoPoster.png"
+                >
+                    <source src="ASSETS/capodan-intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video
+                    class="hero-video hero-video-loop"
+                    width="100%"
+                    height="auto"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                    poster="ASSETS/CapoPoster.png"
+                >
+                    <source src="ASSETS/capodan-loop.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             <div class="homepage-hero-overlay" aria-hidden="true"></div>
             <div class="homepage-hero-content">
               <p class="hero-eyebrow">Language-led research consultancy</p>
