@@ -6294,12 +6294,13 @@ html.js body.cinematic-nav-hidden .tab-banner {
 .homepage-hero-content {
   position: absolute;
   z-index: 2;
-  top: 50%;
-  right: max(40px, calc((100vw - 1280px) / 2 + 40px));
-  width: min(500px, calc(100% - 80px));
+  top: 59%;
+  left: 50%;
+  right: auto;
+  width: min(760px, calc(100% - 120px));
   color: #fff;
-  text-align: left;
-  transform: translateY(-50%);
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
 .hero-eyebrow,
@@ -6331,8 +6332,8 @@ html.js body.cinematic-nav-hidden .tab-banner {
 }
 
 .hero-copy {
-  margin: 0;
-  max-width: 470px;
+  margin: 0 auto;
+  max-width: 680px;
   font-size: 1.18rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.88);
@@ -6341,6 +6342,7 @@ html.js body.cinematic-nav-hidden .tab-banner {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
   margin-top: 30px;
 }
