@@ -6907,6 +6907,22 @@ html.js body.cinematic-boot.cinematic-boot-fading::before {
   transition: opacity 0.9s ease;
 }
 
+.cinematic-hero .homepage-hero-overlay,
+.cinematic-hero .homepage-hero-content,
+.cinematic-hero .google-rating-banner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.85s ease, visibility 0s linear 0.85s;
+}
+
+.cinematic-hero.loop-visible .homepage-hero-overlay,
+.cinematic-hero.loop-visible .homepage-hero-content,
+.cinematic-hero.loop-visible .google-rating-banner {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
 .homepage-hero .cinematic-hero .hero-video {
   height: 100% !important;
   min-height: 0;
