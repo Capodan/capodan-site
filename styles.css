@@ -9183,21 +9183,14 @@ textarea:focus-visible,
 .cinematic-hero .hero-video-stage::after,
 .homepage-hero-overlay {
   background:
-    linear-gradient(90deg, rgba(4, 5, 7, 0.90) 0%, rgba(4, 5, 7, 0.66) 42%, rgba(4, 5, 7, 0.76) 100%),
+    linear-gradient(90deg, rgba(4, 5, 7, 0.86) 0%, rgba(4, 5, 7, 0.52) 44%, rgba(4, 5, 7, 0.84) 100%),
     linear-gradient(180deg, rgba(4, 5, 7, 0.10) 0%, rgba(4, 5, 7, 0.20) 52%, rgba(4, 5, 7, 0.82) 100%);
 }
 
-.homepage-hero .video-container video,
-.cinematic-hero .hero-video {
-  object-position: center right;
-  filter: brightness(0.84) saturate(0.90) contrast(1.04);
-}
-
 .homepage-hero-content {
-  left: auto;
-  right: max(32px, calc((100vw - 1180px) / 2 + 24px));
+  left: max(32px, calc((100vw - 1180px) / 2 + 24px));
   top: 54%;
-  width: min(600px, calc(100% - 64px));
+  width: min(640px, calc(100% - 64px));
   text-align: left;
   transform: translateY(-50%);
 }
@@ -9266,8 +9259,8 @@ textarea:focus-visible,
 .homepage-hero .google-rating-banner {
   display: inline-flex;
   position: absolute;
-  left: auto;
-  right: max(32px, calc((100vw - 1180px) / 2 + 24px));
+  left: max(32px, calc((100vw - 1180px) / 2 + 24px));
+  right: auto;
   bottom: 28px;
   z-index: 2;
   width: auto;
