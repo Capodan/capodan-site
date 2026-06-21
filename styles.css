@@ -8308,6 +8308,14 @@ body {
   margin-bottom: clamp(8px, 1.5vw, 20px);
 }
 
+.RESSPORTtile-container,
+.RESFCMGtile-container,
+.RESFINANCEtile-container,
+.RESPUBSECtile-container,
+.RESB2Btile-container {
+  position: static;
+}
+
 .RESENVtile,
 .RESRETAILtile,
 .RESPHARMAtile,
