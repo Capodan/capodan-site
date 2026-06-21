@@ -927,6 +927,8 @@ function initCinematicHero() {
   const loop = hero?.querySelector(".hero-video-loop");
   if (!hero || !loop) return;
 
+  const introPlaybackRate = 1.5;
+  const introWatchdogMs = Math.round(15000 / introPlaybackRate);
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let loopVisible = false;
   let introWatchdog;
@@ -967,11 +969,13 @@ function initCinematicHero() {
     intro.muted = true;
     intro.loop = false;
     intro.playsInline = true;
+    intro.defaultPlaybackRate = introPlaybackRate;
+    intro.playbackRate = introPlaybackRate;
     intro.currentTime = 0;
 
     intro.addEventListener("ended", playLoop, { once: true });
     intro.addEventListener("error", playLoop, { once: true });
-    introWatchdog = window.setTimeout(playLoop, 15000);
+    introWatchdog = window.setTimeout(playLoop, introWatchdogMs);
 
     const playPromise = intro.play();
     if (playPromise && typeof playPromise.catch === "function") {
