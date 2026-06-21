@@ -8333,6 +8333,56 @@ body {
   border-color: rgba(214, 179, 106, 0.62);
 }
 
+@media (min-width: 901px) {
+  .RESENV-heading,
+  .RESENV-heading-altern,
+  .RESSPORT-heading,
+  .RESSPORT-heading-altern,
+  .RESENV-subtext,
+  .RESENV-altern-subtext {
+    z-index: 3;
+  }
+
+  .RESENV-subtext,
+  .RESENV-altern-subtext {
+    width: 300px;
+    max-width: calc(100% - 64px);
+  }
+
+  .RESENVtile-container,
+  .RESRETAILtile-container,
+  .RESPHARMAtile-container,
+  .RESTRAVELtile-container,
+  .RESMEDIAtile-container,
+  .RESAItile-container,
+  .RESSPORTtile-container,
+  .RESFCMGtile-container,
+  .RESFINANCEtile-container,
+  .RESPUBSECtile-container,
+  .RESB2Btile-container {
+    width: min(780px, calc(100% - 400px));
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .RESENVtile,
+  .RESRETAILtile,
+  .RESPHARMAtile,
+  .RESTRAVELtile,
+  .RESMEDIAtile,
+  .RESAItile,
+  .RESSPORTtile,
+  .RESFCMGtile,
+  .RESFINANCEtile,
+  .RESPUBSECtile,
+  .RESB2Btile {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+  }
+}
+
 .footer-columns {
   padding: 56px max(30px, calc((100vw - 1180px) / 2)) 58px;
   border-top: 1px solid var(--capo-line);
