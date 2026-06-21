@@ -944,13 +944,34 @@ function initCinematicHero() {
   const loop = hero?.querySelector(".hero-video-loop");
   if (!hero || !loop) return;
 
+  const introSeenStorageKey = "capodan-home-intro-seen";
   const introPlaybackRate = 2;
   const introWatchdogMs = Math.round(15000 / introPlaybackRate);
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const hasSeenIntro = (() => {
+    try {
+      return window.localStorage.getItem(introSeenStorageKey) === "1";
+    } catch {
+      return false;
+    }
+  })();
   let loopVisible = false;
   let introWatchdog;
 
-  function clearBootScreen() {
+  function markIntroSeen() {
+    try {
+      window.localStorage.setItem(introSeenStorageKey, "1");
+    } catch {
+      // Ignore storage failures and continue with the intro flow.
+    }
+  }
+
+  function clearBootScreen(immediate = false) {
+    if (immediate) {
+      document.body.classList.remove("cinematic-boot", "cinematic-boot-fading");
+      return;
+    }
+
     document.body.classList.add("cinematic-boot-fading");
     window.setTimeout(() => {
       document.body.classList.remove("cinematic-boot", "cinematic-boot-fading");
@@ -990,6 +1011,7 @@ function initCinematicHero() {
     intro.playbackRate = introPlaybackRate;
     intro.currentTime = 0;
 
+    intro.addEventListener("play", markIntroSeen, { once: true });
     intro.addEventListener("ended", playLoop, { once: true });
     intro.addEventListener("error", playLoop, { once: true });
     introWatchdog = window.setTimeout(playLoop, introWatchdogMs);
@@ -1001,6 +1023,11 @@ function initCinematicHero() {
   }
 
   loop.addEventListener("error", () => hero.classList.add("loop-visible"), { once: true });
+  if (hasSeenIntro) {
+    clearBootScreen(true);
+    playLoop();
+    return;
+  }
   window.setTimeout(playIntro, 1000);
 }
 
