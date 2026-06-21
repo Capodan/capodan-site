@@ -6792,9 +6792,12 @@ html.js body.cinematic-nav-hidden .tab-banner {
 
   .homepage-hero-content {
     position: relative;
+    left: auto;
     right: auto;
     top: auto;
-    width: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 26px 20px 30px;
     background: #101014;
     transform: none;
@@ -6802,10 +6805,16 @@ html.js body.cinematic-nav-hidden .tab-banner {
 
   .homepage-hero-content h1 {
     font-size: 2.6rem;
+    max-width: 11em;
+    margin-left: auto;
+    margin-right: auto;
+    text-wrap: balance;
   }
 
   .hero-copy {
+    max-width: min(100%, 33ch);
     font-size: 1.05rem;
+    overflow-wrap: break-word;
   }
 
   .hero-actions {
@@ -6849,15 +6858,16 @@ html.js body.cinematic-nav-hidden .tab-banner {
   .homepage-hero .video-container video {
     max-height: 350px;
     object-fit: cover;
-    object-position: left top;
+    object-position: center top;
   }
 
   .homepage-hero-content h1 {
     margin-bottom: 12px;
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .hero-copy {
+    font-size: 1rem;
     line-height: 1.55;
   }
 
@@ -6898,7 +6908,7 @@ html.js body.cinematic-nav-hidden .tab-banner {
 
   .cookie-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     flex: 1 1 100%;
     gap: 8px;
     justify-content: stretch;
@@ -6913,7 +6923,7 @@ html.js body.cinematic-nav-hidden .tab-banner {
   }
 
   .cookie-buttons .accept {
-    grid-column: 1 / -1;
+    grid-column: auto;
   }
 
   .homepage-signal-card,
