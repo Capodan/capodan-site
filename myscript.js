@@ -927,7 +927,7 @@ function initCinematicHero() {
   const loop = hero?.querySelector(".hero-video-loop");
   if (!hero || !loop) return;
 
-  const introPlaybackRate = 1.5;
+  const introPlaybackRate = 2;
   const introWatchdogMs = Math.round(15000 / introPlaybackRate);
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let loopVisible = false;
