@@ -7513,7 +7513,8 @@ body {
 .RESB2B-container {
   position: relative;
   box-sizing: border-box;
-  border: 1px solid var(--capo-line);
+  overflow: hidden;
+  border: 0;
   border-radius: 8px;
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
   isolation: isolate;
@@ -7534,6 +7535,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 1;
+  border-radius: inherit;
   background:
     linear-gradient(90deg, rgba(3, 3, 5, 0.84) 0%, rgba(3, 3, 5, 0.42) 52%, rgba(3, 3, 5, 0.78) 100%),
     linear-gradient(0deg, rgba(3, 3, 5, 0.82) 0%, rgba(3, 3, 5, 0.1) 44%);
@@ -8175,7 +8177,7 @@ body {
 }
 
 .JARESsection {
-  padding: 58px 0 14px;
+  padding: 58px 0 42px;
 }
 
 .JARESsection-header {
@@ -8233,12 +8235,12 @@ body {
 .RESFINANCE-container,
 .RESPUBSEC-container,
 .RESB2B-container {
-  width: min(1180px, calc(100% - 48px));
+  width: min(1320px, calc(100% - 48px));
   max-width: none;
   height: clamp(500px, 45vw, 590px);
   margin: 0 auto;
   border-radius: 8px;
-  padding: clamp(18px, 2vw, 28px);
+  padding: clamp(16px, 1.6vw, 24px);
 }
 
 .RESENV-container::before,
@@ -8270,7 +8272,7 @@ body {
 
 .RESENV-subtext,
 .RESENV-altern-subtext {
-  width: min(340px, calc(100% - 80px));
+  width: min(300px, calc(100% - 72px));
   padding: 18px;
   font-size: 0.96rem;
   line-height: 1.55;
@@ -8298,6 +8300,9 @@ body {
 .RESPUBSECtile-container,
 .RESB2Btile-container {
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
   z-index: 2;
   gap: clamp(12px, 1.6vw, 20px);
   margin-bottom: clamp(8px, 1.5vw, 20px);
@@ -8314,9 +8319,17 @@ body {
 .RESFINANCEtile,
 .RESPUBSECtile,
 .RESB2Btile {
-  width: clamp(190px, 21vw, 300px);
-  height: clamp(270px, 30vw, 400px);
+  width: 100%;
+  height: auto;
+  aspect-ratio: 510 / 720;
+  background-color: rgba(8, 10, 16, 0.92);
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+[class*="tile-"][class$="-cover"] {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .RESENVtile:hover,
@@ -8346,7 +8359,7 @@ body {
 
   .RESENV-subtext,
   .RESENV-altern-subtext {
-    width: 300px;
+    width: min(280px, calc(100% - 72px));
     max-width: calc(100% - 64px);
   }
 
@@ -8361,26 +8374,10 @@ body {
   .RESFINANCEtile-container,
   .RESPUBSECtile-container,
   .RESB2Btile-container {
-    width: min(780px, calc(100% - 400px));
+    width: min(940px, calc(100% - 328px));
     max-width: 100%;
     margin-left: 0;
     margin-right: 0;
-  }
-
-  .RESENVtile,
-  .RESRETAILtile,
-  .RESPHARMAtile,
-  .RESTRAVELtile,
-  .RESMEDIAtile,
-  .RESAItile,
-  .RESSPORTtile,
-  .RESFCMGtile,
-  .RESFINANCEtile,
-  .RESPUBSECtile,
-  .RESB2Btile {
-    flex: 1 1 0;
-    width: auto;
-    min-width: 0;
   }
 }
 
@@ -8576,7 +8573,8 @@ html:not(.js) .fade-in-right {
   .RESPUBSECtile-container,
   .RESB2Btile-container {
     width: 100%;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    justify-items: center;
     margin-left: 0;
     margin-right: 0;
   }
@@ -8592,8 +8590,8 @@ html:not(.js) .fade-in-right {
   .RESFINANCEtile,
   .RESPUBSECtile,
   .RESB2Btile {
-    width: 100%;
-    height: 210px;
+    width: min(100%, 320px);
+    height: auto;
   }
 }
 
