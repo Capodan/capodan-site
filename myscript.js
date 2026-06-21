@@ -756,6 +756,23 @@ document.addEventListener("DOMContentLoaded", () => {
   startTickers();
 });
 
+function scrollToTile(targetName) {
+  const target =
+    document.getElementById(targetName) ||
+    document.getElementsByClassName(targetName)[0];
+
+  if (!target) return;
+
+  const header = document.querySelector(".tab-banner");
+  const headerOffset = (header?.getBoundingClientRect().height || 0) + 16;
+  const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+  window.scrollTo({
+    top: Math.max(0, targetTop),
+    behavior: "smooth"
+  });
+}
+
 function scrollToTop() {
   window.scrollTo({
     top: 0,
