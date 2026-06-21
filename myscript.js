@@ -1031,6 +1031,116 @@ function initCinematicHero() {
   window.setTimeout(playIntro, 1000);
 }
 
+function initCommercialProofCarousel() {
+  const track = document.querySelector("[data-commercial-proof-carousel]");
+  if (!track) return;
+
+  const cards = Array.from(track.querySelectorAll(".commercial-proof-card"));
+  if (cards.length < 2) return;
+
+  const dotsWrap = document.querySelector("[data-commercial-proof-dots]");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let activeIndex = 0;
+  let paused = false;
+  let resumeTimer = null;
+  let scrollFrame = null;
+
+  function pauseTemporarily() {
+    paused = true;
+    window.clearTimeout(resumeTimer);
+    resumeTimer = window.setTimeout(() => {
+      paused = false;
+    }, 7000);
+  }
+
+  function updateDots() {
+    if (!dotsWrap) return;
+    dotsWrap.querySelectorAll("button").forEach((dot, index) => {
+      dot.classList.toggle("is-active", index === activeIndex);
+      dot.setAttribute("aria-pressed", index === activeIndex ? "true" : "false");
+    });
+  }
+
+  function scrollToCard(index, behavior = "smooth") {
+    activeIndex = (index + cards.length) % cards.length;
+    track.scrollTo({
+      left: cards[activeIndex].offsetLeft - track.offsetLeft,
+      behavior
+    });
+    updateDots();
+  }
+
+  function syncActiveFromScroll() {
+    const targetLeft = track.scrollLeft + track.offsetLeft;
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    cards.forEach((card, index) => {
+      const distance = Math.abs(card.offsetLeft - targetLeft);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    activeIndex = closestIndex;
+    updateDots();
+  }
+
+  if (dotsWrap) {
+    dotsWrap.innerHTML = "";
+    cards.forEach((card, index) => {
+      const button = document.createElement("button");
+      const title = card.querySelector("h4")?.textContent?.trim() || `Story ${index + 1}`;
+      button.type = "button";
+      button.setAttribute("aria-label", `Show commercial story: ${title}`);
+      button.addEventListener("click", () => {
+        pauseTemporarily();
+        scrollToCard(index);
+      });
+      dotsWrap.appendChild(button);
+    });
+  }
+
+  track.addEventListener("scroll", () => {
+    if (scrollFrame) return;
+    scrollFrame = window.requestAnimationFrame(() => {
+      syncActiveFromScroll();
+      scrollFrame = null;
+    });
+  }, { passive: true });
+
+  ["mouseenter", "focusin", "pointerdown"].forEach(eventName => {
+    track.addEventListener(eventName, () => {
+      if (eventName === "pointerdown") {
+        pauseTemporarily();
+      } else {
+        paused = true;
+        window.clearTimeout(resumeTimer);
+      }
+    }, { passive: true });
+  });
+
+  ["mouseleave", "focusout"].forEach(eventName => {
+    track.addEventListener(eventName, () => {
+      paused = false;
+    }, { passive: true });
+  });
+
+  window.addEventListener("resize", () => {
+    scrollToCard(activeIndex, "auto");
+  }, { passive: true });
+
+  updateDots();
+
+  if (!prefersReducedMotion) {
+    window.setInterval(() => {
+      if (paused || document.hidden) return;
+      scrollToCard(activeIndex + 1);
+    }, 5000);
+  }
+}
+
 function initHomepageScrollFades() {
   const sections = document.querySelectorAll(
     [
@@ -1100,6 +1210,7 @@ function initHomepageScrollFades() {
 document.addEventListener("DOMContentLoaded", () => {
   initMobileNavigation();
   initCinematicHero();
+  initCommercialProofCarousel();
   initHomepageScrollFades();
 });
 
