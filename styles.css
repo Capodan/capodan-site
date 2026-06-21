@@ -10111,3 +10111,40 @@ html:not(.js) .cinematic-hero .hero-video-loop {
     overflow-wrap: break-word;
   }
 }
+
+/* About page CTA button cleanup */
+.about-cta .btn-primary {
+  display: inline-flex;
+  width: auto;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  background: #fff;
+  color: #111318;
+  box-shadow: none;
+  font-size: 0.95rem;
+  font-weight: 760;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.about-cta .btn-primary:hover {
+  border-color: var(--capo-purple);
+  background: var(--capo-purple);
+  color: #111318;
+  transform: translateY(-1px);
+}
+
+@media screen and (max-width: 768px) {
+  .about-cta .cta {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .about-cta .btn-primary {
+    min-width: 0;
+  }
+}
