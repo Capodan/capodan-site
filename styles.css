@@ -7512,6 +7512,7 @@ body {
 .RESPUBSEC-container,
 .RESB2B-container {
   position: relative;
+  box-sizing: border-box;
   border: 1px solid var(--capo-line);
   border-radius: 8px;
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
