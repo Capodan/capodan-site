@@ -8272,7 +8272,7 @@ body {
 
 .RESENV-subtext,
 .RESENV-altern-subtext {
-  width: min(300px, calc(100% - 72px));
+  width: min(280px, calc(100% - 72px));
   padding: 18px;
   font-size: 0.96rem;
   line-height: 1.55;
@@ -8359,7 +8359,7 @@ body {
 
   .RESENV-subtext,
   .RESENV-altern-subtext {
-    width: min(280px, calc(100% - 72px));
+    width: min(252px, calc(100% - 72px));
     max-width: calc(100% - 64px);
   }
 
