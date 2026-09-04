@@ -1031,14 +1031,15 @@ function initCinematicHero() {
   window.setTimeout(playIntro, 1000);
 }
 
-function initCommercialProofCarousel() {
-  const track = document.querySelector("[data-commercial-proof-carousel]");
+function initCommercialProofCarousel(track) {
   if (!track) return;
 
   const cards = Array.from(track.querySelectorAll(".commercial-proof-card"));
   if (cards.length < 2) return;
 
-  const dotsWrap = document.querySelector("[data-commercial-proof-dots]");
+  const carousel = track.closest(".commercial-proof-carousel");
+  const dotsWrap = carousel?.querySelector("[data-commercial-proof-dots]");
+  const carouselLabel = carousel?.classList.contains("findings-carousel") ? "Capodan finding" : "commercial story";
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let activeIndex = 0;
   let paused = false;
@@ -1093,7 +1094,7 @@ function initCommercialProofCarousel() {
       const button = document.createElement("button");
       const title = card.querySelector("h4")?.textContent?.trim() || `Story ${index + 1}`;
       button.type = "button";
-      button.setAttribute("aria-label", `Show commercial story: ${title}`);
+      button.setAttribute("aria-label", `Show ${carouselLabel}: ${title}`);
       button.addEventListener("click", () => {
         pauseTemporarily();
         scrollToCard(index);
@@ -1109,6 +1110,18 @@ function initCommercialProofCarousel() {
       scrollFrame = null;
     });
   }, { passive: true });
+
+  track.addEventListener("keydown", event => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      pauseTemporarily();
+      scrollToCard(activeIndex - 1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      pauseTemporarily();
+      scrollToCard(activeIndex + 1);
+    }
+  });
 
   ["mouseenter", "focusin", "pointerdown"].forEach(eventName => {
     track.addEventListener(eventName, () => {
@@ -1210,7 +1223,7 @@ function initHomepageScrollFades() {
 document.addEventListener("DOMContentLoaded", () => {
   initMobileNavigation();
   initCinematicHero();
-  initCommercialProofCarousel();
+  document.querySelectorAll("[data-commercial-proof-carousel]").forEach(initCommercialProofCarousel);
   initHomepageScrollFades();
 });
 

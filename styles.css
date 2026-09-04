@@ -10384,3 +10384,150 @@ html:not(.js) .cinematic-hero .hero-video-loop {
     font-size: 1.7rem;
   }
 }
+
+/* Capodan additions */
+.homepage-findings-section .commercial-proof-carousel,
+.homepage-industry-section .commercial-proof-carousel {
+  margin-top: 0;
+}
+
+.findings-carousel .commercial-proof-card {
+  display: flex;
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-height: 0;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  grid-template-rows: none;
+  gap: 0;
+  padding: 28px;
+}
+
+.findings-carousel .proof-industry,
+.findings-carousel .commercial-proof-card h4,
+.findings-carousel .commercial-proof-card p,
+.findings-carousel .proof-result {
+  grid-column: auto;
+}
+
+.findings-carousel .proof-industry {
+  margin-bottom: 18px;
+}
+
+.findings-carousel .commercial-proof-card h4 {
+  margin-bottom: 14px;
+  font-size: 1.38rem;
+  line-height: 1.18;
+}
+
+.findings-carousel .commercial-proof-card p {
+  margin-bottom: 14px;
+}
+
+.findings-carousel .finding-quote {
+  margin-top: 2px;
+  padding-top: 16px;
+  border-top: 1px solid var(--capo-line);
+  color: var(--capo-muted-dark);
+  font-family: var(--capo-font-editorial);
+  font-size: 1.02rem;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.findings-carousel .proof-result {
+  margin-top: auto;
+}
+
+.findings-carousel .proof-basis {
+  margin: 12px 0 0;
+  color: var(--capo-muted-dark);
+  font-size: 0.80rem;
+  line-height: 1.5;
+}
+
+.findings-carousel .findings-footnote {
+  grid-column: auto;
+  max-width: 780px;
+  margin: 22px 0 0;
+}
+
+.founder-credential {
+  padding: 42px 0 32px;
+  border-top: 1px solid var(--capo-line-dark);
+  border-bottom: 1px solid var(--capo-line-dark);
+  background: var(--capo-bg);
+  color: #fff;
+}
+
+.founder-credential-inner {
+  padding-left: 22px;
+  border-left: 2px solid var(--capo-purple);
+}
+
+.founder-credential-name,
+.founder-credential-detail {
+  margin: 0;
+}
+
+.founder-credential-name {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.founder-credential-detail {
+  max-width: 72ch;
+  margin-top: 6px;
+  color: var(--capo-muted);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.engagement-start-section .engagement-start-header {
+  width: min(1180px, calc(100% - 48px));
+  max-width: none;
+}
+
+.engagement-start-section .engagement-start-header h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--capo-font-editorial);
+  font-size: clamp(2.6rem, 4.6vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+
+.engagement-start-grid {
+  margin-top: 36px;
+}
+
+@media screen and (max-width: 900px) {
+  .findings-carousel .commercial-proof-card {
+    flex-basis: calc((100% - 18px) / 2);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .findings-carousel .commercial-proof-card {
+    flex-basis: 100%;
+    padding: 22px;
+  }
+
+  .founder-credential {
+    padding: 32px 0 26px;
+  }
+
+  .founder-credential-inner {
+    padding-left: 16px;
+  }
+
+  .engagement-start-section .engagement-start-header {
+    width: calc(100% - 32px);
+  }
+
+  .engagement-start-section .engagement-start-header h2 {
+    font-size: 2.35rem;
+  }
+}
