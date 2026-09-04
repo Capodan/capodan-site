@@ -10226,42 +10226,6 @@ html:not(.js) .cinematic-hero .hero-video-loop {
   }
 }
 
-/* Temporary deployment test banner */
-.deployment-test-banner {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  z-index: 1100;
-  display: flex;
-  width: max-content;
-  max-width: calc(100% - 32px);
-  min-height: 30px;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 14px;
-  transform: translateX(-50%);
-  border: 2px solid #111318;
-  border-top: 0;
-  border-radius: 0 0 6px 6px;
-  background: var(--capo-gold);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.24);
-  color: #111318;
-  font-size: 0.7rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  line-height: 1.2;
-  text-align: center;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-@media screen and (max-width: 520px) {
-  .deployment-test-banner {
-    width: calc(100% - 32px);
-    white-space: normal;
-  }
-}
-
 /* Services hierarchy */
 .comparative-method-section .SPTILEsection-header h1 {
   max-width: 980px;
