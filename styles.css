@@ -9222,27 +9222,37 @@ textarea:focus-visible,
 }
 
 .hero-dynamic-word {
+  position: relative;
   display: inline-block;
-  min-width: 5.5ch;
   vertical-align: baseline;
   color: var(--capo-purple);
   font-style: italic;
   white-space: nowrap;
 }
 
-.hero-dynamic-word-text {
+.hero-dynamic-word-width {
   display: inline-block;
+  visibility: hidden;
   line-height: inherit;
 }
 
+.hero-dynamic-word-text {
+  display: inline-block;
+  line-height: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform, opacity;
+}
+
 .hero-dynamic-word-text.is-entering {
-  animation: hero-word-drop-in 0.65s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+  animation: hero-word-drop-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes hero-word-drop-in {
   from {
     opacity: 0;
-    transform: translateY(-0.65em);
+    transform: translateY(-0.8em);
   }
   to {
     opacity: 1;
