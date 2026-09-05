@@ -9217,7 +9217,7 @@ textarea:focus-visible,
   font-size: clamp(2.9rem, 4.4vw, 4rem);
   font-weight: 400;
   letter-spacing: -0.035em;
-  line-height: 0.98;
+  line-height: 1.06;
   text-shadow: 0 16px 44px rgba(0, 0, 0, 0.40);
 }
 
