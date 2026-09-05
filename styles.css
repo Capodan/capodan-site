@@ -9221,6 +9221,40 @@ textarea:focus-visible,
   text-shadow: 0 16px 44px rgba(0, 0, 0, 0.40);
 }
 
+.hero-dynamic-word {
+  display: inline-block;
+  min-width: 5.5ch;
+  overflow: hidden;
+  vertical-align: -0.08em;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.hero-dynamic-word-text {
+  display: block;
+}
+
+.hero-dynamic-word-text.is-entering {
+  animation: hero-word-drop-in 0.65s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+
+@keyframes hero-word-drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-115%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-dynamic-word {
+    font-style: italic;
+  }
+}
+
 .hero-copy {
   max-width: 560px;
   margin: 0;

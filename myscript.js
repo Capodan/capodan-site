@@ -1031,6 +1031,28 @@ function initCinematicHero() {
   window.setTimeout(playIntro, 1000);
 }
 
+function initHeroDynamicWord() {
+  const wordSlot = document.querySelector(".hero-dynamic-word");
+  const wordText = wordSlot?.querySelector(".hero-dynamic-word-text");
+  if (!wordSlot || !wordText) return;
+
+  const words = ["customers", "patients", "guests", "residents", "businesses", "members", "clients"];
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let wordIndex = 0;
+
+  if (prefersReducedMotion) return;
+
+  window.setInterval(() => {
+    if (document.hidden) return;
+
+    wordIndex = (wordIndex + 1) % words.length;
+    wordText.classList.remove("is-entering");
+    wordText.textContent = words[wordIndex];
+    void wordText.offsetWidth;
+    wordText.classList.add("is-entering");
+  }, 2800);
+}
+
 function initCommercialProofCarousel(track) {
   if (!track) return;
 
@@ -1223,6 +1245,7 @@ function initHomepageScrollFades() {
 document.addEventListener("DOMContentLoaded", () => {
   initMobileNavigation();
   initCinematicHero();
+  initHeroDynamicWord();
   document.querySelectorAll("[data-commercial-proof-carousel]").forEach(initCommercialProofCarousel);
   initHomepageScrollFades();
 });
