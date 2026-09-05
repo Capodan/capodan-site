@@ -9224,18 +9224,15 @@ textarea:focus-visible,
 .hero-dynamic-word {
   display: inline-block;
   min-width: 5.5ch;
-  height: 1.18em;
-  overflow: hidden;
-  vertical-align: -0.12em;
+  vertical-align: baseline;
   color: var(--capo-purple);
   font-style: italic;
-  line-height: 1.15;
   white-space: nowrap;
 }
 
 .hero-dynamic-word-text {
-  display: block;
-  padding-bottom: 0.08em;
+  display: inline-block;
+  line-height: inherit;
 }
 
 .hero-dynamic-word-text.is-entering {
@@ -9245,7 +9242,7 @@ textarea:focus-visible,
 @keyframes hero-word-drop-in {
   from {
     opacity: 0;
-    transform: translateY(-115%);
+    transform: translateY(-0.65em);
   }
   to {
     opacity: 1;
