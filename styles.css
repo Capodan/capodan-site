@@ -9224,14 +9224,18 @@ textarea:focus-visible,
 .hero-dynamic-word {
   display: inline-block;
   min-width: 5.5ch;
+  height: 1.18em;
   overflow: hidden;
-  vertical-align: -0.08em;
+  vertical-align: -0.12em;
+  color: var(--capo-purple);
   font-style: italic;
+  line-height: 1.15;
   white-space: nowrap;
 }
 
 .hero-dynamic-word-text {
   display: block;
+  padding-bottom: 0.08em;
 }
 
 .hero-dynamic-word-text.is-entering {
