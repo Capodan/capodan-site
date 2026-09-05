@@ -10592,6 +10592,11 @@ html:not(.js) .cinematic-hero .hero-video-loop {
 
 .resources-sector-label {
   margin: 0 0 22px;
+  color: var(--capo-purple);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .resources-comparison {
