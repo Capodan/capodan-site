@@ -62,7 +62,7 @@
     <h3>2. Use of the Website</h3>
         <p>The Capodan website is provided for your personal, non-commercial use and for general informational purposes only. By using the Site, you agree not to engage in any activity that could damage, disable, overburden, or impair the website or interfere with any other party’s use of it.</p>
 
-        <p>You must not use the Site in any way that is unlawful, fraudulent, or harmful, or in connection with any unlawful, fraudulent, or harmful purpose or activity. You also agree not to attempt to gain unauthorised access to any part of the Site, other accounts, or systems connected to the Site.</p>
+        <p>You must not use the Site in any way that is unlawful, fraudulent, or harmful, or in connection with any unlawful, fraudulent, or harmful purpose or activity. You also agree not to attempt to gain unauthorized access to any part of the Site, other accounts, or systems connected to the Site.</p>
     <h3>3. Intellectual Property</h3>
         <p>All content on the Capodan website including text, graphics, logos, images, icons, and code — is the property of Capodan Research Ltd or its licensors and is protected by copyright, trademark, and other intellectual property laws.</p>
 
@@ -197,11 +197,11 @@
 
         function saveCookieSettings() {
         const analytics = document.getElementById("analytics-cookies").checked;
-        const personalisation = document.getElementById("personalisation-cookies").checked;
+        const personalization = document.getElementById("personalization-cookies").checked;
 
         localStorage.setItem("cookiesAccepted", "true");
         localStorage.setItem("allowAnalytics", analytics);
-        localStorage.setItem("allowPersonalisation", personalisation);
+        localStorage.setItem("allowPersonalisation", personalization);
 
         document.getElementById("cookie-banner").style.display = "none";
         document.getElementById("cookie-backdrop").style.display = "none";
@@ -249,10 +249,10 @@
       <p class="toggle-description">Helps us understand how visitors use our site.</p>
 
       <label>
-        <input type="checkbox" id="personalisation-cookies">
-        Personalisation
+        <input type="checkbox" id="personalization-cookies">
+        Personalization
       </label>
-      <p class="toggle-description">Used to tailor content and services based on your behaviour.</p>
+      <p class="toggle-description">Used to tailor content and services based on your behavior.</p>
     </div>
 
     <div class="cookie-modal-actions">

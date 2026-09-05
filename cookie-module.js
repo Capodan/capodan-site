@@ -30,11 +30,11 @@ function closeCookieModal() {
 
 function saveCookieSettings() {
   const analytics = document.getElementById("analytics-cookies").checked;
-  const personalisation = document.getElementById("personalisation-cookies").checked;
+  const personalization = document.getElementById("personalization-cookies").checked;
 
   localStorage.setItem("cookiesAccepted", "true");
   localStorage.setItem("allowAnalytics", analytics);
-  localStorage.setItem("allowPersonalisation", personalisation);
+  localStorage.setItem("allowPersonalisation", personalization);
 
   document.getElementById("cookie-banner").style.display = "none";
   document.getElementById("cookie-backdrop").style.display = "none";

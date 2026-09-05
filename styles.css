@@ -252,8 +252,8 @@ main a, .cookie-text a, .footer-column a {
     justify-content: center;
     background-color: #ffffff;
     gap: 30px;
-    padding-top: 0px;  /* ⬅ adds space inside the grey */
-    padding-bottom: 30px; /* ⬅ keeps grey behind tiles */
+    padding-top: 0px;  /* ⬅ adds space inside the gray */
+    padding-bottom: 30px; /* ⬅ keeps gray behind tiles */
     margin-bottom: 0; /* remove if footer sticks tight */
 }
 
@@ -281,7 +281,7 @@ main a, .cookie-text a, .footer-column a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(128, 128, 128, 0.3); /* Semi-transparent grey */
+    background-color: rgba(128, 128, 128, 0.3); /* Semi-transparent gray */
     border-radius: 5px; /* Matches the tile's rounded corners */
 }
 
@@ -316,7 +316,7 @@ main a, .cookie-text a, .footer-column a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(128, 128, 128, 0.3); /* Semi-transparent grey */
+    background-color: rgba(128, 128, 128, 0.3); /* Semi-transparent gray */
     border-radius: 5px; /* Matches the tile's rounded corners */
 }
 
@@ -347,7 +347,7 @@ main a, .cookie-text a, .footer-column a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(128, 128, 128, 0.3); /* Semi-transparent grey */
+    background-color: rgba(128, 128, 128, 0.3); /* Semi-transparent gray */
     border-radius: 5px; /* Matches the tile's rounded corners */
 }
 
@@ -630,7 +630,7 @@ h1 {
 
 .social-icons i:hover {
   transform: scale(1.1);
-  color: #90caf9; /* or any accent hover colour */
+  color: #90caf9; /* or any accent hover color */
 }
 
 .video-container {
@@ -2632,7 +2632,7 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(50, 50, 50, 0.4); /* grey transparent overlay */
+    background-color: rgba(50, 50, 50, 0.4); /* gray transparent overlay */
     border-radius: 8px;
     z-index: 1;
 }
@@ -2709,7 +2709,7 @@ video {
   }
 
   
-  .grey-bg-small {
+  .gray-bg-small {
     background: 
       linear-gradient(135deg, #4a4a4a 0%, #3f3f3f 100%),
       repeating-linear-gradient(
@@ -2951,7 +2951,7 @@ video {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4); /* subtle grey */
+  background-color: rgba(0, 0, 0, 0.4); /* subtle gray */
   z-index: 9998; /* just behind the banner */
 }
 

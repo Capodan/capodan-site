@@ -12,7 +12,7 @@ On: Precision, Lightness, and Everyday Ease
 
 Comfort comes first: Consumers consistently describe On shoes as light, easy, and effortless. Language leans toward "all-day", "travel", and "walking as much as running". These aren’t framed as specialist tools, but as shoes that fit into everyday life.
 
-Performance without intimidation: Rather than aggressive training language, On is talked about in softer, more accessible terms. For many, On feels like a performance brand that doesn’t demand performance behaviour.
+Performance without intimidation: Rather than aggressive training language, On is talked about in softer, more accessible terms. For many, On feels like a performance brand that doesn’t demand performance behavior.
 
 Design as reassurance: Clean aesthetics matter here. People mention how On shoes look with jeans, at the airport, or in the office. The design signals competence without shouting it, and that restraint becomes part of the appeal.
 
@@ -24,7 +24,7 @@ Performance language dominates: Nike discussions are louder, more technical, and
 
 Trust built through history: Nike benefits from deep-rooted confidence. Even when people criticise specific models, the brand itself remains trusted. Language suggests familiarity.
 
-Style as self-expression: Unlike On’s restraint, Nike is discussed as expressive. Colourways, drops, and silhouettes matter. Shoes become statements, not just equipment. For some consumers, that visibility is the value.
+Style as self-expression: Unlike On’s restraint, Nike is discussed as expressive. Colorways, drops, and silhouettes matter. Shoes become statements, not just equipment. For some consumers, that visibility is the value.
 
 Inconsistency at scale: With range comes variability. Consumers sometimes mention fit confusion or model fatigue, too many options, not all of them clear.
 

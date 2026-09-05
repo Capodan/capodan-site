@@ -3,7 +3,7 @@ title: "Oura vs Fitbit: What the Language Tells Us"
 date: 2025-06-17
 ---
 
-We analysed hundreds of customer reviews from a leading online retailer.  
+We analyzed hundreds of customer reviews from a leading online retailer.  
 Not for star ratings. For language.  
 What are people actually saying about the Oura Ring vs Fitbit?  
 Which words come up? What tone is used? What patterns appear again and again?
@@ -47,8 +47,8 @@ In our work decoding language in consumer feedback, patterns like these aren’t
 Oura isn’t outperforming Fitbit just because of features — it’s winning because of what people are saying *and how they’re saying it*.
 
 Language reflects perception.  
-Perception drives behaviour.  
-And behaviour drives sales.
+Perception drives behavior.  
+And behavior drives sales.
 
 At Capodan, we decode the language customers use, and what it really means for your product, positioning, and performance.
 

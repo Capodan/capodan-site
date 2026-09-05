@@ -86,7 +86,7 @@ document.documentElement.classList.add("js");
                                             <strong>Questions we answer:</strong><br>
                                             <span style="font-size: 0.8em; font-style: italic;">
                                               How do different customer types speak and signal intent?<br>
-                                              What patterns emerge across language and behaviour?<br>
+                                              What patterns emerge across language and behavior?<br>
                                               Can we build personas rooted in how people actually think and talk?<br> 
                                             </span>` },
             12: {title: "Chatbot Alignment", text: `Customers notice when a bot feels off. Flat replies and clunky phrasing break the flow and weaken trust.<br><br>
@@ -144,7 +144,7 @@ document.documentElement.classList.add("js");
                                               What tensions or misunderstandings come up in real dialogue?<br>
                                               Which words spark strong reactions positive or negative?<br>
                                             </span>` },
-            19: {title: "Product Testing", text: `It’s not just whether it works, it’s how people talk about it. We test your product with real users and analyse feedback for patterns in experience, perception and vocabulary.<br><br>
+            19: {title: "Product Testing", text: `It’s not just whether it works, it’s how people talk about it. We test your product with real users and analyze feedback for patterns in experience, perception and vocabulary.<br><br>
                                             How they describe it is how they’ll sell it, or not.<br><br><br><br>
                                             <strong>Questions we answer:</strong><br>
                                             <span style="font-size: 0.8em; font-style: italic;">
@@ -152,7 +152,7 @@ document.documentElement.classList.add("js");
                                               Is there a language gap between product intent and perception?<br>
                                               What phrasing or features are sticking or not?<br>
                                             </span>` },
-            20: {title: "Market Trend Analysis", text: `We scan the signals that shape your market, from behavioural shifts to emerging narratives. Using both traditional research and linguistic trendspotting, we highlight what’s changing, what’s growing and what it means for your business.<br><br><br><br>
+            20: {title: "Market Trend Analysis", text: `We scan the signals that shape your market, from behavioral shifts to emerging narratives. Using both traditional research and linguistic trendspotting, we highlight what’s changing, what’s growing and what it means for your business.<br><br><br><br>
                                             <strong>Questions we answer:</strong><br>
                                             <span style="font-size: 0.8em; font-style: italic;">
                                               What shifts are we seeing in how people talk about our space?<br>
@@ -167,10 +167,10 @@ document.documentElement.classList.add("js");
                                               Do they translate insight into action across teams?<br>
                                               How does language support buy-in from key stakeholders?<br> 
                                             </span>` },
-            22: {title: "Trend Forecasting", text: `We don’t just track what’s now, we anticipate what’s next. Using a mix of data, discourse analysis and behavioural insight, we forecast future directions in customer behaviour, market narratives and competitive positioning.<br><br><br><br>
+            22: {title: "Trend Forecasting", text: `We don’t just track what’s now, we anticipate what’s next. Using a mix of data, discourse analysis and behavioral insight, we forecast future directions in customer behavior, market narratives and competitive positioning.<br><br><br><br>
                                             <strong>Questions we answer:</strong><br>
                                             <span style="font-size: 0.8em; font-style: italic;">
-                                              What's coming next in language and behaviour?<br>
+                                              What's coming next in language and behavior?<br>
                                               Where do weak signals show strong potential?<br>
                                               How do we act early on shifting narratives?<br>
                                             </span>` },
@@ -243,15 +243,15 @@ document.documentElement.classList.add("js");
                                               What patterns emerge when we listen across touchpoints?<br>
                                               How can we make the client voice central to our decision-making?<br>
                                             </span>` },
-            32: {title: "Future Consumer Shift", text: `Know what’s coming before it becomes the norm. We combine sociolinguistic analysis, behavioural trends, and predictive data to uncover how future customers will think, act, and decide.<br><br>
-                                            Built for organisations who want to lead their market, not just keep up, this flagship programme gives you a forward view of demand and the confidence to act on it.<br><br><br><br>
+            32: {title: "Future Consumer Shift", text: `Know what’s coming before it becomes the norm. We combine sociolinguistic analysis, behavioral trends, and predictive data to uncover how future customers will think, act, and decide.<br><br>
+                                            Built for organizations who want to lead their market, not just keep up, this flagship program gives you a forward view of demand and the confidence to act on it.<br><br><br><br>
                                             <strong>Questions we answer:</strong><br>
                                             <span style="font-size: 0.8em; font-style: italic;">
                                               What language signals are emerging among future buyers?<br>
                                               Where are expectations moving? What will soon be outdated?<br>
                                               How can we prepare now for the narratives of tomorrow?<br>
                                             </span>` },
-            33: {title: "Value Alignment", text: `What you offer and what your customers value are not always the same. This flagship project uncovers the gaps between your proposition and what your audience truly prioritises, using the Bain & Company B2B or B2C Value Pyramid as a strategic framework.<br><br>
+            33: {title: "Value Alignment", text: `What you offer and what your customers value are not always the same. This flagship project uncovers the gaps between your proposition and what your audience truly prioritizes, using the Bain & Company B2B or B2C Value Pyramid as a strategic framework.<br><br>
                                             We test your offer across emotional, functional, and commercial dimensions to reveal where meaning, relevance, and competitive strength are misaligned. When value is clearly understood and confidently delivered, performance follows.<br><br><br><br>
                                             <strong>Questions we answer:</strong><br>
                                             <span style="font-size: 0.8em; font-style: italic;">
@@ -286,13 +286,13 @@ const resourceModalsContent = {
             },
             2: { 
                 title: "When Net Zero Sounds Hollow", 
-                text: "Net Zero has become a buzzword, but does it still carry weight with the public? This piece explores how overuse and vagueness risk undermining credibility and slowing behavioural change.",
+                text: "Net Zero has become a buzzword, but does it still carry weight with the public? This piece explores how overuse and vagueness risk undermining credibility and slowing behavioral change.",
                 image: "ASSETS/ENVPG2.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
             3: { 
                 title: "Driving Division: Politics in the EV Lane", 
-                text: "Electric vehicles should be neutral ground, but language is making them a political battleground. We analyse how tone fuels division—and what brands must do to stay above the noise.",
+                text: "Electric vehicles should be neutral ground, but language is making them a political battleground. We analyze how tone fuels division—and what brands must do to stay above the noise.",
                 image: "ASSETS/ENVPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
@@ -328,7 +328,7 @@ const resourceModalsContent = {
             },
             9: { 
                 title: "Ozempic vs. Mounjaro", 
-                text: "These names are everywhere, but what do they really signal to patients? We analyse tone, naming strategy and the rise of wellness pharma.",
+                text: "These names are everywhere, but what do they really signal to patients? We analyze tone, naming strategy and the rise of wellness pharma.",
                 image: "ASSETS/PHARMPG3.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
@@ -460,7 +460,7 @@ const resourceModalsContent = {
             },
             31: { 
                 title: "HubSpot vs. Salesforce", 
-                text: "One is casual, the other commanding, but both have reach. We analyse how B2B tone creates clarity, loyalty and competitive edge.",
+                text: "One is casual, the other commanding, but both have reach. We analyze how B2B tone creates clarity, loyalty and competitive edge.",
                 image: "ASSETS/B2BPG1.png",
                 outro: "Interested in what this means for your brand? Contact us to access the full findings."
             },
@@ -647,11 +647,11 @@ function closeCookieModal() {
 }
 function saveCookieSettings() {
   const analytics = document.getElementById("analytics-cookies")?.checked;
-  const personalisation = document.getElementById("personalisation-cookies")?.checked;
+  const personalization = document.getElementById("personalization-cookies")?.checked;
 
   localStorage.setItem("cookiesAccepted", "true");
   localStorage.setItem("allowAnalytics", analytics);
-  localStorage.setItem("allowPersonalisation", personalisation);
+  localStorage.setItem("allowPersonalisation", personalization);
 
   document.getElementById("cookie-banner")?.style.setProperty("display", "none");
   document.getElementById("cookie-backdrop")?.style.setProperty("display", "none");

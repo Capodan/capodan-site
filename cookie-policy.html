@@ -50,7 +50,7 @@
         <h2>Cookie Policy</h2>
         <p><strong>Last updated:</strong> 24 May 2025</p>
 
-        <p>Capodan Research Ltd ("Capodan", "we", "us", or "our") uses cookies and similar tracking technologies on our website (www.capodan.com) to improve user experience, analyse site performance, and support our research and service delivery. This policy outlines what cookies are, which ones we use, why we use them, and your choices as a user.</p>
+        <p>Capodan Research Ltd ("Capodan", "we", "us", or "our") uses cookies and similar tracking technologies on our website (www.capodan.com) to improve user experience, analyze site performance, and support our research and service delivery. This policy outlines what cookies are, which ones we use, why we use them, and your choices as a user.</p>
 
         <h3>1. What Are Cookies?</h3>
         <p>Cookies are small data files placed on your device (computer, smartphone, tablet) when you visit a website. They are widely used to make websites function efficiently and provide information to site owners.</p>
@@ -211,11 +211,11 @@
 
         function saveCookieSettings() {
         const analytics = document.getElementById("analytics-cookies").checked;
-        const personalisation = document.getElementById("personalisation-cookies").checked;
+        const personalization = document.getElementById("personalization-cookies").checked;
 
         localStorage.setItem("cookiesAccepted", "true");
         localStorage.setItem("allowAnalytics", analytics);
-        localStorage.setItem("allowPersonalisation", personalisation);
+        localStorage.setItem("allowPersonalisation", personalization);
 
         document.getElementById("cookie-banner").style.display = "none";
         document.getElementById("cookie-backdrop").style.display = "none";
@@ -263,10 +263,10 @@
       <p class="toggle-description">Helps us understand how visitors use our site.</p>
 
       <label>
-        <input type="checkbox" id="personalisation-cookies">
-        Personalisation
+        <input type="checkbox" id="personalization-cookies">
+        Personalization
       </label>
-      <p class="toggle-description">Used to tailor content and services based on your behaviour.</p>
+      <p class="toggle-description">Used to tailor content and services based on your behavior.</p>
     </div>
 
     <div class="cookie-modal-actions">

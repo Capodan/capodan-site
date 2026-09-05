@@ -16,7 +16,7 @@ WHOOP users frame health as something internal and relative. What matters is how
 
 That mindset carries straight into Recovery Keyness (Likelihood): 30.715
 
-Recovery is discussed as readiness, not rest. It’s shaped by sleep, stress, fueling, and cumulative load rather than just workouts. People use recovery language to decide when to push, when to back off, and when to change behaviour altogether.
+Recovery is discussed as readiness, not rest. It’s shaped by sleep, stress, fueling, and cumulative load rather than just workouts. People use recovery language to decide when to push, when to back off, and when to change behavior altogether.
 
 At the foundation of it all sits Sleep Keyness (Likelihood): 29.918
 
@@ -36,7 +36,7 @@ Garmin conversations are saturated with troubleshooting. Pairing failures, synci
 
 That frustration spills directly into Phone Keyness (Likelihood): 64.476
 
-Here, the tone is problem-first. Users talk about watches not connecting, apps not recognising devices, and setups breaking after updates. The product conversation shifts away from training value and toward reliability anxiety.
+Here, the tone is problem-first. Users talk about watches not connecting, apps not recognizing devices, and setups breaking after updates. The product conversation shifts away from training value and toward reliability anxiety.
 
 Much of that pain is blamed on Updates Keyness (Likelihood): 54.700
 
@@ -56,7 +56,7 @@ Two Value Systems, One Market
 
 In consumer language, WHOOP and Garmin aren’t really competing on the same axis.
 
-WHOOP is talked about as a self-regulation tool. It helps users understand themselves, notice drift early, and adjust behaviour quietly over time.
+WHOOP is talked about as a self-regulation tool. It helps users understand themselves, notice drift early, and adjust behavior quietly over time.
 
 Garmin is discussed as a performance engine. It offers depth, metrics, and capability, but asks users to manage complexity, configuration, and occasional instability in return.
 

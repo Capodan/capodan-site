@@ -5,7 +5,7 @@ date: 2025-06-24
 
 A linguistic insight into how two of the biggest hair tools are landing with real users.
 
-We analysed hundreds of customer reviews from a leading online retailer. Not for star ratings. For language. What are people actually saying about the Dyson Airwrap vs the SharkNinja FlexStyle? Which words appear? What tone is used? What patterns crop up again and again?
+We analyzed hundreds of customer reviews from a leading online retailer. Not for star ratings. For language. What are people actually saying about the Dyson Airwrap vs the SharkNinja FlexStyle? Which words appear? What tone is used? What patterns crop up again and again?
 
 This is where product sentiment lives, and what we found paints a sharp and telling picture.
 
@@ -14,7 +14,7 @@ This is where product sentiment lives, and what we found paints a sharp and tell
 🔹 **Dyson Airwrap: Premium... with Friction**  
 🟣 **Not built to last (the curls, that is)**: Time and again, users talked about curls that "drop in a couple of minutes" or "fall out before I leave the house." It’s not a dealbreaker for everyone, but it’s enough of a trend to signal a mismatch between price tag and performance.
 
-🟣 **App is appreciated**: Users who explored the companion app praised its simplicity and the ability to remember routines, a small but meaningful plus that made the experience feel polished and personalised.
+🟣 **App is appreciated**: Users who explored the companion app praised its simplicity and the ability to remember routines, a small but meaningful plus that made the experience feel polished and personalized.
 
 🟣 **"Easy to use" but still dividing opinion**: Several reviews complimented setup and usability, especially for straight or slightly wavy hair. But the sentiment wasn’t universal. Those with thicker or curlier hair often felt underwhelmed by results.
 
@@ -50,8 +50,8 @@ Dyson isn’t losing ground because of features alone. It’s losing emotional m
 Shark, by contrast, is benefiting from a linguistic halo. The words people use signal satisfaction, surprise, and value. In other words, it’s not just competing, it’s connecting.
 
 Language reflects perception.  
-Perception drives behaviour.  
-And behaviour drives sales.
+Perception drives behavior.  
+And behavior drives sales.
 
 At Capodan, we decode the language customers use, and what it really means for your product, positioning, and performance.
 

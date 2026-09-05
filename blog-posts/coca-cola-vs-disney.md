@@ -2,7 +2,7 @@ Coca-Cola AI vs. Disney Craft: The Language Signalling a Turning Point for AI Cr
 
 The Coca-Cola Company's new AI-generated Christmas ad has sparked attention, but not the kind brands hope for. Audience language shows a shift: people want to feel the work, the depth, and the human effort behind what they watch.
 
-We analysed organic reactions to Coca-Cola’s AI ad and The Walt Disney Company's hand-crafted holiday storytelling. The contrast reveals what audiences connect with, and what they quietly reject.
+We analyzed organic reactions to Coca-Cola’s AI ad and The Walt Disney Company's hand-crafted holiday storytelling. The contrast reveals what audiences connect with, and what they quietly reject.
 
 Coca-Cola: Emotion Without Weight
 
