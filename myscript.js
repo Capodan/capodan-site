@@ -1036,7 +1036,7 @@ function initHeroDynamicWord() {
   const wordText = wordSlot?.querySelector(".hero-dynamic-word-text");
   if (!wordSlot || !wordText) return;
 
-  const words = ["customers", "patients", "guests", "residents", "businesses", "members", "clients"];
+  const words = ["customers", "patients", "guests", "residents", "members", "clients"];
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let wordIndex = 0;
 
