@@ -1,0 +1,9 @@
+# Retired pages (Nov 2026). Forced so they redirect even though the old files are still in the repo.
+/about.html             /    301!
+/about                  /    301!
+/servicespricing.html   /    301!
+/servicespricing        /    301!
+/resources.html         /    301!
+/resources              /    301!
+/blog.html              /    301!
+/blog                   /    301!

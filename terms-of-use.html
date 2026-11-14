@@ -29,28 +29,31 @@
     <meta name="twitter:image" content="https://www.capodan.com/ASSETS/Capo1.svg">
 
     <link rel="icon" type="image/png" href="ASSETS/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
     <script defer src="myscript.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-    <div class="tab-banner">
-      <a href="index.html">
-        <img src="ASSETS/Capo.svg" class="logo-img" alt="Capodan logo" />
-      </a>
-        <div class="burger" onclick="toggleMenu()"></div>
-        <div class="tab-buttons">
-            <a href="index.html" class="tab-button home-button">HOME</a>
-            <a href="about.html" class="tab-button about-button">WHY CAPODAN</a>
-            <a href="resources.html" class="tab-button resources-button">INSIGHTS</a>
-            <a href="servicespricing.html" class="tab-button services-and-pricing-button">WAYS TO WORK TOGETHER</a>
-            <a href="blog.html" class="tab-button blog-button">LATEST SIGNALS</a>
-            <a href="contact.html" class="tab-button contact-button">LETS TALK</a>
-        </div>
-    </div>
+<body class="home h-inner">
 
-    <section class="cookie-text-container" style="margin-top: 120px;">
-    <h2>Terms of Use</h2>
+<div class="h-nav is-scrolled" id="site-nav">
+  <nav class="h-wrap h-nav-inner" aria-label="Main">
+    <a class="h-logo" href="index.html"><img src="ASSETS/Capo.svg" alt="Capodan home"></a>
+    <div class="h-links">
+      <a class="h-navtext" href="index.html#how">How it works</a>
+      <a class="h-navtext" href="index.html#findings">Findings</a>
+      <a class="h-navtext" href="index.html#start">Working together</a>
+      <a class="h-btn h-btn-solid" href="index.html#onepager">Get a one-pager</a>
+    </div>
+  </nav>
+</div>
+
+
+    <main class="h-page">
+  <article class="h-wrap h-prose">
+    <h1>Terms of Use</h1>
     <p><strong>Last updated:</strong> 24 May 2025</p>
 
     <h3>1. Introduction</h3>
@@ -64,7 +67,7 @@
 
         <p>You must not use the Site in any way that is unlawful, fraudulent, or harmful, or in connection with any unlawful, fraudulent, or harmful purpose or activity. You also agree not to attempt to gain unauthorized access to any part of the Site, other accounts, or systems connected to the Site.</p>
     <h3>3. Intellectual Property</h3>
-        <p>All content on the Capodan website including text, graphics, logos, images, icons, and code — is the property of Capodan Research Ltd or its licensors and is protected by copyright, trademark, and other intellectual property laws.</p>
+        <p>All content on the Capodan website including text, graphics, logos, images, icons, and code, is the property of Capodan Research Ltd or its licensors and is protected by copyright, trademark, and other intellectual property laws.</p>
 
         <p>You may view, download, and print content from the Site for personal, non-commercial use only. You must not copy, reproduce, republish, distribute, or modify any material from the Site without our prior written consent, unless such use is permitted by law.</p>
     <h3>4. Content Accuracy</h3>
@@ -94,70 +97,32 @@
         Manchester, M4 5JW<br>
         Email: <a href="mailto:contact@capodan.com">contact@capodan.com</a>
     </p>
-    </section>
+      </article>
+</main>
     
-    <footer class="footer-columns">
-    <div class="footer-column">
-        <img src="ASSETS/Capo1.svg" alt="Capodan Logo" class="footer-logo-img">
-        <p>
-        Capodan Research Ltd is a registered company in England and Wales.<br>
-        Company No. 16292639<br>
-        Founded and run by published linguists, with decades of experience applying language evidence to commercial decisions.
-        </p>
-        <p>© Capodan 2025. All Rights Reserved.</p>
+    <footer class="h-footer">
+  <div class="h-wrap h-foot-grid">
+    <div class="h-foot-col">
+      <img src="ASSETS/Capo.svg" alt="Capodan">
+      <span>Capodan Research Ltd is a registered company in England and Wales. Company No. 16292639.</span>
+      <span>&copy; Capodan 2026. All Rights Reserved.</span>
     </div>
-
-    <div class="footer-column">
-        <h3>Links</h3>
-        <ul>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-        <li><a href="terms-of-use.html">Terms of Use</a></li>
-        <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
-        </ul>
+    <div class="h-foot-col">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="accessibility-statement.html">Accessibility Statement</a>
     </div>
-
-    <div class="footer-column">
-    <h3>UK Office</h3>
-    <address>
-        First Floor, Swan Buildings<br>
-        20 Swan Street<br>
-        Manchester, M4 5JW<br>
-        <a href="mailto:contact@capodan.com">contact@capodan.com</a><br>
-        <a href="tel:+441615245787">+44 (0)161 524 5787</a>
-    </address>
+    <div class="h-foot-col">
+      <address>First Floor, Swan Buildings<br>20 Swan Street<br>Manchester, M4 5JW</address>
     </div>
-
-    <div class="footer-column">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/capodan-team" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/capodanresearch" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/capodanteam" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="Twitter">
-            <i class="fab fa-x-twitter"></i>
-            </a>
-            <a href="https://www.youtube.com/@CapodanResearch"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube">
-            <i class="fab fa-youtube"></i>
-            </a>
-        </div>
+    <div class="h-foot-col">
+      <a href="mailto:contact@capodan.com">contact@capodan.com</a>
+      <a href="tel:+441615245787">+44 (0)161 524 5787</a>
+      <a href="https://www.linkedin.com/in/capodan-team" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
-    </footer>
+  </div>
+</footer>
     <script>
         // DOM Ready: Fade-In Effect + Cookie Banner
         document.addEventListener("DOMContentLoaded", function () {

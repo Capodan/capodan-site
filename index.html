@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capodan Research | Comparative Language Evidence for Commercial Decisions</title>
-    <meta name="description" content="We compare the language of two groups that matter to your business and measure what actually separates them. Buyers and non-buyers. Retained and churned.">
-    
+    <meta name="description" content="We compare the language of the customers who matter to your business, find what one group says far more than another, and read why.">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-06JCZ4NXWZ"></script>
     <script>
@@ -15,42 +15,34 @@
         gtag('config', 'G-06JCZ4NXWZ');
     </script>
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Capodan Research | Customer Language Intelligence for Growth">
-    <meta property="og:description" content="We compare the language of two groups that matter to your business and measure what actually separates them. Buyers and non-buyers. Retained and churned.">
-    <meta property="og:image" content="https://www.capodan.com/ASSETS/Capo1.svg"> <!-- update to full live URL when launched -->
+    <meta property="og:title" content="Capodan Research | Comparative Language Evidence for Commercial Decisions">
+    <meta property="og:description" content="We compare the language of the customers who matter to your business, find what one group says far more than another, and read why.">
+    <meta property="og:image" content="https://www.capodan.com/ASSETS/Capo1.svg">
     <meta property="og:url" content="https://www.capodan.com/">
     <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Capodan Research | Customer Language Intelligence for Growth">
-    <meta name="twitter:description" content="We compare the language of two groups that matter to your business and measure what actually separates them. Buyers and non-buyers. Retained and churned.">
+    <meta name="twitter:title" content="Capodan Research | Comparative Language Evidence for Commercial Decisions">
+    <meta name="twitter:description" content="We compare the language of the customers who matter to your business, find what one group says far more than another, and read why.">
     <meta name="twitter:image" content="https://www.capodan.com/ASSETS/Capo1.svg">
 
     <link rel="icon" type="image/png" href="ASSETS/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
     <script>document.documentElement.classList.add('js');</script>
-    <script defer src="myscript.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!--
-    <script type="application/ld+json">
-    {
-        "@context":"https://schema.org",
-        "@type":"Event",
-        "name":"Capodan Live: What & Why Linguistics — August in Practice",
-        "startDate":"2025-08-27T19:00:00+01:00",
-        "endDate":"2025-08-27T20:00:00+01:00",
-        "eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode",
-        "eventStatus":"https://schema.org/EventScheduled",
-        "location":{"@type":"VirtualLocation","url":"https://us06web.zoom.us/meeting/register/p32S-P9bSfS48EJ4yXX0oQ?utm_source=website&utm_medium=live-banner"},
-        "organizer":{"@type":"Organization","name":"Capodan Research Ltd","url":"https://www.capodan.com"},
-        "description":"A concise intro to business linguistics with a hospitality guest-experience lens. Recording for registrants."
-    }
+    <script>
+    (function () {
+      var d = document.documentElement;
+      var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (still) return;
+      d.classList.add("home-anim");
+      setTimeout(function () { if (!window.__capoHome) d.classList.remove("home-anim"); }, 3000);
+    })();
     </script>
-    -->
-    
+    <script defer src="myscript.js"></script>
+    <script defer src="home.js"></script>
     <!-- Apollo Website Tracker -->
     <script>
     function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
@@ -60,651 +52,302 @@
     document.head.appendChild(o)}initApollo();
     </script>
 </head>
+<body class="home">
 
-<body class="cinematic-boot cinematic-nav-hidden">
-    <div class="tab-banner">
-        <a href="index.html">
-            <img src="ASSETS/Capo.svg" class="logo-img" alt="Capodan logo" />
-        </a>
-        <div class="burger" onclick="toggleMenu()"></div>
-        <div class="tab-buttons" id="nav-links">
-            <a href="about.html" class="tab-button about-button">WHY CAPODAN</a>
-            <a href="resources.html" class="tab-button resources-button">INSIGHTS</a>
-            <a href="servicespricing.html" class="tab-button services-and-pricing-button">WAYS TO WORK TOGETHER</a>
-            <a href="blog.html" class="tab-button blog-button">LATEST SIGNALS</a>
-            <a href="contact.html" class="tab-button contact-button">LET'S TALK</a>
-        </div>
+<div class="h-nav" id="site-nav">
+  <nav class="h-wrap h-nav-inner" aria-label="Main">
+    <a class="h-logo" href="index.html"><img src="ASSETS/Capo.svg" alt="Capodan"></a>
+    <div class="h-links">
+      <a class="h-navtext" href="#how">How it works</a>
+      <a class="h-navtext" href="#findings">Findings</a>
+      <a class="h-navtext" href="#start">Working together</a>
+      <a class="h-btn h-btn-solid" href="#onepager">Get a one-pager</a>
     </div>
-    <!-- Full-width event banner -->
-    <div class="event-banner" style="display:none">
-    <a class="event-ribbon" href="https://us06web.zoom.us/meeting/register/p32S-P9bSfS48EJ4yXX0oQ?utm_source=website&utm_medium=ribbon" aria-label="Register for Capodan Live">
-        Capodan Live · Wed 27 Aug · 7:00 PM BST — What & Why Linguistics (Hospitality) · <u>Save my spot</u>
-    </a>
-    </div>
+  </nav>
+</div>
 
-    <section class="content-offset homepage-hero" aria-labelledby="homepage-hero-title">
-        <div class="video-container cinematic-hero is-loading">
-            <div class="hero-video-stage" aria-hidden="true">
-                <video
-                    class="hero-video hero-video-intro"
-                    width="100%"
-                    height="auto"
-                    muted
-                    playsinline
-                    preload="auto"
-                >
-                    <source src="ASSETS/capodan-intro.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video
-                    class="hero-video hero-video-loop"
-                    width="100%"
-                    height="auto"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    preload="auto"
-                >
-                    <source src="ASSETS/capodan-loop.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="homepage-hero-overlay" aria-hidden="true"></div>
-            <div class="homepage-hero-content">
-              <h1 id="homepage-hero-title" aria-label="What separates the customers who buy from the ones who don't.">What separates the <span class="hero-dynamic-word" aria-hidden="true"><span class="hero-dynamic-word-width">customers</span><span class="hero-dynamic-word-text">customers</span></span> who buy from the ones who don't.</h1>
-              <p class="hero-copy">
-                We compare the language of two groups that matter to your business, then measure what actually separates them. Buyers and non-buyers. Retained and churned. Your market and a competitor's. The difference is the finding.
-              </p>
-              <div class="hero-actions" aria-label="Primary actions">
-                <a href="servicespricing.html" class="hero-button hero-button-primary">Ways to work together</a>
-                <a href="contact.html" class="hero-button hero-button-secondary">Talk to us</a>
-              </div>
-            </div>
-        </div>
-    </section>  
-      
-    <section class="homepage-signals-section">
-      <div class="homepage-signals-inner">
-        <div class="homepage-signals-header">
-          <p class="signals-kicker">The Capodan method</p>
-          <h2>Define two groups. Measure what separates them.</h2>
-          <p class="signals-sub">
-            We turn that difference into a commercial decision, backed by evidence, not opinion.
-          </p>
-        </div>
+<main>
 
-        <div class="homepage-signals-grid">
-          <div class="homepage-signal-card">
-            <span class="method-step">01</span>
-            <div class="signal-icon"><i class="fa-solid fa-comments"></i></div>
-            <h3>Define two groups</h3>
-            <p>Buyers vs non-buyers. Confident customers vs hesitant ones. Your market vs a competitor's market. Any comparison tied to a real decision.</p>
-          </div>
-
-          <div class="homepage-signal-card">
-            <span class="method-step">02</span>
-            <div class="signal-icon"><i class="fa-solid fa-wave-square"></i></div>
-            <h3>Measure the difference</h3>
-            <p>We compare the language each group actually uses and find what shows up disproportionately in one versus the other. Not opinions. Frequency, likelihood, and the actual words people use.</p>
-          </div>
-
-          <div class="homepage-signal-card">
-            <span class="method-step">03</span>
-            <div class="signal-icon"><i class="fa-solid fa-route"></i></div>
-            <h3>Turn it into a decision</h3>
-            <p>You get the finding, the evidence behind it, and what to do next.</p>
-          </div>
-        </div>
-
-        <div class="homepage-signals-cta">
-          <a href="servicespricing.html" class="button-link">See ways to work together</a>
-        </div>
+<section class="h-hero" aria-labelledby="hero-title">
+  <div class="h-wrap h-hero-grid">
+    <div>
+      <p class="h-kicker">COMPARATIVE LANGUAGE EVIDENCE</p>
+      <h1 id="hero-title">What separates the customers <em class="h-a">who buy</em> from the ones <em class="h-b">who don't.</em></h1>
+      <p class="h-hero-sub">We compare the language of the customers who matter to your business, find what one group says far more than another, and read why.</p>
+      <div class="h-actions">
+        <a class="h-btn h-btn-solid" href="#onepager">Get a one-page answer</a>
+        <a class="h-btn h-btn-ghost" href="#how">See how it works</a>
       </div>
-    </section>
-
-    <section class="homepage-signals-section homepage-findings-section fade-in" aria-labelledby="homepage-findings-heading">
-      <div class="homepage-signals-inner">
-        <div class="commercial-proof-carousel findings-carousel" aria-labelledby="homepage-findings-heading">
-          <div class="commercial-proof-header">
-            <p class="section-kicker">Capodan findings</p>
-            <h3 id="homepage-findings-heading">What the comparison actually turned up.</h3>
-            <p class="commercial-proof-kicker">Three comparisons we ran on public discussion. Directional evidence rather than decision-grade, and we say which is which on the work itself.</p>
-          </div>
-
-          <div class="commercial-proof-shell">
-            <div class="commercial-proof-track" data-commercial-proof-carousel aria-live="polite" tabindex="0">
-              <article id="finding-automotive" class="commercial-proof-card">
-                <span class="proof-industry">Jaguar owners vs Land Rover, Audi and Infiniti owners</span>
-                <h4>Hesitation sat in self-image, not in specification.</h4>
-                <p>Buyers were not arguing about features. What separated them was how the car would make them look, and a sense the brand belonged to someone older.</p>
-                <p class="finding-quote">&quot;a brilliant modern sport saloon with nothing old man about it at all&quot;</p>
-                <div class="proof-result">
-                  <strong aria-label="17.3 times">17.3&times;</strong>
-                  <span>More likely to raise brand perception</span>
-                </div>
-                <p class="proof-basis">59,698 words compared. 438 distinctive signals. Public owner and enthusiast discussion.</p>
-              </article>
-
-              <article id="finding-b2b-sales" class="commercial-proof-card">
-                <span class="proof-industry">Closed-won discussion vs stalled-deal discussion</span>
-                <h4>Wins get reported as payouts, never as method.</h4>
-                <p>When a deal closes, the reply is congratulations and comp. How it was actually won goes undiscussed. There was no language anywhere about win reviews or debriefs.</p>
-                <p class="finding-quote">&quot;Enjoy the high, man. Your boss will be back to moaning that pipeline looks slim tomorrow AM.&quot;</p>
-                <div class="proof-result">
-                  <strong aria-label="84 mentions">84</strong>
-                  <span>Mentions of commission, against none in the stalled group</span>
-                </div>
-                <p class="proof-basis">Log-likelihood 54.91, dispersed across many separate commenters rather than concentrated in one thread.</p>
-              </article>
-
-              <article id="finding-senior-living" class="commercial-proof-card">
-                <span class="proof-industry">Families choosing a community vs families already living in one</span>
-                <h4>Choosing is an interrogation, not an evaluation.</h4>
-                <p>Families arrive with a checklist handed to them by other families. Staff turnover, ownership, medical cover, and what is not in the monthly fee. Operators lead on finishes and dining.</p>
-                <p class="finding-quote">&quot;there were many other random and monthly charges that were not mentioned when we toured&quot;</p>
-                <div class="proof-result">
-                  <strong aria-label="3.85 times">3.85&times;</strong>
-                  <span>More likely to use the language of asking</span>
-                </div>
-                <p class="proof-basis">42 occurrences against 16. Log-likelihood 24.21. Collocates with how, staff, medical and additional.</p>
-              </article>
-            </div>
-          </div>
-
-          <div class="commercial-proof-dots" data-commercial-proof-dots aria-label="Capodan findings carousel controls"></div>
-          <p class="commercial-proof-kicker findings-footnote">Each of these is a comparison we ran, not a client outcome. The figures describe what separated the two groups in the language. They do not describe a change in anyone&apos;s revenue.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="homepage-signals-section homepage-industry-section fade-in" aria-labelledby="commercial-proof-heading">
-      <div class="homepage-signals-inner">
-        <div class="commercial-proof-carousel" aria-labelledby="commercial-proof-heading">
-          <div class="commercial-proof-header">
-            <p class="section-kicker">Commercial stories</p>
-            <h3 id="commercial-proof-heading">How this plays out when it works. Industry examples, not Capodan client work.</h3>
-            <p class="commercial-proof-kicker">We use these to show the principle. Ask us for Capodan's own findings.</p>
-          </div>
-
-          <div class="commercial-proof-shell">
-            <div class="commercial-proof-track" data-commercial-proof-carousel aria-live="polite" tabindex="0">
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="Domino's logo">
-                  <img src="ASSETS/case-logo-dominos.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>Domino's logo</span>
-                </div>
-                <span class="proof-industry">Food / QSR</span>
-                <h4>Customer criticism became the product reset.</h4>
-                <p>Domino's rebuilt taste, crust and sauce around the language customers were already using, then made that feedback central to the relaunch.</p>
-                <div class="proof-result">
-                  <strong>14.3%</strong>
-                  <span>reported U.S. same-store sales growth</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="McDonald's logo">
-                  <img src="ASSETS/case-logo-mcdonalds.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>McDonald's logo</span>
-                </div>
-                <span class="proof-industry">Food / QSR</span>
-                <h4>Demand outside the old journey became the offer.</h4>
-                <p>McDonald's saw people wanted breakfast beyond the old breakfast window and brought the offer closer to how customers wanted to buy.</p>
-                <div class="proof-result">
-                  <strong>5.7%</strong>
-                  <span>reported U.S. comparable sales growth</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="Dove logo">
-                  <img src="ASSETS/case-logo-dove.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>Dove logo</span>
-                </div>
-                <span class="proof-industry">Beauty / Personal Care</span>
-                <h4>Beauty language moved closer to real customers.</h4>
-                <p>Dove moved away from narrow category ideals and built around a customer truth: many women did not see themselves reflected in advertising.</p>
-                <div class="proof-result">
-                  <strong>60%</strong>
-                  <span>reported sales growth</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="LEGO logo">
-                  <img src="ASSETS/case-logo-lego.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>LEGO logo</span>
-                </div>
-                <span class="proof-industry">Toys / Entertainment</span>
-                <h4>The turnaround came from returning to core value.</h4>
-                <p>LEGO refocused on the play experience customers cared about most, rebuilding around clearer customer value and product discipline.</p>
-                <div class="proof-result">
-                  <strong>4.5x</strong>
-                  <span>publicly cited commercial scale increase</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="T-Mobile logo">
-                  <img src="ASSETS/case-logo-tmobile.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>T-Mobile logo</span>
-                </div>
-                <span class="proof-industry">Telecoms</span>
-                <h4>Customer frustration became challenger positioning.</h4>
-                <p>T-Mobile built its Un-carrier strategy around pain points customers disliked most, from contracts to upgrade friction and needless complexity.</p>
-                <div class="proof-result">
-                  <strong>4.4m+</strong>
-                  <span>reported customer additions</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="Hyundai logo">
-                  <img src="ASSETS/case-logo-hyundai.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>Hyundai logo</span>
-                </div>
-                <span class="proof-industry">Automotive</span>
-                <h4>Buyer anxiety became a confidence offer.</h4>
-                <p>Hyundai responded to recession-era buyer fear by reframing the offer around reassurance, not only vehicle features.</p>
-                <div class="proof-result">
-                  <strong>8%</strong>
-                  <span>reported unit sales growth</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="Coca-Cola logo">
-                  <img src="ASSETS/case-logo-cocacola.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>Coca-Cola logo</span>
-                </div>
-                <span class="proof-industry">Beverage / FMCG</span>
-                <h4>Generic packaging became personal language.</h4>
-                <p>Share a Coke put names directly on bottles, making the product easier to talk about, share and connect with socially.</p>
-                <div class="proof-result">
-                  <strong>11%</strong>
-                  <span>reported package sales growth</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="Snickers logo">
-                  <img src="ASSETS/case-logo-snickers.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>Snickers logo</span>
-                </div>
-                <span class="proof-industry">Confectionery</span>
-                <h4>A product benefit became a human phrase.</h4>
-                <p>Snickers made hunger instantly recognizable through language people already understood: you are not yourself when hungry.</p>
-                <div class="proof-result">
-                  <strong>15.9%</strong>
-                  <span>reported sales growth</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="Aerie logo">
-                  <img src="ASSETS/case-logo-aerie.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>Aerie logo</span>
-                </div>
-                <span class="proof-industry">Fashion / Lingerie</span>
-                <h4>Representation replaced category convention.</h4>
-                <p>Aerie moved away from heavily retouched beauty imagery and aligned more closely with how customers wanted to see themselves.</p>
-                <div class="proof-result">
-                  <strong>20%</strong>
-                  <span>reported sales growth</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="Monzo logo">
-                  <img src="ASSETS/case-logo-monzo.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>Monzo logo</span>
-                </div>
-                <span class="proof-industry">Financial Services / Fintech</span>
-                <h4>Clearer wording removed customer friction.</h4>
-                <p>Monzo simplified parts of its business banking journey and help content so customers could act without needing support.</p>
-                <div class="proof-result">
-                  <strong>GBP2m</strong>
-                  <span>reported annual revenue increase</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="Moz logo">
-                  <img src="ASSETS/case-logo-moz.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>Moz logo</span>
-                </div>
-                <span class="proof-industry">SaaS / B2B Tech</span>
-                <h4>Customer objections rebuilt the sales page.</h4>
-                <p>Moz used interviews with paying, trial and canceled customers to answer real objections earlier in the buying journey.</p>
-                <div class="proof-result">
-                  <strong>52%</strong>
-                  <span>reported sales increase</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="Ryanair logo">
-                  <img src="ASSETS/case-logo-ryanair.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>Ryanair logo</span>
-                </div>
-                <span class="proof-industry">Airline / Travel</span>
-                <h4>Customer irritation became a service reset.</h4>
-                <p>Ryanair softened avoidable journey friction while keeping the low-cost model customers already understood.</p>
-                <div class="proof-result">
-                  <strong>32%</strong>
-                  <span>reported profit increase</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="Expedia logo">
-                  <img src="ASSETS/case-logo-expedia.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>Expedia logo</span>
-                </div>
-                <span class="proof-industry">Travel / Ecommerce</span>
-                <h4>One confusing field was costing millions.</h4>
-                <p>Expedia found that an optional form field was causing billing confusion. Removing the ambiguity helped more people complete booking.</p>
-                <div class="proof-result">
-                  <strong>$12m</strong>
-                  <span>reported annual uplift</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="ASOS logo">
-                  <img src="ASSETS/case-logo-asos.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>ASOS logo</span>
-                </div>
-                <span class="proof-industry">Fashion Ecommerce</span>
-                <h4>Checkout language reduced purchase anxiety.</h4>
-                <p>ASOS reframed account creation so the journey felt less like forced registration and more like completing the purchase.</p>
-                <div class="proof-result">
-                  <strong>50%</strong>
-                  <span>reported checkout abandonment reduction</span>
-                </div>
-              </article>
-
-              <article class="commercial-proof-card">
-                <div class="proof-logo-frame" aria-label="The Heritage Foundation logo">
-                  <img src="ASSETS/case-logo-heritagefoundation.png" alt="" onload="this.nextElementSibling.hidden=true;" onerror="this.hidden=true;">
-                  <span>Heritage Foundation logo</span>
-                </div>
-                <span class="proof-industry">Nonprofit / Fundraising</span>
-                <h4>Clearer explanation increased donor confidence.</h4>
-                <p>The Heritage Foundation improved value-proposition copy and reduced donation-page friction to make the ask easier to act on.</p>
-                <div class="proof-result">
-                  <strong>31%</strong>
-                  <span>reported revenue per visitor increase</span>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="commercial-proof-dots" data-commercial-proof-dots aria-label="Commercial story carousel controls"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="dante-quote-section" aria-label="Dante quote">
-      <div class="dante-quote-inner">
-        <img
-          class="dante-quote-art"
-          src="ASSETS/dante_quote.svg"
-          alt="O you who have sound intellects, look at the doctrine that hides itself beneath the veil of the strange verses. Dante, Inferno IX.61-63"
-        >
-        <img
-          class="dante-quote-figure"
-          src="ASSETS/dante_image.svg"
-          alt=""
-          aria-hidden="true"
-        >
-      </div>
-    </section>
-
-    <!-- Upcoming Event Card -->
-    <section class="event-card content-offset" style="display:none">
-    <div class="event-card-inner">
-        <h2>Capodan Live: What & Why Linguistics — August in Practice</h2>
-        <p class="event-sub">Hospitality · Guest Experience · Wed 27 Aug · 7:00 PM BST · Zoom</p>
-        <ul class="event-bullets">
-        <li>A plain-English intro to business linguistics</li>
-        <li>The guest-language signals worth watching</li>
-        <li>How those signals can inform better decisions</li>
-        </ul>
-        <a class="event-cta" href="https://us06web.zoom.us/meeting/register/p32S-P9bSfS48EJ4yXX0oQ?utm_source=website&utm_medium=event-card">Save my spot</a>
-        <p class="event-note">Can’t make it? Register to get the recording.</p>
-    </div>
-    </section> 
-
-    <section class="homepage-services-section" aria-labelledby="homepage-services-heading">
-      <div class="homepage-section-header">
-        <p class="section-kicker">Ways to work together</p>
-        <h2 id="homepage-services-heading">Sharper decisions from the language your market is already giving you.</h2>
-        <p>
-          Use Capodan when you need to understand hesitation, prove what builds confidence,
-          or turn customer language into growth moves.
-        </p>
-      </div>
-
-      <div class="homepage-service-cards">
-        <div class="homepage-service-card">
-            <span class="card-kicker">The comparative method</span>
-            <h3>Find what separates two groups</h3>
-            <p>
-                We compare the language of buyers and non-buyers, retained and churned, your market and a competitor's. The difference is what changes the decision.
-            </p>
-            <ul>
-                <li>Brand and positioning clarity</li>
-                <li>Customer experience signals</li>
-                <li>Sales and objection insight</li>
-            </ul>
-            <a href="servicespricing.html#language-insight" class="card-link">Explore language impact</a>
-        </div>
-
-        <div class="homepage-service-card">
-            <span class="card-kicker">Research support</span>
-            <h3>Give bigger decisions clearer evidence</h3>
-            <p>
-                When surface feedback is not enough, we design and deliver research that shows what matters and what to do next.
-            </p>
-            <ul>
-                <li>Survey design and fielding</li>
-                <li>Stakeholder interviews</li>
-                <li>Insight reports and trend analysis</li>
-            </ul>
-            <a href="servicespricing.html#research-services" class="card-link">Explore research support</a>
-        </div>
-
-        <div class="homepage-service-card">
-            <span class="card-kicker">Flagship work</span>
-            <h3>Build the next growth move from language</h3>
-            <p>
-                Our deeper work maps changing expectations, latent demand and the friction points that shape whether customers move or stall.
-            </p>
-            <ul>
-                <li>Client voice architecture</li>
-                <li>Future consumer shift</li>
-                <li>Value alignment</li>
-            </ul>
-            <a href="servicespricing.html#strategy" class="card-link">Explore flagship strategy</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="blog-banner-carousel" aria-labelledby="blog-carousel-heading">
-      <div class="container">
-        <div class="carousel-header">
-          <h2 id="blog-carousel-heading" class="carousel-heading">Latest customer-language signals</h2>
-          <div class="carousel-controls">
-            <button class="carousel-btn prev" type="button" aria-label="Previous">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button class="carousel-btn next" type="button" aria-label="Next">
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-          </div>
-        </div>
-    
-        <div
-          class="carousel-track"
-          id="blog-carousel"
-          role="region"
-          aria-roledescription="carousel"
-          aria-label="Blog posts"
-          tabindex="0"
-        >
-          <!-- cards injected by JS -->
-        </div>
-    
-        <!-- soft edges -->
-        <div class="carousel-edge left" aria-hidden="true"></div>
-        <div class="carousel-edge right" aria-hidden="true"></div>
-      </div>
-    </section>
-
-    <section class="faq-section homepage-faq-section" aria-labelledby="homepage-faq-heading">
-      <div class="homepage-section-header">
-        <p class="section-kicker">Common questions</p>
-        <h2 id="homepage-faq-heading">How Capodan works with your language data.</h2>
-      </div>
-
-      <div class="faq-item">
-          <input type="checkbox" id="faq1">
-          <label for="faq1" class="faq-question">What exactly does Capodan do?</label>
-          <div class="faq-answer">
-          <p>We compare two groups that matter commercially and measure what separates their language. Buyers against non-buyers, retained against churned, one market against another. The difference tells you what to change.</p>
-          </div>
-      </div>
-
-      <div class="faq-item">
-          <input type="checkbox" id="faq2">
-          <label for="faq2" class="faq-question">What makes you different from other research or insight agencies?</label>
-          <div class="faq-answer">
-          <p>Most tools tell you what one group is saying. We compare two groups that matter to your business and measure what actually separates them. Buyers and non-buyers. Retained and churned.</p>
-          </div>
-      </div>
-
-      <div class="faq-item">
-          <input type="checkbox" id="faq3">
-          <label for="faq3" class="faq-question">Is Capodan just for marketing teams?</label>
-          <div class="faq-answer">
-          <p>No, we work across product, strategy, insight, CX, and leadership. Anywhere language plays a role in decisions, we add clarity and precision.</p>
-          </div>
-      </div>
-
-      <div class="faq-item">
-          <input type="checkbox" id="faq4">
-          <label for="faq4" class="faq-question">What’s your process?</label>
-          <div class="faq-answer">
-          <p>We start by understanding your challenge, then collect or work with existing language data from reviews to calls to competitor messaging. We surface patterns, signals, and meaning through expert analysis, not just AI.</p>
-          </div>
-      </div>
-
-      <div class="faq-item">
-          <input type="checkbox" id="faq5">
-          <label for="faq5" class="faq-question">Do you use AI or is this human-led?</label>
-          <div class="faq-answer">
-          <p>Our tools support us, but interpretation is always human. That’s where the real insight lies, in context, nuance, and framing.</p>
-          </div>
-      </div>
-
-      <div class="faq-item">
-          <input type="checkbox" id="faq6">
-          <label for="faq6" class="faq-question">What kind of data can you analyze?</label>
-          <div class="faq-answer">
-          <p>Customer reviews, call transcripts, sales pitches, chatbot logs, brand messaging, competitor pages, any language data can be turned into insight.</p>
-          </div>
-      </div>
-
-      <div class="faq-item">
-          <input type="checkbox" id="faq7">
-          <label for="faq7" class="faq-question">Can you work with our existing data?</label>
-          <div class="faq-answer">
-          <p>Absolutely. We often extract more value from what you already have, it’s just been waiting to be interpreted properly.</p>
-          </div>
-      </div>
-
-      <div class="faq-item">
-          <input type="checkbox" id="faq8">
-          <label for="faq8" class="faq-question">What deliverables can we expect?</label>
-          <div class="faq-answer">
-          <p>We tailor to the business need, decks, headline summaries, or leadership briefs.</p>
-          </div>
-      </div>
-
-      <div class="faq-item">
-          <input type="checkbox" id="faq9">
-          <label for="faq9" class="faq-question">Is this suitable for B2B or just consumer?</label>
-          <div class="faq-answer">
-          <p>Both. In fact, many of our sharpest insights come from complex or technical industries where language is the key barrier to alignment.</p>
-          </div>
-      </div>
-    </section>
-
-    <footer class="footer-columns">
-    <div class="footer-column">
-        <img src="ASSETS/Capo1.svg" alt="CapoDan Logo" class="footer-logo-img">
-        <p>
-        Capodan Research Ltd is a registered company in England and Wales.<br>
-        Company No. 16292639<br>
-        Founded and run by published linguists, with decades of experience applying language evidence to commercial decisions.
-        </p>
-        <p>© Capodan 2025. All Rights Reserved.</p>
     </div>
 
-    <div class="footer-column">
-        <h3>Links</h3>
-        <ul>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="cookie-policy.html">Cookie Policy</a></li>
-        <li><a href="terms-of-use.html">Terms of Use</a></li>
-        <li><a href="accessibility-statement.html">Accessibility Statement</a></li>
-        </ul>
-    </div>
-
-    <div class="footer-column">
-    <h3>UK Office</h3>
-    <address>
-        First Floor, Swan Buildings<br>
-        20 Swan Street<br>
-        Manchester, M4 5JW<br>
-        <a href="mailto:contact@capodan.com">contact@capodan.com</a><br>
-        <a href="tel:+441615245787">+44 (0)161 524 5787</a>
-    </address>
-    </div>
-
-    <div class="footer-column">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/capodan-team" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/capodanresearch" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/capodanteam" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="Twitter">
-            <i class="fab fa-x-twitter"></i>
-            </a>
-            <a href="https://www.youtube.com/@CapodanResearch"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="YouTube">
-            <i class="fab fa-youtube"></i>
-            </a>
+    <figure class="h-specimen" id="specimen" aria-label="Example finding: Jaguar owners talk about how the car makes them look 17.3 times more often than Land Rover, Audi and Infiniti owners.">
+      <figcaption>
+        <span>COMPARISONS WE RAN</span>
+        <span id="spec-source">PUBLIC OWNER DISCUSSION</span>
+      </figcaption>
+      <div class="h-spec-body" id="spec-body">
+        <div class="h-pills" aria-hidden="true">
+          <span class="h-pill h-a" id="spec-pill-a">Jaguar owners</span>
+          <span class="h-pill-sep">against</span>
+          <span class="h-pill h-b" id="spec-pill-b">Land Rover, Audi and Infiniti owners</span>
         </div>
+        <div class="h-kwic" aria-hidden="true">
+          <div class="h-kwic-left"><span id="spec-left">a brilliant modern sport saloon with nothing</span></div>
+          <div class="h-kwic-key" id="spec-key">old man</div>
+          <div class="h-kwic-right" id="spec-right">about it at all</div>
+        </div>
+        <div class="h-bars h-grow" id="spec-bars" aria-hidden="true">
+          <div class="h-bar-row"><span id="spec-label-a">Jaguar owners</span><div class="h-bar h-bar-a" id="spec-bar-a" style="--w: 100%"></div></div>
+          <div class="h-bar-row"><span id="spec-label-b">The other owners</span><div class="h-bar h-bar-b" id="spec-bar-b" style="--w: 5.8%"></div></div>
+        </div>
+        <p class="h-specimen-line" id="spec-line" aria-hidden="true">Jaguar owners talk about how the car makes them look <span class="h-a">17.3 times</span> more often than the other owners.</p>
+      </div>
+      <div class="h-spec-dots" id="spec-dots" hidden>
+        <button type="button" class="is-active" data-slide="0" aria-label="Show the car owners comparison"></button>
+        <button type="button" data-slide="1" aria-label="Show the senior living comparison"></button>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="h-light" aria-labelledby="ai-title">
+  <div class="h-wrap h-ai-grid">
+    <h2 id="ai-title" class="h-display"><span class="h-dim">AI describes your customers.</span><br>Capodan explains them.</h2>
+    <p>Ask a general AI about your customers and you get the top line, the themes any business in your sector would recognise. Capodan compares the customers that matter to you, finds what one group says far more than another, and reads why. Software does the counting at scale. A linguist does the reading.</p>
+  </div>
+</section>
+
+<section id="how" class="h-method" aria-labelledby="how-title">
+  <div class="h-wrap">
+    <p class="h-kicker">HOW IT WORKS</p>
+    <h2 id="how-title" class="h-display">From real conversations to a change you can make.</h2>
+    <ol class="h-steps" id="steps">
+      <li>
+        <div class="h-node" aria-hidden="true"><span></span></div>
+        <p class="h-step-num">01</p>
+        <h3>Capture</h3>
+        <p class="h-step-text">We collect thousands of real conversations from public sources, or work with your own reviews, calls and support tickets.</p>
+      </li>
+      <li>
+        <div class="h-node" aria-hidden="true"><span></span></div>
+        <p class="h-step-num">02</p>
+        <h3>Refine</h3>
+        <p class="h-step-text">We strip out anything that isn't a real customer talking, such as brand replies, duplicates, bots and adverts.</p>
+      </li>
+      <li>
+        <div class="h-node" aria-hidden="true"><span class="h-dot-a"></span><span class="h-dot-b"></span></div>
+        <p class="h-step-num">03</p>
+        <h3>Compare</h3>
+        <p class="h-step-text">We test every word and phrase to see what one group says far more than the other, and what is just noise.</p>
+      </li>
+      <li>
+        <div class="h-node" aria-hidden="true"><span></span></div>
+        <p class="h-step-num">04</p>
+        <h3>Read</h3>
+        <p class="h-step-text">A linguist reads the conversations behind each difference that holds up, to find the reason underneath it.</p>
+      </li>
+      <li>
+        <div class="h-node" aria-hidden="true"><span></span></div>
+        <p class="h-step-num">05</p>
+        <h3>Apply</h3>
+        <p class="h-step-text">We set each finding against how you sell now, and turn the gaps into changes your team can make.</p>
+      </li>
+    </ol>
+    <p class="h-rule">The numbers find the patterns. The reading explains them. If we can't show where a finding came from, it doesn't go in.</p>
+  </div>
+</section>
+
+<section id="findings" class="h-findings" aria-labelledby="findings-title">
+  <div class="h-wrap">
+    <div class="h-findings-head">
+      <div>
+        <p class="h-kicker">FINDINGS</p>
+        <h2 id="findings-title" class="h-display">What the comparison turned up.</h2>
+      </div>
+      <p class="h-note">Three comparisons we ran on public conversations. They're demonstrations, not client results.</p>
     </div>
 
-    </footer>
+    <div class="h-cards">
+      <article class="h-card">
+        <p class="h-card-label">Jaguar owners vs Land Rover, Audi and Infiniti owners</p>
+        <h3>Jaguar owners talk about how the car makes them look. The other owners talk about it far less.</h3>
+        <div class="h-meter h-grow" aria-hidden="true">
+          <div class="h-bar h-bar-a" style="--w: 100%"></div>
+          <div class="h-bar h-bar-b" style="--w: 5.8%"></div>
+        </div>
+        <p class="h-stat"><strong><span data-count="17.3" data-decimals="1">17.3</span>&times;</strong> more likely to talk about how the brand comes across</p>
+        <p class="h-quote">"a brilliant modern sport saloon with nothing old man about it at all"</p>
+      </article>
+
+      <article class="h-card">
+        <p class="h-card-label">Closed-won deals vs stalled deals</p>
+        <h3>When a deal closes, salespeople talk about the commission. Nobody in the sample talks about how the deal was won.</h3>
+        <div class="h-meter h-grow" aria-hidden="true">
+          <div class="h-bar h-bar-a" style="--w: 100%"></div>
+          <div class="h-bar-zero"></div>
+        </div>
+        <p class="h-stat"><strong><span data-count="84" data-decimals="0">84</span></strong> mentions of commission in closed-won threads, against none in stalled-deal threads</p>
+        <p class="h-quote">"Enjoy the high, man. Your boss will be back to moaning that pipeline looks slim tomorrow AM."</p>
+      </article>
+
+      <article class="h-card">
+        <p class="h-card-label">Families choosing a community vs families living in one</p>
+        <h3>Families choosing a senior living community talk in questions far more. Most are about staff, medical cover and extra fees.</h3>
+        <div class="h-meter h-grow" aria-hidden="true">
+          <div class="h-bar h-bar-a" style="--w: 100%"></div>
+          <div class="h-bar h-bar-b" style="--w: 26%"></div>
+        </div>
+        <p class="h-stat"><strong><span data-count="3.85" data-decimals="2">3.85</span>&times;</strong> more likely to ask questions than families already living in one</p>
+        <p class="h-quote">"there were many other random and monthly charges that were not mentioned when we toured"</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="start" class="h-start" aria-labelledby="start-title">
+  <div class="h-wrap">
+    <p class="h-kicker">WORKING TOGETHER</p>
+    <h2 id="start-title" class="h-display">How it starts.</h2>
+    <div class="h-cards">
+      <div class="h-start-step">
+        <p class="h-big-num">1</p>
+        <h3>Tell us the behaviour</h3>
+        <p class="h-text">Tell us one customer behaviour your data doesn't explain well.</p>
+      </div>
+      <div class="h-start-step h-hot">
+        <p class="h-big-num">2</p>
+        <h3>Get a one-page answer</h3>
+        <p class="h-text">We run the comparison and send you a one-page answer. Free.</p>
+      </div>
+      <div class="h-start-step">
+        <p class="h-big-num">3</p>
+        <h3>Go further if it's useful</h3>
+        <p class="h-text">If it's useful, we scope a full study on your own data, at a fixed fee agreed upfront.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="h-who" aria-labelledby="who-title">
+  <div class="h-wrap h-who-inner">
+    <div class="h-monogram" aria-hidden="true">LD</div>
+    <div>
+      <p class="h-kicker">WHO DOES THE READING</p>
+      <h2 id="who-title">Lee Daniels</h2>
+      <p class="h-text">Founder of Capodan. A published linguist (MA, BA Hons, doctoral research) with a decade of applying language evidence to commercial decisions.</p>
+    </div>
+  </div>
+</section>
+
+<section class="h-faq" aria-labelledby="faq-title">
+  <div class="h-wrap">
+    <h2 id="faq-title" class="h-kicker">COMMON QUESTIONS</h2>
+    <div class="h-faq-grid">
+      <div>
+        <h3>What do you compare?</h3>
+        <p class="h-text">Groups of customers tied to a real decision. Buyers and people who walked away, customers who stay and customers who leave, your market and a competitor's.</p>
+      </div>
+      <div>
+        <h3>Where does the language come from?</h3>
+        <p class="h-text">Public conversations such as forums, reviews and discussions, in the languages your customers speak. Nothing private is used and names are never published.</p>
+      </div>
+      <div>
+        <h3>Can you use our own data?</h3>
+        <p class="h-text">Yes. Reviews, call transcripts, support tickets and sales notes can be compared the same way, and usually give the sharpest answer.</p>
+      </div>
+      <div>
+        <h3>What do we get at the end?</h3>
+        <p class="h-text">The findings, the real customer conversations behind each one, and a short list of changes your team can make.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="onepager" class="h-light" aria-labelledby="onepager-title">
+  <div class="h-wrap h-cta-grid">
+    <h2 id="onepager-title" class="h-display">Tell us one customer behaviour your data doesn't explain well. <em>We'll send you a one-page answer.</em></h2>
+    <form class="h-form" id="onepager-form" action="https://formspree.io/f/xvgrgnka" method="POST" aria-label="Request a one-pager">
+      <input type="hidden" name="_subject" value="One-pager request from capodan.com">
+      <input type="hidden" name="source" value="homepage one-pager form">
+      <label class="h-field">The behaviour
+        <textarea name="message" rows="4" placeholder="e.g. why trial users don't upgrade" required></textarea>
+      </label>
+      <label class="h-field">Work email
+        <input type="email" name="email" placeholder="you@company.com" required>
+      </label>
+      <label class="h-consent">
+        <input type="checkbox" name="consent" required>
+        <span>I agree to the <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+      </label>
+      <button type="submit">Send it</button>
+      <p class="h-status" id="onepager-status" role="status" aria-live="polite" hidden></p>
+      <p class="h-form-alt">Or email <a href="mailto:contact@capodan.com">contact@capodan.com</a></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="h-footer">
+  <div class="h-wrap h-foot-grid">
+    <div class="h-foot-col">
+      <img src="ASSETS/Capo.svg" alt="Capodan">
+      <span>Capodan Research Ltd is a registered company in England and Wales. Company No. 16292639.</span>
+      <span>&copy; Capodan 2026. All Rights Reserved.</span>
+    </div>
+    <div class="h-foot-col">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="accessibility-statement.html">Accessibility Statement</a>
+    </div>
+    <div class="h-foot-col">
+      <address>First Floor, Swan Buildings<br>20 Swan Street<br>Manchester, M4 5JW</address>
+    </div>
+    <div class="h-foot-col">
+      <a href="mailto:contact@capodan.com">contact@capodan.com</a>
+      <a href="tel:+441615245787">+44 (0)161 524 5787</a>
+      <a href="https://www.linkedin.com/in/capodan-team" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById("onepager-form");
+  var status = document.getElementById("onepager-status");
+  if (!form || !status) return;
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var button = form.querySelector("button[type='submit']");
+    button.disabled = true;
+    status.hidden = true;
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" }
+    }).then(function (response) {
+      status.hidden = false;
+      if (response.ok) {
+        status.className = "h-status h-ok";
+        status.textContent = "Thanks. We've got it and will be in touch about your one-pager.";
+        form.reset();
+        if (typeof gtag === "function") gtag("event", "onepager_request");
+      } else {
+        status.className = "h-status h-err";
+        status.textContent = "That didn't send. Please try again, or email contact@capodan.com.";
+      }
+    }).catch(function () {
+      status.hidden = false;
+      status.className = "h-status h-err";
+      status.textContent = "That didn't send. Please try again, or email contact@capodan.com.";
+    }).then(function () {
+      button.disabled = false;
+    });
+  });
+})();
+</script>
+
 
 <!--HTML COOKIES-->
 <div id="cookie-backdrop" class="cookie-backdrop" style="display: none;"></div>
@@ -761,134 +404,6 @@
 
 
 </div>
-<!-- Blog carousel script: place just before </body> -->
 
-<script>
-(async function () {
-  // Helpers
-  const byDateDesc = (a, b) => new Date(b.date) - new Date(a.date);
-  const slugify = (s) =>
-    (s || "post")
-      .replace(/\.[^.]+$/, "")              // drop extension
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")          // non-alnum -> dashes
-      .replace(/^-+|-+$/g, "");
-
-  // Load posts.json once
-  let posts = [];
-  try {
-    const res = await fetch("blog-posts/posts.json", { cache: "no-store" });
-    posts = await res.json();
-  } catch (e) {
-    console.error("Failed to load posts.json", e);
-    posts = [];
-  }
-  posts.sort(byDateDesc);
-
-  /* -------------------- HOME CAROUSEL -------------------- */
-  const track =
-    document.getElementById("blog-carousel") ||
-    document.getElementById("carousel-container");
-
-  if (track && posts.length) {
-    // Only show the latest 12 in the carousel
-    const latest = posts.slice(0, 12);
-
-    // Build cards (grab excerpt from MD if not provided)
-    const cards = await Promise.all(
-      latest.map(async (post) => {
-        const slug = slugify(post.slug || post.file || post.title);
-        const url = post.url || `blog.html#${slug}`;
-        const dateStr = post.date
-          ? new Date(post.date).toLocaleDateString(undefined, {
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-            })
-          : "";
-
-        // Prefer posts.json excerpt; otherwise create one from the MD body
-        let excerpt = (post.excerpt || "").trim();
-        if (!excerpt && post.file) {
-          try {
-            const md = await fetch(`blog-posts/${post.file}`).then((r) => r.text());
-            const bodyMatch = md.match(/---\s*[\s\S]*?---\s*([\s\S]*)/); // strip frontmatter
-            const body = (bodyMatch ? bodyMatch[1] : md)
-              // strip links/images/markdown chars
-              .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
-              .replace(/\[[^\]]*\]\([^)]*\)/g, "")
-              .replace(/[*`>#_]/g, "");
-            excerpt = body.split(/\s+/).slice(0, 28).join(" ") + "…";
-          } catch {}
-        }
-
-        return `
-          <article class="blog-card">
-            ${dateStr ? `<time datetime="${post.date}">${dateStr}</time>` : ""}
-            <h3><a href="${url}">${post.title || "Untitled"}</a></h3>
-            ${excerpt ? `<p class="excerpt">${excerpt}</p>` : ""}
-            <a class="read-more" href="${url}">Read More →</a>
-          </article>
-        `;
-      })
-    );
-
-    track.innerHTML = cards.join("");
-
-    // Wire arrows (if present)
-    const prev = document.querySelector(".carousel-btn.prev");
-    const next = document.querySelector(".carousel-btn.next");
-
-    function scrollByAmount(dir = 1) {
-      const amt = Math.round(track.clientWidth * 0.9);
-      track.scrollBy({ left: dir * amt, behavior: "smooth" });
-    }
-    function updateArrows() {
-      const atStart = track.scrollLeft <= 2;
-      const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
-      if (prev) prev.disabled = atStart;
-      if (next) next.disabled = atEnd;
-    }
-
-    if (prev) prev.addEventListener("click", () => scrollByAmount(-1));
-    if (next) next.addEventListener("click", () => scrollByAmount(1));
-    track.addEventListener("scroll", updateArrows, { passive: true });
-    updateArrows();
-  }
-
-  /* -------------------- BLOG PAGE -------------------- */
-  const blogContainer = document.getElementById("blog-posts");
-  if (blogContainer && posts.length) {
-    blogContainer.innerHTML = "";
-    for (const post of posts) {
-      try {
-        const md = await fetch(`blog-posts/${post.file}`).then((r) => r.text());
-        const fm = md.match(/---\s*([\s\S]*?)\s*---/); // frontmatter
-        const body = fm ? md.replace(fm[0], "") : md;
-        const html = marked.parse(body);
-
-        const slug = slugify(post.slug || post.file || post.title);
-        const dateStr = new Date(post.date).toDateString();
-
-        const el = document.createElement("article");
-        el.className = "blog-article";
-        el.id = slug; // anchor target for Read More
-        el.innerHTML = `
-          <h2 class="blog-title">${post.title}</h2>
-          <p class="blog-date">${dateStr}</p>
-          <div class="blog-body">${html}</div>
-          <hr class="blog-divider">
-        `;
-        blogContainer.appendChild(el);
-      } catch (e) {
-        console.error("Failed to render post:", post, e);
-      }
-    }
-  }
-})();
-</script>
-
-
-    
 </body>
 </html>
