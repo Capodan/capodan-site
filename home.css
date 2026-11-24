@@ -150,6 +150,22 @@ body.home {
 .home .h-desk-foot { margin-top: auto; }
 .home .h-approved { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 8px; background: var(--group-a); color: var(--ground); }
 
+/* Wordmark without its box (homepage only) */
+.home .h-logo img.h-wordmark { height: 22px; }
+.home .h-foot-col img.h-wordmark { height: 18px; margin-bottom: 8px; }
+
+/* Concordance line fades at both edges so the cut reads as intentional */
+.home .h-kwic-left { -webkit-mask-image: linear-gradient(to right, transparent 0, #000 48px); mask-image: linear-gradient(to right, transparent 0, #000 48px); }
+.home .h-kwic-right { -webkit-mask-image: linear-gradient(to left, transparent 0, #000 48px); mask-image: linear-gradient(to left, transparent 0, #000 48px); }
+
+/* Findings cards share rows so quotes and cost lines line up across */
+.home .h-cards.h-cards-2 { row-gap: 22px; }
+.home .h-cards-2 .h-card { display: grid; grid-template-rows: subgrid; grid-row: span 6; row-gap: 22px; }
+.home .h-cards-2 .h-quote { margin: 0; }
+
+/* Button under How it starts */
+.home .h-start-cta { margin-top: 56px; }
+
 /* Working together */
 .home .h-start { background: var(--surface); padding: 112px 0; border-top: 1px solid #1C2640; border-bottom: 1px solid #1C2640; }
 .home .h-start .h-display { margin-bottom: 64px; }
@@ -168,7 +184,7 @@ body.home {
 .home .h-who p.h-text { margin: 0; max-width: 640px; color: var(--muted); }
 
 /* FAQ */
-.home .h-faq { padding: 0 0 112px; }
+.home .h-faq { padding: 112px 0; }
 .home .h-faq-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 64px; }
 .home .h-faq h3 { margin: 0 0 10px; font-size: 19px; font-weight: 600; color: var(--ink); }
 .home .h-faq p.h-text { margin: 0; color: var(--muted); }
@@ -222,6 +238,10 @@ body.home {
   .home .h-cost-head { margin-bottom: 40px; }
   .home .h-desk { grid-template-columns: minmax(0, 1fr); gap: 44px; }
   .home .h-desk-card { height: auto; min-height: 200px; }
+  .home .h-cards.h-cards-2 { row-gap: 22px; }
+  .home .h-cards-2 .h-card + .h-card { margin-top: 24px; }
+  .home .h-start-cta { margin-top: 40px; }
+  .home .h-faq { padding: 72px 0; }
   .home .h-problem-line { font-size: 26px; }
     .home .h-foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .home .h-rule { font-size: 26px; margin-top: 64px; }
@@ -237,6 +257,7 @@ body.home {
 
 @media (max-width: 420px) {
   .home .h-logo img { height: 28px; }
+  .home .h-logo img.h-wordmark { height: 19px; }
   .home .h-links .h-btn { padding: 10px 14px; font-size: 13px; }
   .home .h-foot-grid { grid-template-columns: minmax(0, 1fr); }
 }
@@ -247,6 +268,8 @@ body.home {
   .home .h-kwic-left,
   .home .h-kwic-right { display: inline; overflow: visible; white-space: normal; }
   .home .h-kwic-key { display: inline; margin: 0 4px; }
+  .home .h-kwic-left,
+  .home .h-kwic-right { -webkit-mask-image: none; mask-image: none; }
 }
 
 
