@@ -125,6 +125,31 @@ body.home {
 .home .h-change { margin: 0; padding-top: 18px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; color: var(--ink); }
 .home .h-change span { display: block; margin-bottom: 6px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; color: var(--group-b); }
 
+/* What it costs */
+.home .h-cost { background: var(--surface); padding: 112px 0; border-top: 1px solid #1C2640; border-bottom: 1px solid #1C2640; }
+.home .h-cost-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-bottom: 56px; }
+.home .h-cost-head .h-display { max-width: 760px; }
+.home .h-cost-head p.h-note { margin: 0; max-width: 300px; font-size: 15px; color: var(--quiet); }
+.home .h-desk { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.home .h-desk-col { display: flex; flex-direction: column; }
+.home .h-desk-col h3 { margin: 24px 0 8px; font-size: 20px; font-weight: 600; color: var(--ink); }
+.home .h-desk-col p.h-text { margin: 0; font-size: 16px; color: var(--muted); }
+.home .h-desk-card { height: 236px; box-sizing: border-box; padding: 20px 22px; background: var(--raise); border: 1px solid var(--line-strong); border-radius: 14px; display: flex; flex-direction: column; gap: 12px; font-size: 14px; }
+.home .h-desk-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.home .h-desk-title { font-size: 15px; font-weight: 600; color: var(--ink); }
+.home .h-desk-pill { font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--group-b); color: var(--group-b); white-space: nowrap; }
+.home .h-desk-field { display: flex; flex-direction: column; gap: 6px; }
+.home .h-desk-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; color: var(--quiet); }
+.home .h-desk-value { color: var(--muted); }
+.home .h-desk-select { align-self: flex-start; padding: 6px 10px; border: 1px solid var(--group-a); border-radius: 8px; color: var(--ink); }
+.home .h-desk-empty { font-style: italic; font-size: 13px; color: var(--quiet); }
+.home .h-desk-files { font-family: var(--mono); font-size: 13px; gap: 11px; }
+.home .h-strike { position: relative; align-self: flex-start; color: #6F7B95; }
+.home .h-strike::after { content: ""; position: absolute; left: 0; right: 0; top: 52%; height: 1px; background: #6F7B95; transform-origin: left center; }
+.home .h-desk-latest { color: var(--ink); }
+.home .h-desk-foot { margin-top: auto; }
+.home .h-approved { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 8px; background: var(--group-a); color: var(--ground); }
+
 /* Working together */
 .home .h-start { background: var(--surface); padding: 112px 0; border-top: 1px solid #1C2640; border-bottom: 1px solid #1C2640; }
 .home .h-start .h-display { margin-bottom: 64px; }
@@ -193,8 +218,12 @@ body.home {
   .home .h-cards.h-cards-2,
   .home .h-faq-grid { grid-template-columns: minmax(0, 1fr); }
   .home .h-problem { padding: 64px 0; }
+  .home .h-cost { padding-top: 72px; padding-bottom: 72px; }
+  .home .h-cost-head { margin-bottom: 40px; }
+  .home .h-desk { grid-template-columns: minmax(0, 1fr); gap: 44px; }
+  .home .h-desk-card { height: auto; min-height: 200px; }
   .home .h-problem-line { font-size: 26px; }
-  .home .h-foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .home .h-foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .home .h-rule { font-size: 26px; margin-top: 64px; }
   .home .h-light,
   .home .h-method,
@@ -279,6 +308,23 @@ body.home {
 /* 4. Cards lift with a magenta and blue edge */
 .home .h-card { transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease; }
 .home .h-card:hover { transform: translateY(-4px); border-color: #2C3858; box-shadow: -1px -1px 0 0 rgba(228, 107, 190, 0.55), 1px 1px 0 0 rgba(124, 192, 234, 0.55), 0 22px 44px rgba(0, 0, 0, 0.35); }
+
+/* 5. Desk cards in the cost section: rise in, old decks get crossed out, approval lands last */
+.home .h-desk-col { transition: opacity 0.6s ease, transform 0.6s ease; }
+.home .h-desk-col:nth-child(2) { transition-delay: 0.15s; }
+.home .h-desk-col:nth-child(3) { transition-delay: 0.3s; }
+.home .h-desk-select { transition: border-color 0.5s ease 0.9s; }
+.home .h-strike::after { transition: transform 0.45s ease; }
+.home .h-strike:nth-of-type(2)::after { transition-delay: 0.9s; }
+.home .h-strike:nth-of-type(3)::after { transition-delay: 1.3s; }
+.home .h-strike:nth-of-type(4)::after { transition-delay: 1.7s; }
+.home .h-desk-latest .h-a { transition: opacity 0.4s ease 2.1s; }
+.home .h-approved { transition: opacity 0.35s ease 2.3s, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1) 2.3s; }
+.home-anim .h-desk:not(.is-in) .h-desk-col { opacity: 0; transform: translateY(14px); }
+.home-anim .h-desk:not(.is-in) .h-desk-select { border-color: var(--line-strong); }
+.home-anim .h-desk:not(.is-in) .h-strike::after { transform: scaleX(0); }
+.home-anim .h-desk:not(.is-in) .h-desk-latest .h-a { opacity: 0; }
+.home-anim .h-desk:not(.is-in) .h-approved { opacity: 0; transform: scale(1.3) rotate(-4deg); }
 
 @media (prefers-reduced-motion: reduce) {
   .home *, .home *::before, .home *::after { transition: none !important; animation: none !important; }

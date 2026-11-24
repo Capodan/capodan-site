@@ -54,6 +54,8 @@
   var watched = Array.prototype.slice.call(document.querySelectorAll(".h-findings .h-grow"));
   var steps = $("steps");
   if (steps) watched.push(steps);
+  var desk = $("cost-desk");
+  if (desk) watched.push(desk);
 
   if (still || !hasIO) {
     watched.forEach(function (el) { el.classList.add("is-in"); });
