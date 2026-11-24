@@ -115,6 +115,16 @@ body.home {
 .home .h-stat strong { font-family: var(--serif); font-weight: 400; font-size: 34px; color: var(--group-a); margin-right: 4px; }
 .home .h-quote { margin: auto 0 0; padding-top: 20px; border-top: 1px solid var(--line); font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--muted); }
 
+/* Problem line under the hero */
+.home .h-problem { padding: 96px 0; border-top: 1px solid #1C2640; }
+.home .h-problem-line { margin: 0; max-width: 940px; font-family: var(--serif); font-weight: 300; font-size: 38px; line-height: 1.25; letter-spacing: -0.01em; color: var(--muted); }
+.home .h-problem-turn { color: var(--ink); }
+
+/* Two-card findings row and the change line on each card */
+.home .h-cards.h-cards-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.home .h-change { margin: 0; padding-top: 18px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; color: var(--ink); }
+.home .h-change span { display: block; margin-bottom: 6px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; color: var(--group-b); }
+
 /* Working together */
 .home .h-start { background: var(--surface); padding: 112px 0; border-top: 1px solid #1C2640; border-bottom: 1px solid #1C2640; }
 .home .h-start .h-display { margin-bottom: 64px; }
@@ -180,7 +190,10 @@ body.home {
   .home .h-steps { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .home .h-steps li { padding-right: 0; }
   .home .h-cards,
+  .home .h-cards.h-cards-2,
   .home .h-faq-grid { grid-template-columns: minmax(0, 1fr); }
+  .home .h-problem { padding: 64px 0; }
+  .home .h-problem-line { font-size: 26px; }
   .home .h-foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .home .h-rule { font-size: 26px; margin-top: 64px; }
   .home .h-light,

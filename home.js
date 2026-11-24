@@ -75,19 +75,6 @@
   /* ---------- 1. Hero specimen cycles through real comparisons ---------- */
   var slides = [
     {
-      source: "PUBLIC OWNER DISCUSSION",
-      pillA: "Jaguar owners",
-      pillB: "Land Rover, Audi and Infiniti owners",
-      left: "a brilliant modern sport saloon with nothing",
-      key: "old man",
-      right: "about it at all",
-      labelA: "Jaguar owners",
-      labelB: "The other owners",
-      wB: "5.8%",
-      line: "Jaguar owners talk about how the car makes them look <span class=\"h-a\">17.3 times</span> more often than the other owners.",
-      aria: "Example finding: Jaguar owners talk about how the car makes them look 17.3 times more often than Land Rover, Audi and Infiniti owners."
-    },
-    {
       source: "PUBLIC FAMILY DISCUSSION",
       pillA: "Families choosing a community",
       pillB: "Families already living in one",
@@ -99,6 +86,19 @@
       wB: "26%",
       line: "Families choosing a senior living community ask questions <span class=\"h-a\">3.85 times</span> more often than families already living in one.",
       aria: "Example finding: families choosing a senior living community ask questions 3.85 times more often than families already living in one."
+    },
+    {
+      source: "PUBLIC OWNER DISCUSSION",
+      pillA: "Jaguar owners",
+      pillB: "Land Rover, Audi and Infiniti owners",
+      left: "a brilliant modern sport saloon with nothing",
+      key: "old man",
+      right: "about it at all",
+      labelA: "Jaguar owners",
+      labelB: "The other owners",
+      wB: "5.8%",
+      line: "Jaguar owners talk about how the car makes them look <span class=\"h-a\">17.3 times</span> more often than the other owners.",
+      aria: "Example finding: Jaguar owners talk about how the car makes them look 17.3 times more often than Land Rover, Audi and Infiniti owners."
     }
   ];
 
