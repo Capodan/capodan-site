@@ -178,8 +178,6 @@ body.home {
 
 /* Who */
 .home .h-who { padding: 112px 0; }
-.home .h-who-inner { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
-.home .h-monogram { width: 120px; height: 120px; border-radius: 50%; background: var(--raise); border: 1px solid var(--line-strong); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 40px; font-weight: 300; flex: 0 0 auto; }
 .home .h-who h2 { margin: 0 0 10px; font-family: var(--serif); font-weight: 300; font-size: 40px; line-height: 1.1; color: var(--ink); }
 .home .h-who p.h-text { margin: 0; max-width: 640px; color: var(--muted); }
 
